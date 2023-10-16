@@ -1,8 +1,11 @@
-let s1 = "rock";
-let s2 = "pop";
-let s3 = "rap";
-const checkApi = (genre) => {
-  fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${genre}`)
+
+const search = document.getElementById("searchBtn");
+const searchSongs = () => {
+  const searchWrap = document.getElementById("search");
+  const searchValue = searchWrap.value;
+  fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${searchValue}`
+  )
     .then((res) => {
       if (res.ok) {
         return res.json();
@@ -14,7 +17,8 @@ const checkApi = (genre) => {
       console.log(detail);
       const myRow = document.getElementById("myRow");
       myRow.classList.add("d-flex", "flex-row");
-      for (let i = 0; i < 4; i++) {
+      myRow.innerText = ``;
+      for (let i = 0; i < detail.data.length; i++) {
         const newDiv = document.createElement("div");
         newDiv.classList.add("col-4");
 
@@ -35,6 +39,4 @@ const checkApi = (genre) => {
       console.log("Error: ", err);
     });
 };
-checkApi(s1);
-checkApi(s2);
-checkApi(s3);
+search.addEventListener("click", searchSongs);

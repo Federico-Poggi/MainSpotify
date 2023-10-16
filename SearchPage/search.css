@@ -12153,4 +12153,39 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}/*# sourceMappingURL=personal.css.map */
+}
+#footerMobile {
+  background-color: rgba(12, 12, 12, 0.842);
+}
+
+.headerButtons {
+  background-color: rgb(19, 19, 19);
+}
+
+.grey {
+  color: grey;
+}
+
+.classGrey {
+  color: grey;
+}
+.classGrey:hover {
+  color: white;
+}
+
+.arrow {
+  border-radius: 100% !important;
+  background-color: #121212;
+}
+
+#player {
+  box-shadow: grey 0px -1px 2px 0px;
+}
+
+#cardColor {
+  background-color: rgba(24, 24, 24, 0.4196078431);
+}
+
+.img {
+  border-radius: 15px;
+}/*# sourceMappingURL=search.css.map */
