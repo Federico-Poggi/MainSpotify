@@ -26,8 +26,6 @@ const checkApi = (genre) => {
               <p class="card-text">${detail.data[i].title}.</p>
               </div>
               </div>
-          
-             
         </div>
      `;
         myRow.appendChild(newDiv);
