@@ -2,6 +2,7 @@
 // Dati relativi a album artista
 // Al play va anche fatta partire la traccia
 // Aggiungere search params per permettere all'utente di cercare le canzoni
+// Backoffice
 
 const spotifyAPI = "";
 const album = "";
