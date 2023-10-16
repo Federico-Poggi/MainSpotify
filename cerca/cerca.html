@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home spotify clone</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../homeSpotify/homeStyle.css" />
+  </head>
+  <body class="text-white bg-secondary">
+    <!-- inizio container principale -->
+    <div class="conteiner-fluid w-100 d-flex justify-content-center">
+      <div class="row w-100">
+        <!-- inizio sezione di sinistra -->
+
+        <div class="col-lg-3 d-sm-block d-none col-3">
+          <div>
+            <ul>
+              <li>home</li>
+              <li>cerca</li>
+              <li>la tua libreria</li>
+            </ul>
+          </div>
+          <div>
+            <ol>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+              <li>najfnafna</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- fine sezione di sinistra -->
+
+        <!-- inizio sezione principale -->
+        <div class="col">
+          <form class="d-flex" role="search">
+            <div
+              id="searchWrap"
+              class="d-flex bg-dark border-0 border-white rounded-5 my-2 w-75"
+            >
+              <button
+                id="searchBtn"
+                class="btn btn-outline-secondary w-20 border-0"
+                type="button"
+              >
+                <i class="bi bi-search text-white"></i></button
+              ><input
+                id="search"
+                class="form-control me-2 bg-dark text-white border-0 my-2"
+                type="search"
+                placeholder="Search"
+              />
+            </div>
+          </form>
+          <div class="container">
+            <div id="myRow" class="row"></div>
+          </div>
+        </div>
+
+        <!-- fine sezione principale -->
+
+        <!-- inizio sezione di destra -->
+
+        <div class="col-md-2 d-none d-lg-block bg-secondary">
+          <h6>attivita amici</h6>
+          <div>
+            <div class="d-flex align-items-center">
+              <img src="https://placekitten.com/50" alt="" />
+              <div>
+                <h6>hai messo mi piace a 88 brani</h6>
+                <p>di daidfa</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <img src="https://placekitten.com/50" alt="" />
+              <div>
+                <h6>hai messo mi piace a 88 brani</h6>
+                <p>di daidfa</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <img src="https://placekitten.com/50" alt="" />
+              <div>
+                <h6>hai messo mi piace a 88 brani</h6>
+                <p>di daidfa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- fine sezione di destra -->
+      </div>
+    </div>
+    <!-- fine container principale -->
+
+    <!-- footer mobile -->
+    <footer
+      id="footerMobile"
+      class="position-sticky bottom-0 w-100 bg-none d-md-none z-3"
+    >
+      <div
+        class="d-flex justify-content-center mx-2 bg-third align-items-center py-3 rounded-2"
+        id="player"
+      >
+        <span id="songTitle" class="fw-semibold">song title</span>
+        <div class="fs-2">
+          <i class="bi bi-pc-display ms-2"></i>
+          <i class="bi bi-heart mx-3 d-nonne"></i>
+          <i class="bi bi-heart-fill d-none text-primary"></i>
+          <i class="bi bi-caret-right-fill"></i>
+        </div>
+      </div>
+      <div class="d-flex justify-content-around mb-2 mt-4">
+        <div class="d-flex flex-column align-items-center">
+          <div class="display-4">
+            <i class="bi bi-house-door-fill classGrey"></i>
+          </div>
+          <span>Home</span>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <div class="display-4">
+            <i class="bi bi-search classGrey"></i>
+          </div>
+          <span>Cerca</span>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <div>
+            <i class="bi bi-book classGrey display-4"></i>
+          </div>
+          <span>La tua libreria</span>
+        </div>
+      </div>
+    </footer>
+    <!-- fine footer mobile -->
+    <!-- footer  desktop -->
+    <footer
+      class="position-absolute bottom-0 w-100 bg-secondary d-none d-md-bloc z-3"
+    >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-2">
+            <div class="d-flex align-items-center">
+              <img src="https://placekitten.com/60" alt="" />
+              <div>
+                <h6>playlist 6</h6>
+                <p>di daidfa</p>
+              </div>
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-heart-fill d-none"></i>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-shuffle"></i>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+    </footer>
+    <!-- fine footer desktop -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../homeSpotify/home.js"></script>
+  </body>
+</html>

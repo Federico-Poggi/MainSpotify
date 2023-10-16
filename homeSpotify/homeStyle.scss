@@ -1,37 +1,34 @@
-@import './../assets/css/custom-bootstrap/personal';  
-
-
-
+@import "./../assets/css/custom-bootstrap/personal";
 
 #footerMobile {
   background-color: rgba(12, 12, 12, 0.842);
 }
-.headerButtons{
-  background-color: rgb(19,19,19);
+.headerButtons {
+  background-color: rgb(19, 19, 19);
 }
-.grey{
-  color: grey ;
+.grey {
+  color: grey;
 }
-.classGrey{
-  color: grey ;
-  &:hover{
+.classGrey {
+  color: grey;
+  &:hover {
     color: white;
   }
 }
-.arrow{
+.arrow {
   border-radius: 100% !important;
   background-color: #121212;
 }
-#player{
-  box-shadow:grey 0px -1px 2px 0px;
+#player {
+  box-shadow: grey 0px -1px 2px 0px;
 }
 // #cardSize{
 //   height: 95%;
 // }
 
-#cardColor{
-  background-color:   #1818186b;
+#cardColor {
+  background-color: #1818186b;
 }
-.img{
+.img {
   border-radius: 15px;
 }
