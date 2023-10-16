@@ -17,12 +17,13 @@ const checkApi = (genre) => {
       for (let i = 0; i < 4; i++) {
         const newDiv = document.createElement("div");
         newDiv.classList.add("col-4");
+        
 
         newDiv.innerHTML = `
-              <div class="card">
-              <img src="${detail.data[i].album.cover_medium}" class="card-img-top" alt="${detail.data[i].album.title}">
-              <div class="card-body">
-              <h5 class="card-title">${detail.data[i].album.title}</h5>
+              <div class="card h-100 p-0  text-white border-0" id="cardColor"   >
+              <img src="${detail.data[i].album.cover_medium}" class="card-img-top ps-2 pt-2 pe-2 img" alt="${detail.data[i].album.title}">
+              <div class="card-body d-flex flex-column justify-content-center text-center">
+              <h6 class="card-title">${detail.data[i].album.title}</h6>
               <p class="card-text">${detail.data[i].title}.</p>
               </div>
               </div>
