@@ -13,18 +13,23 @@ const checkApi = (genre) => {
     .then((detail) => {
       console.log(detail);
       const myRow = document.getElementById("myRow");
-      for (let i = 0; i < detail.length; i++) {
+      myRow.classList.add("d-flex", "flex-row");
+      for (let i = 0; i < 4; i++) {
         const newDiv = document.createElement("div");
-        newDiv.classList.add("col-6", "col-sm-4");
-        newDiv.innerHTML = `  
-        <div class="d-flex align-items-center">
-        <img src="${detail[i].data.album.cover_medium}" alt="" />
-        <div>
-          <h2>playlist 1</h2>
-          <p>di daidfa</p>
+        newDiv.classList.add("col-4");
+
+        newDiv.innerHTML = `
+              <div class="card">
+              <img src="${detail.data[i].album.cover_medium}" class="card-img-top" alt="${detail.data[i].album.title}">
+              <div class="card-body">
+              <h5 class="card-title">${detail.data[i].album.title}</h5>
+              <p class="card-text">${detail.data[i].title}.</p>
+              </div>
+              </div>
+          
+             
         </div>
-      </div>
-   `;
+     `;
         myRow.appendChild(newDiv);
       }
     })
@@ -32,7 +37,6 @@ const checkApi = (genre) => {
       console.log("Error: ", err);
     });
 };
-const allTheGenre = [s1, s2, s3];
-for (let i = 0; i < allTheGenre.length; i++) {
-  checkApi(allTheGenre[i]);
-}
+checkApi(s1);
+checkApi(s2);
+checkApi(s3);
