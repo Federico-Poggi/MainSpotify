@@ -11,13 +11,15 @@ const moreYouLike = (genre) => {
       console.log(detail);
       const myRow = document.getElementById("myRow");
       myRow.classList.add("d-flex", "flex-row");
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 10; i++) {
         const newDiv = document.createElement("div");
-        newDiv.classList.add("col-4");
+        newDiv.classList.add("w-20");
 
         newDiv.innerHTML = `
-              <div class="card h-100 p-0  text-white border-0" id="cardColor"   >
-              <img src="${detail.data[i].album.cover_medium}" class="card-img-top ps-2 pt-2 pe-2 img" alt="${detail.data[i].album.title}">
+              <div class="card h-100 p-0  text-white border-0 " id="cardColor"   >
+              <div class=" ps-2 pt-2 pe-2">
+              <img src="${detail.data[i].album.cover_medium}" class="card-img-top img shadow" alt="${detail.data[i].album.title}">
+              </div>
               <div class="card-body d-flex flex-column justify-content-center text-center">
               <h6 class="card-title">${detail.data[i].album.title}</h6>
               <p class="card-text">${detail.data[i].title}.</p>
@@ -65,10 +67,10 @@ const createPersonalSection = (genre) => {
         const col = document.createElement(`div`);
         col.classList.add(`col-6`, `col-sm-4`);
         col.innerHTML = `
-       <div class="d-flex align-items-center">
+       <div class="d-flex align-items-center ">
          <img
            src="${detail.data[i].album.cover_medium}"
-           class="rounded-start-2"
+           class="rounded-start-2 shadow p-0"
            width=60
            alt="${detail.data[i].album.title}"
          />
@@ -112,7 +114,15 @@ const createPersonalPlaylist = (genre, string) => {
       console.group(detail);
       for (let i = 0; i < 1; i++) {
         const row = document.createElement(`div`);
-        row.classList.add(`row`, `mt-3`, `g-2`, `bg-third`, `rounded-2`, `p-2`);
+        row.classList.add(
+          `row`,
+          `mt-3`,
+          `g-2`,
+          `bg-third`,
+          `rounded-2`,
+          `p-2`,
+          `d-md-none`
+        );
         const col = document.createElement(`div`);
         const col2 = document.createElement(`div`);
         const col3 = document.createElement(`div`);
@@ -121,19 +131,19 @@ const createPersonalPlaylist = (genre, string) => {
         col3.classList.add(`col-12`, `d-flex`, `justify-content-between`);
 
         col.innerHTML = `<div class="row px-3 pb-3">
-        <div class="col-6 m-0 p-0">
+        <div class="col-6 m-0 p-0 ">
           <img
             src="${detail.data[i].album.cover_medium}"
             width="50px"
             alt=""
-            class="w-100"
+            class="w-100 shadow"
           />
         </div>
         <div class="col-6 m-0 p-0">
           <img
             src="${detail.data[i + 2].album.cover_medium}"
             width="50px"
-            class="w-100"
+            class="w-100 shadow"
             alt=""
           />
         </div>
@@ -141,7 +151,7 @@ const createPersonalPlaylist = (genre, string) => {
           <img
             src="${detail.data[i + 4].album.cover_medium}"
             width="50px"
-            class="w-100"
+            class="w-100 shadow"
             alt=""
           />
         </div>
@@ -149,7 +159,7 @@ const createPersonalPlaylist = (genre, string) => {
           <img
             src="${detail.data[i + 7].album.cover_medium}"
             width="50px"
-            class="w-100"
+            class="w-100 shadow"
             alt=""
           />
         </div>
@@ -186,7 +196,6 @@ let s2 = "pop";
 let s3 = "rap";
 
 createPersonalSection(s1);
-
 
 moreYouLike(s2);
 const toggle = function (e) {

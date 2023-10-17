@@ -28,27 +28,26 @@
     <div class="conteiner-fluid w-100 d-flex justify-content-center">
       <div class="row w-100">
         <!-- inizio sezione di sinistra -->
-
-        <div class="col-lg-3 d-sm-flex flex-column d-none col-3">
+        
+        <div class="col-lg-3 d-sm-flex flex-column d-none col-2">
           <div>
             <ul class="list-group">
               <li>
                 <a
-                  href="./home.html"
+                  href="../SearchPage/search.html"
                   class="btn btn-secondary text-light border-0"
-                  ><i class="bi bi-house-door-fill classGrey"></i>Home</a
-                >
+                  ><i class="bi bi-house-door-fill classGrey pe-2 fs-6"></i>Home</a>
               </li>
               <li>
                 <a
                   href="../SearchPage/search.html"
                   class="btn btn-secondary text-light border-0"
-                  ><i class="bi bi-search classGrey pe-2 fs-4"></i>Cerca</a
+                  ><i class="bi bi-search classGrey pe-2 fs-6"></i>Cerca</a
                 >
               </li>
               <li>
                 <a href="#" class="btn btn-secondary text-light border-0"
-                  ><i class="bi bi-book classGrey pe-2 fs-4"></i>La tua
+                  ><i class="bi bi-book classGrey pe-2 fs-6"></i>La tua
                   libreria</a
                 >
               </li>
@@ -56,13 +55,13 @@
             </ul>
           </div>
           <div>
-            <ul class="list-group ms-2 mb-3">
+            <ul class="list-group ms-2 ps-1 mb-3">
               <li class="d-flex align-items-center">
                 <div
                   id="div-add"
-                  class="d-flex justify-content-center align-items-center"
+                  class="boxIcon d-flex justify-content-center align-items-center"
                 >
-                  <i id="add-icon" class="bi bi-plus"></i>
+                <i id="add-icon" class="bi bi-plus"></i>
                 </div>
                 <a href="#" class="btn btn-secondary text-light border-0"
                   >Crea Playlist</a
@@ -71,18 +70,19 @@
               <li class="d-flex align-items-center">
                 <div
                   id="div-heart"
-                  class="d-flex justify-content-center align-items-center"
+                  class="boxIcon d-flex justify-content-center align-items-center"
                 >
-                  <i id="heart-icon" class="bi bi-heart-fill"></i>
+                <i id="heart-icon" class=" bi bi-heart-fill"></i>
                 </div>
                 <a href="#" class="btn btn-secondary text-light border-0"
                   >Brani che ti piacciono</a
                 >
               </li>
+
               <li class="d-flex align-items-center">
                 <div
                   id="div-save"
-                  class="d-flex justify-content-center align-items-center"
+                  class="boxIcon d-flex justify-content-center align-items-center"
                 >
                   <i id="save-icon" class="bi bi-bookmark-fill"></i>
                 </div>
@@ -109,10 +109,7 @@
           <!-- inizio testata -->
           <div class="d-flex align-items-center d-none d-md-block">
             <!-- carousel -->
-
-            <div id="carouselExample" class="carousel slide">
-              <!-- frecce -->
-
+            <div class="ms-3">
               <button
                 class="button-car"
                 type="button"
@@ -124,7 +121,6 @@
                   aria-hidden="true"
                 ></span>
               </button>
-
               <button
                 class="button-car"
                 type="button"
@@ -136,22 +132,70 @@
                   aria-hidden="true"
                 ></span>
               </button>
-              <!-- frecce -->
-              <!-- card da appendere con js -->
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="../assets/imgs/main/image-1.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="../assets/imgs/main/image-2.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
+            </div>
+
+            <div
+              class="d-flex justify-content-center mt-3 mx-3 p-4 "
+              id="header"
+            >
+              <div id="carouselExample" class="carousel slide w-100">
+                <!-- frecce -->
+
+                <!-- frecce -->
+                <!-- card da appendere con js -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-3 d-flex align-items-center">
+                        <img
+                          src="../assets/imgs/main/image-1.jpg"
+                          class="w-100 shadow"
+                          alt="..."
+
+                         
+                        />
+                      </div>
+                      <div class="col">
+                        <span>Album</span>
+                        <h1 class="display-4 fw-bold">VIOLA feat. </h1>
+                        <p>ciao ciao</p>
+                        <p>ciao ciao</p>
+                        <div class="align-items-center d-flex">
+                          <button
+                            type="button"
+                            class="btn rounded-5 px-4 py-2 btn-outline-dark fw-bold bg-primary"
+                          >
+                            Play
+                          </button>
+                          <button
+                            type="button"
+                            class="btn rounded-5 px-4 py-2  border border-1 border-fourth text-white  fw-bold  mx-4"
+                          >
+                            Salva
+                          </button>
+                          <i class="bi bi-three-dots fs-2 ms-2 classGrey"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-2 justify-content-end align-items-start me-4 d-flex"
+                      >
+                        <button
+                          type="button"
+                          class="btn btn-outline- classGrey fw-bold bg-third border-0 rounded-5"
+                        >
+                          <p class="fs-11 5 m-0">NASCONDI ANNUNCI</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="../assets/imgs/main/image-2.jpg"
+                      class="d-block"
+                      width="100"
+                      alt="..."
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -208,7 +252,7 @@
 
         <!-- inizio sezione di destra -->
 
-        <div class="col-md-2 d-none d-lg-block bg-secondary" id="rightCol">
+        <div class="col-md-2 d-none d-l-block bg-secondary" id="rightCol">
           <div class="d-flex justify-content-between">
             <h6>attivita amici</h6>
             <i class="bi bi-x-lg" onclick="closeTab(event)"></i>
@@ -277,11 +321,7 @@
       </div>
     </footer>
 
-    <i
-      class="bbi bi-caret-left position-absolute top-0 end-0 d-none"
-      id="showIcon"
-      onclick="riShow()"
-    ></i>
+    <i class="bbi bi-caret-left d-none" id="showIcon" onclick="riShow()"></i>
     <!-- fine footer mobile -->
     <!-- footer  desktop -->
     <footer
