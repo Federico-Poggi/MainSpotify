@@ -1,0 +1,12 @@
+#mainCard {
+  background: linear-gradient(to bottom, green, darkgreen, black, black);
+}
+#mainImg {
+  width: 120%;
+  margin-right: 20px;
+}
+
+#smallImg {
+  width: 40px;
+  margin-right: 5px;
+}

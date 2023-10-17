@@ -25,8 +25,8 @@ const searchSongs = () => {
               <div class="card h-100 p-0  text-white border-0" id="cardColor"   >
               <img src="${detail.data[i].album.cover_medium}" class="card-img-top ps-2 pt-2 pe-2 img" alt="${detail.data[i].album.title}">
               <div class="card-body d-flex flex-column justify-content-center text-center">
-              <a href="../artistPage/artist.html?artist=${detail.data[i].id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].artist.name}</a>
-              <a href="../albumPage/album.html?album=${detail.data[i].id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].album.title}</a>
+              <a href="../artistPage/artist.html?artist=${detail.data[i].artist.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].artist.name}</a>
+              <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].album.title}</a>
              
               </div>
               </div>
