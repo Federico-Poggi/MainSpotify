@@ -12268,6 +12268,13 @@ textarea.form-control-lg {
 }
 
 #main-section {
+  background-color: #2d2d2d;
   overflow-y: scroll;
   height: 100vh;
+}
+
+.button-car {
+  background-color: black;
+  border: 0;
+  border-radius: 90%;
 }/*# sourceMappingURL=homeStyle.css.map */
