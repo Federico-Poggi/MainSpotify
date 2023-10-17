@@ -28,21 +28,23 @@ const albumFetch = () => {
         <div></div>
       </div>
       <div class=" d-flex flex-row">
-        <div class="w-20 d-flex align-items-end mb-1 ms-2 me-4">
+        <div class="d-flex align-items-end mb-1 me-3">
           <img id="mainImg" src="${detail.cover_big}" class="card-img " alt="${detail.title}" />
         </div>
         <div
           class="card-body d-flex flex-column justify-content-between"
         >
           <p class="my-0">ALBUM</p>
-          <h1 class="card-title">${detail.tracks.data[0].album.title}</h1>
-          <p class="card-text">
+          <h1 id="myH1" class="card-title">${detail.tracks.data[0].album.title}</h1>
+          <div class="card-text d-flex align-items-center justify-content-start">         
             <img id="smallImg" src="${detail.artist.picture_medium}" alt="/" class=" rounded-circle"  />
-            <span> ${detail.artist.name} - </span>
-            <span>${detail.release_date} - </span>
-            <span>${detail.tracks.data.length} Brani - </span>
-            <span>${detail.duration}</span>
-            </p>
+            <div class="d-flex">
+            <span class="smaller fw-bold me-1">${detail.artist.name}</span>
+            <span class="smaller d-none d-xl-block me-1"> - ${detail.release_date}</span>
+            <span class="smaller d-none d-xl-block me-1"> - ${detail.tracks.data.length} Brani - </span>
+            <span id="durationAlbum" class="smaller d-none d-xl-block"> ${detail.duration}</span>
+            </div>
+            </div>
         </div>
       </div>
       <div id="songList">
@@ -66,6 +68,14 @@ const albumFetch = () => {
       </div>
                 </div>`;
       myRow.appendChild(newDiv);
+      const durationAlbum = document.getElementById("durationAlbum");
+      const durationNumberAlbum = parseInt(durationAlbum.innerText);
+      if (durationNumberAlbum > 60) {
+        let hours = Math.floor(durationNumberAlbum / 3600);
+        let min = Math.floor((durationNumberAlbum / 60) % 60);
+        let sec = durationNumberAlbum % 60;
+        durationAlbum.innerText = `${hours}h ${min}m ${sec}s`;
+      }
       const mySongsList = document.getElementById("myList");
       for (let i = 0; i < detail.tracks.data.length; i++) {
         const newListDiv = document.createElement("div");
@@ -89,8 +99,10 @@ const albumFetch = () => {
         mySongsList.appendChild(newListDiv);
         const convert = () => {
           const duration = document.querySelectorAll(".duration");
+
           for (let y = 0; y < duration.length; y++) {
             const durationNumber = parseInt(duration[y].innerText);
+
             if (durationNumber > 60) {
               let hours = Math.floor(durationNumber / 60);
               let mins = durationNumber % 60;
