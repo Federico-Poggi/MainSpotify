@@ -4,40 +4,103 @@ html,body{
     
 }
 
+
+#content{
+    position: absolute;
+    top: 0;
+    padding: 0.5em;
+    height: 100vh;
+}
+
+
+.card{
+  width: 10vw;
+}
+
+.imgCard{
+  width: 10rem;
+}
+
+
+#sidebar{
+    height: 100%;
+}
+
+
+#library h3{
+    font-size: 60%;
+    padding-left: 1em;
+}
+
+#library i{
+    font-size: 100%;
+}
 #containerAll{
     height:100vh;
 }
 
-#sidebar{
-    margin: 0.5%;
-    height: 100%;
-}
-
 main{
+  width: 100vw;
     height: 100vh;
     overflow-y: scroll;
-    height: 100vh; 
+    background: linear-gradient(180deg, rgba(33,33,33,1) 26%, rgba(18,18,18,1) 92%);
 }
 
-.card{
-    background-image: linear-gradient(to right top, #121212, #161616, #191919, #1c1c1c, #1f1f1f);
+nav {
+//    font-size: 11px;;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #main{
+    width:100vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+    #main{
+        float: right;
+        position: absolute;
+        right: 0;
+        width: 80%;
+    }
+
+    #content{
+      display: flex;
+    }
 }
 
 
 
-#song li{
-    background-color: transparent;
-    border:none;
-    font-family: Circular;
-    font-weight: 600;
-    color: white;
-}
 
-#artistImg{
-    background: url(https://placekitten.com/500);
-    position: fixed;
-    top: 0;
-}
+
+// #containMain{
+//     height: 100vh;
+//     display: flex;
+// }
+
+
+
+
+// .card{
+//     background-image: linear-gradient(to right top, #121212, #161616, #191919, #1c1c1c, #1f1f1f);
+// }
+
+
+
+// #song li{
+//     background-color: transparent;
+//     border:none;
+//     font-family: Circular;
+//     font-weight: 600;
+//     color: white;
+// }
+
+// #artistImg{
+//     background: url(https://placekitten.com/500);
+//     position: fixed;
+//     top: 0;
+// }
 
 
 ::-webkit-scrollbar {
