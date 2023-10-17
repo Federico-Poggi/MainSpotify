@@ -43,77 +43,127 @@
                 <a
                   href="../SearchPage/search.html"
                   class="btn btn-secondary text-light border-0"
-                  ><i class="bi bi-search classGrey"></i>Cerca</a
+                  ><i class="bi bi-search classGrey pe-2 fs-4"></i>Cerca</a
                 >
               </li>
               <li>
                 <a href="#" class="btn btn-secondary text-light border-0"
-                  ><i class="bi bi-book classGrey"></i>La tua libreria</a
+                  ><i class="bi bi-book classGrey pe-2 fs-4"></i>La tua
+                  libreria</a
                 >
               </li>
+              <!-- seconda lista -->
             </ul>
           </div>
           <div>
-            <ul class="list-group">
+            <ul class="list-group ms-2 mb-3">
               <li class="d-flex align-items-center">
-                <button type="button" class="btn btn-primary"></button>
+                <div
+                  id="div-add"
+                  class="d-flex justify-content-center align-items-center"
+                >
+                  <i id="add-icon" class="bi bi-plus"></i>
+                </div>
                 <a href="#" class="btn btn-secondary text-light border-0"
                   >Crea Playlist</a
                 >
               </li>
               <li class="d-flex align-items-center">
-                <button type="button" class="btn btn-primary"></button>
+                <div
+                  id="div-heart"
+                  class="d-flex justify-content-center align-items-center"
+                >
+                  <i id="heart-icon" class="bi bi-heart-fill"></i>
+                </div>
                 <a href="#" class="btn btn-secondary text-light border-0"
                   >Brani che ti piacciono</a
                 >
               </li>
               <li class="d-flex align-items-center">
-                <button type="button" class="btn btn-primary"></button>
+                <div
+                  id="div-save"
+                  class="d-flex justify-content-center align-items-center"
+                >
+                  <i id="save-icon" class="bi bi-bookmark-fill"></i>
+                </div>
                 <a href="#" class="btn btn-secondary text-light border-0"
                   >I tuoi episodi</a
                 >
               </li>
             </ul>
           </div>
-          <div>
-            <ol>
-              <li class="">najfnafna</li>
+          <hr />
+          <!-- div scrollbar -->
+          <div id="box">
+            <ul>
               <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-            </ol>
+            </ul>
           </div>
+          <!-- fine scrollbar -->
         </div>
 
         <!-- fine sezione di sinistra -->
 
         <!-- inizio sezione principale -->
-        <div class="col me-2">
+        <div id="main-section" class="col">
           <!-- inizio testata -->
           <div class="d-flex align-items-center d-none d-md-block">
-            <img src="https://placekitten.com/150" alt="" />
-            <div>
-              <h2>playlist 1</h2>
-              <p>di daidfa</p>
+            <!-- carousel -->
+
+            <div id="carouselExample" class="carousel slide">
+              <!-- frecce -->
+
+              <button
+                class="button-car"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+
+              <button
+                class="button-car"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <!-- frecce -->
+              <!-- card da appendere con js -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="../assets/imgs/main/image-1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/imgs/main/image-2.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
             </div>
+            <!-- card da appendere con js -->
+            <!-- fine carousel -->
           </div>
           <!-- fine testata -->
 
           <!-- inizio sezione buonasera -->
 
           <!-- inizio playlist personali -->
-          <div class=" fw-bold mt-4">
+          <div class="fw-bold mt-4">
             <div
               class="mt-2 mb-4 d-flex justify-content-between align-items-center"
             >
@@ -149,7 +199,7 @@
 
           <!-- inizio sezione altro di cio che ti piace -->
           <div class="row d-none d-sm-flex g-4 mt-4" id="myRow">
-            <h2 class= "fw-bold">Altro di cio' che ti piace</h2>
+            <h2 class="fw-bold">Altro di cio' che ti piace</h2>
           </div>
           <!-- fine sezione altro di cio che ti piace -->
         </div>

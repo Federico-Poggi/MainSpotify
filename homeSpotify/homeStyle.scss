@@ -1,4 +1,36 @@
 @import "./../assets/css/custom-bootstrap/personal";
+@font-face {
+  font-family: 'Circular';
+  src: url('../assets/fonts/CircularStd-Black.otf');
+  font-weight: normal;
+  font-style: normal;};
+  @font-face {
+    font-family: 'Circular';
+  src: url('../assets/fonts/CircularStd-BlackItalic.otf');
+  font-weight: normal;
+  font-style: italic;}
+  @font-face {
+    font-family: 'Circular';
+    src: url('../assets/fonts/CircularStd-Bold.otf');
+  font-weight: bold;
+  font-style: normal;}
+  @font-face {
+    font-family: 'Circular';
+    src: url('../assets/fonts/CircularStd-BoldiItalic.otf');
+  font-weight: bold;
+  font-style: italic;}
+  @font-face {
+    font-family: 'Circular';
+    src: url('../assets/fonts/CircularStd-Light.otf');
+  font-weight: lighter;
+  font-style: normal;}
+  @font-face {
+    font-family: 'Circular';
+    src: url('../assets/fonts/CircularStd-LightItalic.otf');
+  font-weight: lighter;
+  font-style: italic;}
+
+
 
 
 
@@ -80,3 +112,53 @@
 .img {
   border-radius: 15px;
 }
+
+#add-icon {
+color: #B2B2B2;
+}
+
+#heart-icon{
+  
+  color:  #B2B2B2;
+  
+  font-size: 10px;
+}
+#div-heart {
+  background:   linear-gradient(100deg, #3D1FA8, rgba(255,0,0,0) 100%),  linear-gradient(360deg, #B2B2B2, rgba(0,0,255,0) 100%);
+  width: 18px;
+  height: 20px;
+}
+#save-icon{
+  
+  color:  #149643;
+  
+  font-size: 10px;
+}
+#div-save {
+  background-color: #004537;
+  width: 18px;
+  height: 20px;
+}
+#div-add{
+  background-color: #B2B2B2;
+  width: 18px;
+  height: 20px;
+}
+#add-icon {
+  color: black;
+}
+#box {
+  width: auto;
+  overflow: auto;
+}
+#main-section{
+  background-color: #2d2d2d;
+  overflow-y: scroll;
+  height: 100vh;
+}
+.button-car {
+  background-color: black;
+    border: 0;
+    border-radius: 100%;
+}
+// code per scrollbar
