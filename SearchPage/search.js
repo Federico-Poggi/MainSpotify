@@ -14,19 +14,43 @@ const searchSongs = () => {
     })
     .then((detail) => {
       console.log(detail);
+      const myHead = document.getElementById("myHead");
+      myHead.innerHTML = ``;
+      const myTitle = document.createElement("div");
+      myTitle.innerHTML = `
+      <div class="col-12">
+      <div class="dark-bg my-5">
+      <div class="dark-bg my-5">
+      <div class="dark-bg my-5">
+            <div class="dark-bg my-5">
+      <div class="my-5"> ${detail.data[0].artist.name}</div></div></div>
+      </div>
+      </div>
+      </div>
+      `;
+      myHead.appendChild(myTitle);
+      myTitle.classList.add("py-5", "text-primary");
+
+      myTitle.classList.add("display-1");
+      myTitle.style.background = `url("${detail.data[5].album.cover_xl}")`;
+      myTitle.style.backgroundSize = "cover";
+      myTitle.style.backgroundPosition = "center";
+      myTitle.style.backgroundRepeat = "no-repeat";
+      myTitle.style.opacity = ".4";
+
       const myRow = document.getElementById("myRow");
       myRow.classList.add("d-flex", "flex-row");
       myRow.innerText = ``;
-      for (let i = 0; i < detail.data.length; i++) {
+      for (let i = 0; i < 8; i++) {
         const newDiv = document.createElement("div");
-        newDiv.classList.add("col-4");
+        newDiv.classList.add("col-4", "col-md-3", "col-xl-2");
 
         newDiv.innerHTML = `
               <div class="card h-100 p-0  text-white border-0" id="cardColor"   >
               <img src="${detail.data[i].album.cover_medium}" class="card-img-top ps-2 pt-2 pe-2 img" alt="${detail.data[i].album.title}">
               <div class="card-body d-flex flex-column justify-content-center text-center">
-              <a href="../artistPage/artist.html?artist=${detail.data[i].artist.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].artist.name}</a>
-              <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].album.title}</a>
+              <a id="artist" href="../artistPage/artist.html?artist=${detail.data[i].artist.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].artist.name}</a>
+              <a id="album" href="../albumPage/album.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].album.title}</a>
              
               </div>
               </div>

@@ -1,36 +1,40 @@
 @import "./../assets/css/custom-bootstrap/personal";
 @font-face {
-  font-family: 'Circular';
-  src: url('../assets/fonts/CircularStd-Black.otf');
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-Black.otf");
   font-weight: normal;
-  font-style: normal;};
-  @font-face {
-    font-family: 'Circular';
-  src: url('../assets/fonts/CircularStd-BlackItalic.otf');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-BlackItalic.otf");
   font-weight: normal;
-  font-style: italic;}
-  @font-face {
-    font-family: 'Circular';
-    src: url('../assets/fonts/CircularStd-Bold.otf');
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-Bold.otf");
   font-weight: bold;
-  font-style: normal;}
-  @font-face {
-    font-family: 'Circular';
-    src: url('../assets/fonts/CircularStd-BoldiItalic.otf');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-BoldiItalic.otf");
   font-weight: bold;
-  font-style: italic;}
-  @font-face {
-    font-family: 'Circular';
-    src: url('../assets/fonts/CircularStd-Light.otf');
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-Light.otf");
   font-weight: lighter;
-  font-style: normal;}
-  @font-face {
-    font-family: 'Circular';
-    src: url('../assets/fonts/CircularStd-LightItalic.otf');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-LightItalic.otf");
   font-weight: lighter;
-  font-style: italic;}
-
-
+  font-style: italic;
+}
 
 #footerMobile {
   background-color: rgba(12, 12, 12, 0.842);
@@ -66,24 +70,23 @@
 }
 
 #add-icon {
-color: #B2B2B2;
+  color: #b2b2b2;
 }
 
-#heart-icon{
-  
-  color:  #B2B2B2;
-  
+#heart-icon {
+  color: #b2b2b2;
+
   font-size: 10px;
 }
 #div-heart {
-  background:   linear-gradient(100deg, #3D1FA8, rgba(255,0,0,0) 100%),  linear-gradient(360deg, #B2B2B2, rgba(0,0,255,0) 100%);
+  background: linear-gradient(100deg, #3d1fa8, rgba(255, 0, 0, 0) 100%),
+    linear-gradient(360deg, #b2b2b2, rgba(0, 0, 255, 0) 100%);
   width: 18px;
   height: 20px;
 }
-#save-icon{
-  
-  color:  #149643;
-  
+#save-icon {
+  color: #149643;
+
   font-size: 10px;
 }
 #div-save {
@@ -91,8 +94,8 @@ color: #B2B2B2;
   width: 18px;
   height: 20px;
 }
-#div-add{
-  background-color: #B2B2B2;
+#div-add {
+  background-color: #b2b2b2;
   width: 18px;
   height: 20px;
 }
@@ -103,14 +106,14 @@ color: #B2B2B2;
   width: auto;
   overflow: auto;
 }
-#main-section{
+#main-section {
   background-color: #2d2d2d;
   overflow-y: scroll;
   height: 100vh;
 }
 .button-car {
   background-color: black;
-    border: 0;
-    border-radius: 100%;
+  border: 0;
+  border-radius: 100%;
 }
 // code per scrollbar

@@ -1,6 +1,6 @@
 let s1 = "rock";
-let s2 = "pop";
-let s3 = "rap";
+let s2 = "brit rock";
+let s3 = "R'n'B";
 const checkApi = (genre) => {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${genre}`)
     .then((res) => {
