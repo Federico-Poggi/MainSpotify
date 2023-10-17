@@ -1,5 +1,5 @@
 #mainCard {
-  background: linear-gradient(to bottom, green, darkgreen, black, black);
+  background: linear-gradient(to bottom, darkgreen, black, black);
 }
 #mainImg {
   width: 220px;
@@ -16,4 +16,13 @@
 }
 #myH1 {
   font-size: 2.8em;
+}
+.gray {
+  color: rgb(159, 159, 159);
+}
+#songList > div > i:hover {
+  cursor: pointer;
+}
+.small {
+  font-size: 0.7em;
 }

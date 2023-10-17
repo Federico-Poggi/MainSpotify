@@ -15,7 +15,8 @@ const albumFetch = () => {
       console.log(detail);
       const myRow = document.getElementById("myRow");
       const newDiv = document.createElement("div");
-      newDiv.innerHTML = `<div id="mainCard" class="cardWrap px-5">
+      newDiv.innerHTML = `
+      <div id="mainCard" class="cardWrap px-5">
       <div id="head" class="">
         <div id="btn-wrap">
           <button class="btn p-3">
@@ -32,30 +33,29 @@ const albumFetch = () => {
           <img id="mainImg" src="${detail.cover_big}" class="card-img " alt="${detail.title}" />
         </div>
         <div
-          class="card-body d-flex flex-column justify-content-between"
+          class="card-body d-flex flex-column justify-content-end"
         >
-          <p class="my-0">ALBUM</p>
-          <h1 id="myH1" class="card-title">${detail.tracks.data[0].album.title}</h1>
+          <div class="my-0 small text-light d-flex">ALBUM</div>
+          <h1 id="myH1" class="card-title pb-3 pt-1">${detail.tracks.data[0].album.title}</h1>
           <div class="card-text d-flex align-items-center justify-content-start">         
             <img id="smallImg" src="${detail.artist.picture_medium}" alt="/" class=" rounded-circle"  />
             <div class="d-flex">
             <span class="smaller fw-bold me-1">${detail.artist.name}</span>
             <span class="smaller d-none d-xl-block me-1"> - ${detail.release_date}</span>
-            <span class="smaller d-none d-xl-block me-1"> - ${detail.tracks.data.length} Brani - </span>
-            <span id="durationAlbum" class="smaller d-none d-xl-block"> ${detail.duration}</span>
+            <span class="smaller d-none d-xl-block me-1"> - ${detail.tracks.data.length} Brani,</span>
+            <span id="durationAlbum" class="smaller gray d-none d-xl-block"> ${detail.duration}</span>
             </div>
             </div>
         </div>
       </div>
       <div id="songList">
-        <div class="d-flex">
-          <i class="bi bi-play-circle-fill p-2"></i>
-          <i class="bi bi-heart p-2"></i>
-          <i class="bi bi-heart-fill d-none p-2"></i>
-          <i class="bi bi-arrow-down-circle p-2"></i>
-          <i class="bi bi-three-dots p-2"></i>
+        <div class="d-flex py-4 display-flex align-items-center">
+          <i class="bi bi-play-circle-fill p-2 mx-1 display-5 text-primary"></i>
+          <i class="bi bi-heart p-2 mx-1 fs-4 gray" onclick="toggle(event)"></i>
+          <i class="bi bi-arrow-down-circle p-2 fs-4 mx-1 gray"></i>
+          <i class="bi bi-three-dots p-2 fs-4 mx-1 gray"></i>
         </div>
-        <div class="row">
+        <div class="row gray">
           <div class="col d-flex">
             <div class="px-3">#</div>
             <div>Titolo</div>
@@ -63,10 +63,11 @@ const albumFetch = () => {
           <div class="col-1 d-flex justify-content-end">Riproduzioni</div>
           <div class="col-3 d-flex justify-content-end"><i class="bi bi-clock"></i></div>
         </div>
-        <div id="myList" class="">
+        <div id="myList" class="gray">
         </div>
       </div>
                 </div>`;
+
       myRow.appendChild(newDiv);
       const durationAlbum = document.getElementById("durationAlbum");
       const durationNumberAlbum = parseInt(durationAlbum.innerText);
@@ -118,3 +119,10 @@ const albumFetch = () => {
     });
 };
 albumFetch();
+
+const toggle = (e) => {
+  console.log(e.target);
+  e.target.classList.toggle("bi-heart-fill");
+  e.target.classList.toggle("bi-heart");
+  e.target.classList.toggle("text-primary");
+};
