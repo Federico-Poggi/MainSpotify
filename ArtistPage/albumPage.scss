@@ -40,23 +40,55 @@ html,body{
 main{
     width: 100vw;
     height: 100vh;
-    overflow-y: scroll;
-    background: linear-gradient(180deg, rgba(33,33,33,1) 26%, rgba(18,18,18,1) 92%);
+    width: 100vw;
+   height: 100vh;
+   overflow-y: scroll;
+}
+
+#mainSection{
+ 
+  background: linear-gradient(180deg, rgba(33,33,33,1) 26%, rgba(18,18,18,1) 92%);
+  
+  z-index: 1;
 }
 
 nav {
 //    font-size: 11px;;
     width: 100%;
     z-index: 3;
-    background-color: rgba(65, 65, 65, 0.756);
+    background-color: rgba(65, 65, 65, 0);
+}
+
+h1{
+  font-size: 10vh;
+  font-family: Circular;
+  font-weight: 900;
 }
 
 section{
   margin-top: 5em;
   background: linear-gradient(180deg, rgba(33,33,33,1) 26%, rgba(18,18,18,1) 92%);
+  font-family: Circular;
+}
+
+header{
+  padding-top:10vh ;
+  padding-bottom: 10vh;
+  z-index: 3;
+  background-image: url(freddy.png);
+  background-position-y: top;
+}
+
+li{
+  font-family: Circular;
+  font-weight: 400;
+  font-size: 0.8em;
   
-  position: static;
-  top: 0;
+}
+
+
+.title{
+  flex-grow: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -66,8 +98,6 @@ section{
   .card{
     width: 100%;
   }
-
-
 
   .scrollmenu{
     visibility: visible;
