@@ -1,0 +1,162 @@
+@import '../assets/css/custom-bootstrap/personal.scss';  
+html,body{
+    height: 100vh;
+    
+}
+
+
+#content{
+    position: absolute;
+    top: 0;
+    padding: 0.5em;
+    height: 100vh;
+}
+
+
+
+
+.imgCard{
+  width: 10rem;
+}
+
+
+#sidebar{
+    height: 100%;
+}
+
+
+#library h3{
+    font-size: 60%;
+    padding-left: 1em;
+}
+
+#library i{
+    font-size: 100%;
+}
+#containerAll{
+    height:100vh;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    background: linear-gradient(180deg, rgba(33,33,33,1) 26%, rgba(18,18,18,1) 92%);
+}
+
+nav {
+//    font-size: 11px;;
+    width: 100%;
+    z-index: 3;
+    background-color: rgba(65, 65, 65, 0.756);
+}
+
+section{
+  margin-top: 5em;
+  background: linear-gradient(180deg, rgba(33,33,33,1) 26%, rgba(18,18,18,1) 92%);
+  
+  position: static;
+  top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #main{
+    width:100vw;
+  }
+  .card{
+    width: 100%;
+  }
+
+
+
+  .scrollmenu{
+    visibility: visible;
+    overflow-x: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+    #main{
+        float: right;
+        position: absolute;
+        right: 0;
+        width: 80%;
+        
+    }
+
+    #content{
+      display: flex;
+    }
+
+
+    .scrollmenu{
+      visibility: hidden;
+    }
+}
+
+
+
+
+
+// #containMain{
+//     height: 100vh;
+//     display: flex;
+// }
+
+
+
+
+// .card{
+//     background-image: linear-gradient(to right top, #121212, #161616, #191919, #1c1c1c, #1f1f1f);
+// }
+
+
+
+// #song li{
+//     background-color: transparent;
+//     border:none;
+//     font-family: Circular;
+//     font-weight: 600;
+//     color: white;
+// }
+
+// #artistImg{
+//     background: url(https://placekitten.com/500);
+//     position: fixed;
+//     top: 0;
+// }
+
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border: 0px none #000000;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+  border: 0px none #000000;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #000000;
+}
+::-webkit-scrollbar-track:active {
+  background: #000000;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
