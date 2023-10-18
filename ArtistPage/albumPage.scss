@@ -56,7 +56,9 @@ nav {
   .card{
     width: 100%;
   }
- 
+
+
+
   .scrollmenu{
     visibility: visible;
     overflow-x: auto;
@@ -74,6 +76,8 @@ nav {
     #content{
       display: flex;
     }
+
+
     .scrollmenu{
       visibility: hidden;
     }
