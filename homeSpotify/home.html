@@ -34,61 +34,75 @@
         >
           <div>
             <ul class="list-group list-unstyled">
-              <li class="list-group-item-disabled">
-                <a href="#" class="btn btn-secondary text-light border-0"
-                  ><i class="bi bi-house-door-fill classGrey pe-2 fs-6"></i
+              <li class="list-group-item-disabled select">
+                <a href="#" class="btn grey border-0">
+                  <i class="bi bi-spotify text-primary pe-1 fs-6 scale me-3"></i
                   >Home</a
                 >
               </li>
-              <li class="list-group-item-disabled">
+              <li
+                class="list-group-item-disabled d-flex align-items-center select"
+              >
                 <a
                   href="../SearchPage/search.html"
-                  class="btn btn-secondary text-light border-0"
-                  ><i class="bi bi-search classGrey pe-2 fs-6"></i>Cerca</a
+                  class="btn grey border-0 d-flex align-items-center"
+                >
+                  <div
+                    id="div-heart"
+                    class="boxIcon select-border2 d-flex justify-content-center me-3 align-items-center"
+                  >
+                    <i class="bi bi-search text-white fs-6"></i>
+                  </div>
+                  Cerca</a
                 >
               </li>
-              <li class="list-group-item-disabled">
-                <a href="#" class="btn btn-secondary text-light border-0"
-                  ><i class="bi bi-book classGrey pe-2 fs-6"></i>La tua
-                  libreria</a
-                >
+              <li class="list-group-item-disabled p-s1 select">
+                <a href="#" class="btn grey border-0 d-flex align-items-center">
+                  <div
+                    id="div-add"
+                    class="boxIcon select-border2 d-flex me-3 justify-content-center align-items-center"
+                  >
+                    <i class="bi bi-book text-dark fs-7"></i>
+                  </div>
+                  La tua libreria
+                </a>
               </li>
               <!-- seconda lista -->
             </ul>
           </div>
           <div>
-            <ul class="list-group ms-2 ps-1 mb-3">
-              <li class="d-flex align-items-center">
+            <ul class="list-group mb-3">
+              <li class="d-flex padding-start align-items-center select">
                 <div
                   id="div-add"
-                  class="boxIcon d-flex justify-content-center align-items-center"
+                  class="boxIcon select-border2 d-flex justify-content-center me-1 align-items-center"
                 >
                   <i id="add-icon" class="bi bi-plus"></i>
                 </div>
-                <a href="#" class="btn btn-secondary text-light border-0"
+                <a href="#" class="btn grey  border-0"
                   >Crea Playlist</a
                 >
               </li>
-              <li class="d-flex align-items-center">
+              <li class="d-flex padding-start align-items-center select">
                 <div
                   id="div-heart"
-                  class="boxIcon d-flex justify-content-center align-items-center"
+                  class="boxIcon select-border2 d-flex me-1 justify-content-center align-items-center"
                 >
                   <i id="heart-icon" class="bi bi-heart-fill"></i>
                 </div>
-                <a href="#" class="btn btn-secondary text-light border-0"
+                <a href="#" class="btn grey  me-1 border-0"
                   >Brani che ti piacciono</a
                 >
               </li>
 
-              <li class="d-flex align-items-center">
+              <li class="d-flex padding-start align-items-center select">
                 <div
                   id="div-save"
-                  class="boxIcon d-flex justify-content-center align-items-center"
+                  class="boxIcon me-1 select-border2 d-flex justify-content-center align-items-center"
                 >
                   <i id="save-icon" class="bi bi-bookmark-fill"></i>
                 </div>
-                <a href="#" class="btn btn-secondary text-light border-0"
+                <a href="#" class="btn grey  border-0"
                   >I tuoi episodi</a
                 >
               </li>
@@ -129,7 +143,7 @@
             </div>
 
             <div
-              class="d-flex justify-content-center mt-2 mx-3 p-4"
+              class="d-flex justify-content-center mt-2 mx-3 p-4 select-border2"
               id="header"
             >
               <div id="carouselExample" class="carousel slide w-100">
@@ -229,7 +243,13 @@
             <!-- fine playlist personali -->
 
             <!-- inizio playlist pubbliche -->
-            <div id="publicPlaylist"></div>
+            <div id="publicPlaylist">
+              <a
+                href="../albumPage/album.html?album=${detail.data[i].album.id}"
+                class="text-white link-underline link-underline-opacity-0"
+                id="ancor"
+              ></a>
+            </div>
           </div>
           <!-- fine playlist publliche -->
           <!-- fine sezione buonasera -->
@@ -252,24 +272,6 @@
           <div class="d-flex justify-content-between">
             <h6 class="fw-bold">attivita amici</h6>
             <i id="btnOut" class="bi bi-x-lg"></i>
-          </div>
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <div class="d-flex align-items-start mt-2 ms-2">
-                <img
-                  src="https://placekitten.com/50"
-                  class="rounded-5 me-2"
-                  alt=""
-                  width="40"
-                />
-                <div class="fs-9">
-                  <h6 class="m-0">Noyz Narcos</h6>
-                  <p class="m-0">Guilty</p>
-                  <p class="m-0">Zoo de Roma</p>
-                </div>
-              </div>
-            </div>
-            <span class="mb-4">5h</span>
           </div>
         </div>
 

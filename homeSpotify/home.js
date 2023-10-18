@@ -19,11 +19,22 @@ const moreYouLike = (genre, par) => {
       for (let i = 0; i < 10; i++) {
         arrayList.push(detail.data[i].title);
         const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`);
+        li.classList.add(`mb-2`, `classGrey`, `select`);
         li.innerText = arrayList[i];
         sidelist.appendChild(li);
 
         const newDiv = document.createElement("div");
+        newDiv.addEventListener(`mouseover`, function (e) {
+          newDiv.classList.remove(`resize`);
+          newDiv.classList.add(`scale`);
+
+          console.log(newDiv);
+        });
+        newDiv.addEventListener(`mouseleave`, function (e) {
+          newDiv.classList.add(`resize`);
+
+          console.log(newDiv);
+        });
         newDiv.classList.add("col-4", "col-lg-3");
 
         newDiv.innerHTML = `<a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="fw-bold text-white link-underline link-underline-opacity-0">
@@ -69,28 +80,29 @@ const createPersonalSection = (genre) => {
       for (let i = 0; i < 6; i++) {
         arrayList.push(detail.data[i].title);
         const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`);
+        li.classList.add(`mb-2`, `classGrey`, `select`);
         li.innerText = arrayList[i];
         sidelist.appendChild(li);
 
         const col = document.createElement(`div`);
         col.classList.add(`col-6`, `col-sm-4`);
+
         col.innerHTML = `
-       <div class="d-flex align-items-center bg-fourth rounded-1 ">
-         <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="text-white link-underline link-underline-opacity-0">
+        <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="text-white link-underline link-underline-opacity-0">
+       <div class="d-flex align-items-center bg-fourth rounded-1 select-border">
          <img
            src="${detail.data[i].album.cover_medium}"
-           class="rounded-start-1 shadow p-0"
+           class="rounded-start-1  p-1"
            width=60px 
            alt="${detail.data[i].album.title}"
          />
-         </a>
-         <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="text-white link-underline link-underline-opacity-0">
+         
          <div class="d-flex align-items-center">
-           <h6 class="ms-2 fs-7 fw-bold text-white link-underline link-underline-opacity-0">${detail.data[i].album.title}</h6>
+         <h6 class="ms-2 fs-7 fw-bold text-white link-underline link-underline-opacity-0">${detail.data[i].album.title}</h6>
+         </div>
+         
          </div>
          </a>
-       </div>
      </div>
     `;
         personalPlaylist.appendChild(col);
@@ -118,12 +130,14 @@ const createPersonalPlaylist = (genre, string) => {
       for (let i = 0; i < 1; i++) {
         arrayList.push(detail.data[i].title);
         const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`);
+        li.classList.add(`mb-2`, `classGrey`, `select`);
         li.innerText = arrayList[i];
         sidelist.appendChild(li);
 
         const row = document.createElement(`div`);
+
         row.classList.add(
+          `select-border`,
           `row`,
           `mt-3`,
           `g-2`,
@@ -132,14 +146,20 @@ const createPersonalPlaylist = (genre, string) => {
           `p-2`,
           `d-md-none`
         );
-        const col = document.createElement(`div`);
-        const col2 = document.createElement(`div`);
-        const col3 = document.createElement(`div`);
-        col.classList.add(`col-6`);
-        col2.classList.add(`col-6`);
-        col3.classList.add(`col-12`, `d-flex`, `justify-content-between`);
+        // const col = document.createElement(`div`);
+        // const col2 = document.createElement(`div`);
+        // const col3 = document.createElement(`div`);
+        // col.classList.add(`col-6`);
 
-        col.innerHTML = `<div class="row px-3 pb-3">
+        // col2.classList.add(`col-6`);
+        // col3.classList.add(`col-12`, `d-flex`, `justify-content-between`);
+        row.innerHTML = ` 
+        <a href="../albumPage/album.html?album=${
+          detail.data[i].album.id
+        }" class="text-white link-underline link-underline-opacity-0">
+          <div class="row">
+          <div class="col-6">
+          <div class="row px-3 pb-3">
         <div class="col-6 m-0 p-0 ">
           <img
             src="${detail.data[i].album.cover_medium}"
@@ -173,25 +193,30 @@ const createPersonalPlaylist = (genre, string) => {
           />
         </div>
       </div>
-        `;
-        col2.innerHTML = `<h6 class="classGrey">Playlist</h6>
-        <p>${string}</p>`;
-        col3.innerHTML = ` <div>
-        <div class="display-5 ms-1 classGrey">
-          <i class="bi bi-heart d-non display-5 heart " onclick="toggle(event)"></i>
-          <i class="bi bi-three-dots-vertical classGrey"></i>
+          </div>
+          <div class="col-6">
+          <h6 class="classGrey">Playlist</h6>
+          <p>${string}</p>
+          </div>
+          <div class="col-12 d-flex justify-content-between">
+          <div>
+          <div class="display-5 ms-1 classGrey">
+            <i class="bi bi-heart d-non display-5 heart " onclick="toggle(event)"></i>
+            <i class="bi bi-three-dots-vertical classGrey"></i>
+          </div>
         </div>
-      </div>
-      <div class="d-flex align-items-center">
-        <span class="grey me-4">${detail.data.length} brani</span>
-        <div class="display-6">
-          <i class="bi bi-caret-right-fill arrow px-1"></i>
-        </div>
-      </div>`;
+        <div class="d-flex align-items-center">
+          <span class="grey me-4">${detail.data.length} brani</span>
+          <div class="display-6">
+            <i class="bi bi-caret-right-fill arrow px-1"></i>
+          </div>
+          </div>
 
-        row.appendChild(col);
-        row.appendChild(col2);
-        row.appendChild(col3);
+          </div>
+          </div>
+          </a>
+             `;
+
         publicPlaylist.appendChild(row);
       }
     })
@@ -215,10 +240,20 @@ const createCarousel = function (par) {
 
       for (let i = 0; i < 10; i++) {
         const col = document.createElement(`div`);
+        col.addEventListener(`mouseover`, function (e) {
+          col.classList.remove(`resize`);
+          col.classList.add(`scale`);
 
+          console.log(col);
+        });
+        col.addEventListener(`mouseleave`, function (e) {
+          col.classList.add(`resize`);
+
+          console.log(col);
+        });
         col.innerHTML = `
-        <div class="carousel-item">
-                    <div class="row d-flex" >
+        <div class="carousel-item  ">
+                    <div class="row d-flex " >
         <div class="col-3 d-flex align-items-center">
         <img
           src="${detail.data[i].album.cover_medium}"

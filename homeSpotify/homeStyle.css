@@ -12336,10 +12336,6 @@ body {
   color: grey;
 }
 
-.grey {
-  color: grey;
-}
-
 .classGrey {
   color: grey;
 }
@@ -12377,6 +12373,10 @@ body {
 #save-icon {
   color: #149643;
   font-size: 10px;
+}
+
+.lente {
+  color: #3d1fa8;
 }
 
 .boxIcon {
@@ -12518,4 +12518,57 @@ body {
     transform-origin: right;
     opacity: 0;
   }
+}
+@keyframes scale {
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes resize {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.scale {
+  animation: scale;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+
+.resize {
+  animation: resize;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-delay: 0;
+  z-index: 0;
+}
+
+.select-border {
+  transition: all 0.8s;
+}
+.select-border:hover {
+  box-shadow: rgb(107, 107, 107) 0px 0px 8px 2px;
+  transition: all 0.8s;
+}
+
+.select-border2 {
+  transition: 0.8s;
+}
+.select-border2:hover {
+  box-shadow: #1ED760 0px 0px 9px 3px;
+  transition: 0.8s;
+}
+
+.select:hover {
+  background-color: rgba(100, 100, 100, 0.697);
+}
+
+.padding-start {
+  padding-left: 11.5px !important;
 }/*# sourceMappingURL=homeStyle.css.map */
