@@ -88,15 +88,19 @@ const createPersonalSection = (genre) => {
         col.classList.add(`col-6`, `col-sm-4`);
         col.innerHTML = `
        <div class="d-flex align-items-center bg-fourth rounded-1 ">
+         <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="text-white link-underline link-underline-opacity-0">
          <img
            src="${detail.data[i].album.cover_medium}"
            class="rounded-start-1 shadow p-0"
-           width=60
+           width=60px 
            alt="${detail.data[i].album.title}"
          />
-         <div>
-           <h6 class="ms-3 fs-7 fw-bold">${detail.data[i].album.title}</h6>
+         </a>
+         <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="text-white link-underline link-underline-opacity-0">
+         <div class="d-flex align-items-center">
+           <h6 class="ms-2 fs-7 fw-bold text-white link-underline link-underline-opacity-0">${detail.data[i].album.title}</h6>
          </div>
+         </a>
        </div>
      </div>
     `;

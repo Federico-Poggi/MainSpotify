@@ -17,15 +17,10 @@ const searchSongs = () => {
       const myHead = document.getElementById("myHead");
       myHead.innerHTML = ``;
       const myTitle = document.createElement("div");
-      // myTitle.innerHTML = `
-      // <div class="col-12 h-100 py-5">
-      // <div class=" mx-3 z-3 text-light"> ${detail.data[0].artist.name}</div>
-      // </div>
-      // `;
 
       myTitle.innerHTML = `
       <div class="col-12 d-flex">
-        <div class="col-6 pt-2 ps-2 bg-primary rounded">
+        <div id="gray-bg" class="col-6 pt-2 ps-2 rounded bg-dark">
           <div>
             <img src="${detail.data[0].album.cover_medium}" class="card-img-top ps-2 pt-2 pe-2 w-30 rounded-circle" alt="${detail.data[0].album.title}">
           </div>
@@ -47,8 +42,8 @@ const searchSongs = () => {
           <img src="${detail.data[i].album.cover_medium}" class="ps-2 pt-2 pe-2 w-100" alt="${detail.data[i].album.title}">
           </div>
           <div class="col d-flex flex-column">
-            <div class="small">${detail.data[i].album.title}</div>
-            <div class="small">${detail.data[i].artist.name} </div>
+          <div class="small"><a href="../artistPage/artist.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].album.title}</a></div>
+          <div class="small"><a href="../artistPage/artist.html?artist=${detail.data[i].artist.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].artist.name}</a></div>
           </div>
         </div>
       `;
@@ -73,11 +68,11 @@ const searchSongs = () => {
 
         newDiv.innerHTML = `
               
-              <div class="card h-100 p-0  text-white border-0" id="cardColor"   >
+              <div class="card h-100 p-0 text-white border-0" id="cardColor"   >
               <img src="${detail.data[i].album.cover_medium}" class="card-img-top ps-2 pt-2 pe-2 img" alt="${detail.data[i].album.title}">
               <div class="card-body d-flex flex-column justify-content-center text-center">
               <a id="artist" href="../artistPage/artist.html?artist=${detail.data[i].artist.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].artist.name}</a>
-              <a id="album" href="../albumPage/album.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].album.title}</a>
+              <a  href="../albumPage/album.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].album.title}</a>
              
               </div>
               </div>
