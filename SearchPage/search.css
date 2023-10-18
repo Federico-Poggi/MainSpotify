@@ -12282,4 +12282,17 @@ textarea.form-control-lg {
 
 .img {
   border-radius: 15px;
+}
+
+#album {
+  font-size: 5em;
+}
+
+
+.bg-gray {
+  background-color: rgb(99, 99, 99);
+}
+
+.img-albumList {
+  width: 25px;
 }/*# sourceMappingURL=search.css.map */
