@@ -1,4 +1,4 @@
-const checkApi = (genre) => {
+const moreYouLike = (genre) => {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${genre}`)
     .then((res) => {
       if (res.ok) {
@@ -284,8 +284,8 @@ const toggle = function (e) {
 let s1 = "rock";
 let s2 = "classica";
 let s3 = "rap";
-// moreYouLike(s3);
-// moreYouLike(s2);
+moreYouLike(s3);
+moreYouLike(s2);
 createPersonalSection(`gianni morandi`);
 createPersonalPlaylist(`noyz narcos`, `best of Noyz Narcos`);
 createPersonalPlaylist(`metal`, `Metal composition`);
