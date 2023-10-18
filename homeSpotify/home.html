@@ -29,9 +29,18 @@
       <div class="row w-100">
         <!-- inizio sezione di sinistra -->
 
-        <div class="col-lg-3 d-sm-flex flex-column d-none col-2">
+        <div
+          class="col-lg-3 d-lg-flex flex-column bg-secondary d-none col-2 pe-0"
+        >
           <div>
             <ul class="list-group">
+              <li>
+                <a
+                  href="../SearchPage/search.html"
+                  class="btn btn-secondary text-light border-0"
+                  ><i class="bi bi-three-dots fs-4 classGrey"></i
+                ></a>
+              </li>
               <li>
                 <a
                   href="../SearchPage/search.html"
@@ -129,7 +138,7 @@
             </div>
 
             <div
-              class="d-flex justify-content-center mt-3 mx-3 p-4"
+              class="d-flex justify-content-center mt-2 mx-3 p-4"
               id="header"
             >
               <div id="carouselExample" class="carousel slide w-100">
@@ -149,9 +158,11 @@
                       </div>
                       <div class="col">
                         <span>Album</span>
-                        <h1 class="display-4 fw-bold">VIOLA feat.</h1>
-                        <p>ciao ciao</p>
-                        <p>ciao ciao</p>
+                        <h1 class="display-4 fw-bold">
+                          VIOLA &#40;feat. Salmo&#41;
+                        </h1>
+                        <p>fedez, Salmo</p>
+                        <p>esplora il nuovo catalogo</p>
                         <div class="align-items-center d-flex">
                           <button
                             type="button"
@@ -161,7 +172,7 @@
                           </button>
                           <button
                             type="button"
-                            class="btn rounded-5 px-4 py-2 border border-1 border-fourth text-white fw-bold mx-4"
+                            class="btn rounded-5 px-4 py-2 border hover-text-black border-2 border-fourth text-white fw-bold mx-4"
                           >
                             Salva
                           </button>
@@ -191,16 +202,15 @@
           <!-- inizio sezione buonasera -->
 
           <!-- inizio playlist personali -->
-          <div>
-            <div class="fw-bold mt-4 ms-3">
+          <div class="fw-bold mt-4 ms-3">
+            <div
+              class="mt-2 mb-4 d-flex justify-content-between align-items-center position-relative"
+            >
               <div
-                class="mt-2 mb-4 d-flex justify-content-between align-items-center position-relative"
+                class="spinner-border text-primary position-absolute top-50 start-50"
+                id="spinner"
+                role="status"
               >
-                <div
-                  class="spinner-border text-primary position-absolute top-50 start-50"
-                  id="spinner"
-                  role="status"
-                ></div>
                 <span class="sr-only">Loading...</span>
               </div>
               <h2 class="mb-0 fw-bold">Buonasera</h2>
@@ -228,198 +238,7 @@
             <!-- fine playlist personali -->
 
             <!-- inizio playlist pubbliche -->
-            <div
-              class="row mt-3 g-2 bg-third rounded-2 p-2"
-              id="publicPlaylist"
-            >
-              <div class="col-12 d-flex justify-content-between">
-                <div>
-                  <div class="display-4">
-                    <i class="bi bi-heart d-non"></i>
-                    <i class="bi bi-heart-fill d-none text-primary"></i>
-                    <i class="bi bi-three-dots-vertical classGrey"></i>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <span class="grey me-4">brani</span>
-                  <div class="display-3">
-                    <i class="bi bi-caret-right-fill arrow px-1"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- prova per footer -->
-
-            <!-- <div
-              class="row mt-3 g-2 bg-third rounded-2 p-2"
-              id="publicPlaylist"
-            >
-              <div class="col-6">
-                <div class="row">
-                  <div class="col-6">
-                    <img
-                      src="../assets/imgs/main/image-1.jpg"
-                      width="50px"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6">
-                    <img
-                      src="../assets/imgs/main/image-1.jpg"
-                      width="50px"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6">
-                    <img
-                      src="../assets/imgs/main/image-1.jpg"
-                      width="50px"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6">
-                    <img
-                      src="../assets/imgs/main/image-1.jpg"
-                      width="50px"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <h6 class="classGrey">Playlist</h6>
-                <p>Lorem ipsum dolor sit amet consectetur</p>
-              </div>
-              <div class="col-12 d-flex justify-content-between">
-                <div>
-                  <div class="display-4">
-                    <i class="bi bi-heart d-non"></i>
-                    <i class="bi bi-heart-fill d-none text-primary"></i>
-                    <i class="bi bi-three-dots-vertical classGrey"></i>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <span class="grey me-4">brani</span>
-                  <div class="display-3">
-                    <i class="bi bi-caret-right-fill arrow px-1"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="row mt-3 g-2 bg-third rounded-2 p-2"
-              id="publicPlaylist"
-            >
-              <div class="col-6">
-                <div class="row">
-                  <div class="col-6">
-                    <img
-                      src="../assets/imgs/main/image-1.jpg"
-                      width="50px"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6">
-                    <img
-                      src="../assets/imgs/main/image-1.jpg"
-                      width="50px"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6">
-                    <img
-                      src="../assets/imgs/main/image-1.jpg"
-                      width="50px"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6">
-                    <img
-                      src="../assets/imgs/main/image-1.jpg"
-                      width="50px"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <h6 class="classGrey">Playlist</h6>
-                <p>Lorem ipsum dolor sit amet consectetur</p>
-              </div>
-              <div class="col-12 d-flex justify-content-between">
-                <div>
-                  <div class="display-4">
-                    <i class="bi bi-heart d-non"></i>
-                    <i class="bi bi-heart-fill d-none text-primary"></i>
-                    <i class="bi bi-three-dots-vertical classGrey"></i>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <span class="grey me-4">brani</span>
-                  <div class="display-3">
-                    <i class="bi bi-caret-right-fill arrow px-1"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="row mt-3 g-2 bg-third rounded-2 p-2"
-              id="publicPlaylist"
-            >
-              <div class="col-6">
-                <div class="row">
-                  <div class="col-6">
-                    <img
-                      src="../assets/imgs/main/image-1.jpg"
-                      width="50px"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6">
-                    <img
-                      src="../assets/imgs/main/image-1.jpg"
-                      width="50px"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6">
-                    <img
-                      src="../assets/imgs/main/image-1.jpg"
-                      width="50px"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6">
-                    <img
-                      src="../assets/imgs/main/image-1.jpg"
-                      width="50px"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <h6 class="classGrey">Playlist</h6>
-                <p>Lorem ipsum dolor sit amet consectetur</p>
-              </div>
-              <div class="col-12 d-flex justify-content-between">
-                <div>
-                  <div class="display-4">
-                    <i class="bi bi-heart d-non"></i>
-                    <i class="bi bi-heart-fill d-none text-primary"></i>
-                    <i class="bi bi-three-dots-vertical classGrey"></i>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center">
-                  <span class="grey me-4">brani</span>
-                  <div class="display-3">
-                    <i class="bi bi-caret-right-fill arrow px-1"></i>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- fine prova per footer -->
+            <div id="publicPlaylist"></div>
           </div>
           <!-- fine playlist publliche -->
           <!-- fine sezione buonasera -->
