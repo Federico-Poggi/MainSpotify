@@ -1,7 +1,7 @@
 const sidelist = document.getElementById(`ulBox`);
 
 // SEZIONE ALTRO DI CIO CHE TI PIACE
-const moreYouLike = (genre) => {
+const moreYouLike = (genre,par) => {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${genre}`)
     .then((res) => {
       if (res.ok) {
@@ -32,8 +32,8 @@ const moreYouLike = (genre) => {
               <img src="${detail.data[i].album.cover_medium}" class="card-img-top img shadow" alt="${detail.data[i].album.title}">
               </div>
               <div class=" card-body d-flex flex-column justify-content-center text-center">
-              <h6 class="card-title">c</h6>
-              <p class="card-text">${detail.data[i].title}.</p>
+              <h6 class="fw-bold card-title">${detail.data[i].title}</h6>
+              <p class="card-text"></p>
               </div>
               <i class="grey bi bi-spotify" id="spotify-logo"></i>
               </div>
@@ -73,6 +73,8 @@ const createPersonalSection = (genre) => {
       }
     })
     .then((detail) => {
+      const spinner= document.getElementById(`spinner`)
+      spinner.classList.add(`d-none`)
       console.group(detail);
       const arrayList = [];
       for (let i = 0; i < 6; i++) {
@@ -282,13 +284,13 @@ const toggle = function (e) {
 };
 
 let s1 = "rock";
-let s2 = "pop";
+let s2 = "classica";
 let s3 = "rap";
+moreYouLike(s3);
 moreYouLike(s2);
-moreYouLike(s1);
-createPersonalSection(s1);
+createPersonalSection(`gianni morandi`);
 createPersonalPlaylist(`noyz narcos`, `best of Noyz Narcos`);
 createPersonalPlaylist(`metal`, `Metal composition`);
 createPersonalPlaylist(`gianna nannini`, `My playlist of Gianna Nannini`);
-createPersonalPlaylist(`gianna nannini`, `My playlist of Gianna Nannini`);
+
 createCarousel(`trap`);

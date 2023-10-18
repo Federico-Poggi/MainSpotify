@@ -12483,4 +12483,9 @@ body {
 
 .hover-text-black:hover {
   color: #1ED760 !important;
+}
+
+#spinner {
+  width: 50px;
+  height: 50px;
 }/*# sourceMappingURL=homeStyle.css.map */
