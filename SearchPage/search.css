@@ -24804,4 +24804,21 @@ body {
 
 #add-icon {
   color: black;
+}
+
+#myHead {
+  max-height: 250px;
+}
+
+.imgList {
+  width: 50px;
+  height: 50px;
+}
+
+#artistImg {
+  width: 100px;
+}
+
+.gray {
+  color: rgb(206, 206, 206);
 }/*# sourceMappingURL=search.css.map */

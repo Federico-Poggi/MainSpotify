@@ -19,31 +19,40 @@ const searchSongs = () => {
       const myTitle = document.createElement("div");
 
       myTitle.innerHTML = `
-      <div class="col-12 d-flex">
-        <div id="gray-bg" class="col-6 pt-2 ps-2 rounded bg-dark">
-          <div>
-            <img src="${detail.data[0].album.cover_medium}" class="card-img-top ps-2 pt-2 pe-2 w-30 rounded-circle" alt="${detail.data[0].album.title}">
+      <div id="myTitle" class="col-12 d-flex">
+        <div id="artistWrap" class=" col-12 col-lg-5 rounded bg-dark d-flex flex-lg-column p-2">
+          <div id="artistImgWrap" class="d-flex align-items-center p-2">
+            <img id="artistImg" src="${detail.data[0].album.cover_medium}" class="shadow rounded-circle" alt="${detail.data[0].album.title}">
           </div>
-          <div class=" ps-2 pt-3 pb-2 display-6 text-light"> ${detail.data[0].artist.name}
+          <div class="d-flex flex-column justify-content-center px-4 p-lg-2">
+            <div class="fs-2 fw-bold text-light"> 
+              ${detail.data[0].artist.name}
+            </div>
+            <div class="d-flex justify-content-start">
+            <span class=" btn btn-secondary rounded-5 fs-6 py-1 mt-2">Artista</span>
+            </div>
           </div>
-          <span class=" ms-2 btn btn-secondary mb-2 rounded-5 fs-6 py-1">Artista</span>
         </div>
-          <div class="col-5 offset-1 d-flex flex-column justify-content-center" id="listCol">
+          <div class=" d-none d-lg-flex col offset-1 flex-column" id="listCol">
           </div>
       </div>
        `;
       myHead.appendChild(myTitle);
+      const myh4 = document.getElementById("myH4Div");
+      myh4.classList.remove("d-none");
       const myCol = document.getElementById("listCol");
       for (let i = 0; i < 4; i++) {
         const newCol = document.createElement("div");
         newCol.innerHTML = `
         <div class="row">
-          <div class="col-3">
-          <img src="${detail.data[i].album.cover_medium}" class="ps-2 pt-2 pe-2 w-100" alt="${detail.data[i].album.title}">
-          </div>
-          <div class="col d-flex flex-column justify-content-center">
-          <div class="small"><a href="../artistPage/artist.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].album.title}</a></div>
-          <div class="small"><a href="../artistPage/artist.html?artist=${detail.data[i].artist.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].artist.name}</a></div>
+          <div class="col d-flex my-2">
+            <img src="${detail.data[i].album.cover_medium}" class="imgList me-2" alt="${detail.data[i].album.title}">
+            <div class="col d-flex flex-column justify-content-center">
+              <div class="small"><a href="../artistPage/artist.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title fw-bold">${detail.data[i].album.title}</a>
+              </div>
+              <div class="small"><a href="../artistPage/artist.html?artist=${detail.data[i].artist.id}" class="link-underline link-underline-opacity-0 card-title gray">${detail.data[i].artist.name}</a>
+              </div>
+            </div>
           </div>
         </div>
       `;
@@ -58,13 +67,13 @@ const searchSongs = () => {
       const myRow = document.getElementById("myRow");
       myRow.classList.add("d-flex", "flex-row");
       myRow.innerText = ``;
-      const myH4 = document.getElementById("myH4");
-      myH4.classList.add("my-4");
-      myH4.innerHTML = ``;
-      myH4.innerHTML = `Altro di ${detail.data[0].artist.name}`;
+      const myH = document.getElementById("myH4");
+      myH.classList.add("mt-4", "pt-4");
+      myH.innerHTML = ``;
+      myH.innerHTML = `Altro di ${detail.data[0].artist.name}`;
       for (let i = 0; i < 8; i++) {
         const newDiv = document.createElement("div");
-        newDiv.classList.add("col-4", "col-md-3", "col-xl-2");
+        newDiv.classList.add("col-6", "col-sm-4", "col-md-3", "col-xl-2");
 
         newDiv.innerHTML = `
               
