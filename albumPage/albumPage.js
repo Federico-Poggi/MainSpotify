@@ -80,9 +80,9 @@ const albumFetch = () => {
       const mySongsList = document.getElementById("myList");
       for (let i = 0; i < detail.tracks.data.length; i++) {
         const newListDiv = document.createElement("div");
-        newListDiv.classList.add("row", "py-2");
+        newListDiv.classList.add("row", "py-2","select");
         newListDiv.innerHTML = `
-        <div class="col d-flex">
+        <div class="col d-flex ">
         <div class="px-3 d-flex align-items-center">${i + 1}</div>
         <div class="d-flex flex-column">
           <div class="d-flex justify-content-start">${
