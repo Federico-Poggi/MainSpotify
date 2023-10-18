@@ -30,20 +30,85 @@ fetch(
         class = 'list-group-item d-flex align-items-center bg-transparent border-0 text-white px-0'
       >
         <div class='d-flex align-items-center'>
-          <h5></h5>
+          <h5 class="px-3">1-</h5>
 
           <img src="${content.data[i].album.cover_small}" alt="img"/>
         </div>
 
-        <div class='px-2'></div>
+        <div class='px-2'>${content.data[i].title}</div>
 
         <div></div>
 
-        <div class='px-2'>4:35</div>
+        <div class='px-2'>${content.data[i].duration}</div>
+      </li>
+      <li
+        class = 'list-group-item d-flex align-items-center bg-transparent border-0 text-white px-0'
+      >
+        <div class='d-flex align-items-center'>
+          <h5 class="px-3">2-</h5>
+
+          <img src="${content.data[i + 3].album.cover_small}" alt="img"/>
+        </div>
+
+        <div class='px-2'>${content.data[i + 3].title}</div>
+
+        <div></div>
+
+        <div class='px-2'>${content.data[i + 3].duration}</div>
+      </li>
+      <li
+        class = 'list-group-item d-flex align-items-center bg-transparent border-0 text-white px-0'
+      >
+        <div class='d-flex align-items-center'>
+          <h5 class="px-3">3-</h5>
+
+          <img src="${content.data[i + 5].album.cover_small}" alt="img"/>
+        </div>
+
+        <div class='px-2'>${content.data[i + 5].title}</div>
+
+        <div></div>
+
+        <div class='px-2'>${content.data[i + 5].duration}</div>
+      </li>
+      <li
+        class = 'list-group-item d-flex align-items-center bg-transparent border-0 text-white px-0'
+      >
+        <div class='d-flex align-items-center'>
+          <h5 class="px-3">4-</h5>
+
+          <img src="${content.data[i + 7].album.cover_small}" alt="img"/>
+        </div>
+
+        <div class='px-2'>${content.data[i + 7].title}</div>
+
+        <div></div>
+
+        <div class='px-2'>${content.data[i + 7].duration}</div>
+      </li>
+      <li
+        class = 'list-group-item d-flex align-items-center bg-transparent border-0 text-white px-0'
+      >
+        <div class='d-flex align-items-center'>
+          <h5 class="px-3">5-</h5>
+
+          <img src="${content.data[i + 9].album.cover_small}" alt="img"/>
+        </div>
+
+        <div class='px-2'>${content.data[i + 9].title}</div>
+
+        <div></div>
+
+        <div class='px-2'>${content.data[i + 9].duration}</div>
       </li>`);
 
+      const duration = content.data[i].duration;
+      console.log(duration);
       artistSection.appendChild(art);
-      console.log(artistSection);
+      const timeConvert = (duration) => {
+        let minute = duration;
+        let second;
+      };
     }
   })
   .catch((err) => {
