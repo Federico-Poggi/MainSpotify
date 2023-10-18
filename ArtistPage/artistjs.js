@@ -102,13 +102,23 @@ fetch(
         <div class='px-2'>${content.data[i + 9].duration}</div>
       </li>`);
 
+      // artistSection.appendChild(art);
+
       const duration = content.data[i].duration;
-      console.log(duration);
-      artistSection.appendChild(art);
       const timeConvert = (duration) => {
-        let minute = duration;
-        let second;
+        let milliseconds = Math.ceil(duration * 1000);
+        let minuti = Math.floor(milliseconds / 60000);
+
+        let secondi = Math.floor(milliseconds - minuti * 60000) / 1000;
+        if (secondi < 10 && secondi != 0) {
+          return minuti + ":" + secondi * 10;
+        } else if ((secondi = 0)) {
+          return minuti + ":" + secondi * 100;
+        } else {
+          return minuti + ":" + secondi;
+        }
       };
+      console.log(timeConvert(200));
     }
   })
   .catch((err) => {
