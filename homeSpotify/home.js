@@ -85,7 +85,7 @@ const createPersonalSection = (genre) => {
         sidelist.appendChild(li);
 
         const col = document.createElement(`div`);
-        col.classList.add(`col-6`, `col-sm-4`);
+        col.classList.add(`col-6`,`col-xs-12`, `col-sm-4`,`h-100`);
 
         col.innerHTML = `
         <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="text-white link-underline link-underline-opacity-0">
@@ -137,7 +137,7 @@ const createPersonalPlaylist = (genre, string) => {
         const row = document.createElement(`div`);
 
         row.classList.add(
-          `select-border`,
+          `select-border2`,
           `row`,
           `mt-3`,
           `g-2`,
@@ -240,17 +240,7 @@ const createCarousel = function (par) {
 
       for (let i = 0; i < 10; i++) {
         const col = document.createElement(`div`);
-        col.addEventListener(`mouseover`, function (e) {
-          col.classList.remove(`resize`);
-          col.classList.add(`scale`);
-
-          console.log(col);
-        });
-        col.addEventListener(`mouseleave`, function (e) {
-          col.classList.add(`resize`);
-
-          console.log(col);
-        });
+       
         col.innerHTML = `
         <div class="carousel-item  ">
                     <div class="row d-flex " >
@@ -361,7 +351,8 @@ let s2 = "classica";
 let s3 = "rap";
 moreYouLike(s3);
 moreYouLike(s2);
-createPersonalSection(`gianni morandi`);
+createPersonalSection(`punk-pop`);
+createPersonalSection(`pop`);
 createPersonalPlaylist(`noyz narcos`, `best of Noyz Narcos`);
 createPersonalPlaylist(`metal`, `Metal composition`);
 createPersonalPlaylist(`gianna nannini`, `My playlist of Gianna Nannini`);
