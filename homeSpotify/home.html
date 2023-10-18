@@ -14,186 +14,452 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="homeStyle.css" />
   </head>
-  <body>
+  <body class="text-white bg-secondary">
     <!-- inizio container principale -->
-    <div class="conteiner-fluid w-100">
+    <div class="conteiner-fluid w-100 d-flex justify-content-center">
       <div class="row w-100">
         <!-- inizio sezione di sinistra -->
 
-        <div class="col-lg-3 d-sm-block d-none col-3 bg-primary">
+        <div class="col-lg-3 d-sm-flex flex-column d-none col-3">
           <div>
-            <ul>
-              <li>home</li>
-              <li>cerca</li>
-              <li>la tua libreria</li>
+            <!-- prima lista -->
+            <ul class="list-group mb-4">
+              <li><i class="bi bi-three-dots fs-2 ms-2"></i></li>
+
+              <li>
+                <a
+                  href="./home.html"
+                  class="fs-7 btn btn-secondary text-light border-0"
+                  ><i class="bi bi-house-door-fill classGrey pe-2 fs-4"></i
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../SearchPage/search.html"
+                  class="btn btn-secondary text-light border-0"
+                  ><i class="bi bi-search classGrey pe-2 fs-4"></i>Cerca</a
+                >
+              </li>
+              <li>
+                <a href="#" class="btn btn-secondary text-light border-0"
+                  ><i class="bi bi-book classGrey pe-2 fs-4"></i>La tua
+                  libreria</a
+                >
+              </li>
+              <!-- seconda lista -->
             </ul>
           </div>
           <div>
-            <ul>
-              <li>home</li>
-              <li>cerca</li>
-              <li>la tua libreria</li>
+            <ul class="list-group ms-2 mb-3">
+              <li class="d-flex align-items-center">
+                <div
+                  id="div-add"
+                  class="d-flex justify-content-center align-items-center"
+                >
+                  <i id="add-icon" class="bi bi-plus"></i>
+                </div>
+                <a href="#" class="btn btn-secondary text-light border-0"
+                  >Crea Playlist</a
+                >
+              </li>
+              <li class="d-flex align-items-center">
+                <div
+                  id="div-heart"
+                  class="d-flex justify-content-center align-items-center"
+                >
+                  <i id="heart-icon" class="bi bi-heart-fill"></i>
+                </div>
+                <a href="#" class="btn btn-secondary text-light border-0"
+                  >Brani che ti piacciono</a
+                >
+              </li>
+              <li class="d-flex align-items-center">
+                <div
+                  id="div-save"
+                  class="d-flex justify-content-center align-items-center"
+                >
+                  <i id="save-icon" class="bi bi-bookmark-fill"></i>
+                </div>
+                <a href="#" class="btn btn-secondary text-light border-0"
+                  >I tuoi episodi</a
+                >
+              </li>
             </ul>
           </div>
-          <div>
-            <ol>
+          <hr />
+          <!-- div scrollbar -->
+          <div id="box">
+            <ul>
               <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-            </ol>
+            </ul>
           </div>
+          <!-- fine scrollbar -->
         </div>
 
         <!-- fine sezione di sinistra -->
         
         <!-- inizio sezione principale -->
-        <div class="col">
+        <div id="main-section" class="col">
           <!-- inizio testata -->
           <div class="d-flex align-items-center d-none d-md-block">
-            <img src="https://placekitten.com/150" alt="" />
-            <div>
-              <h2>playlist 1</h2>
-              <p>di daidfa</p>
+            <!-- carousel -->
+
+            <div id="carouselExample" class="carousel slide">
+              <!-- frecce -->
+
+              <button
+                class="button-car"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+
+              <button
+                class="button-car"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <!-- frecce -->
+              <!-- card da appendere con js -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="../assets/imgs/main/image-1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/imgs/main/image-2.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
             </div>
+            <!-- card da appendere con js -->
+            <!-- fine carousel -->
           </div>
           <!-- fine testata -->
 
           <!-- inizio sezione buonasera -->
 
           <!-- inizio playlist personali -->
-          <div class="row">
-            <div class="d-flex justify-content-between">
-              <h2>buonasera</h2>
-              <div class="d-sm-none">
+          <div class="mx-3 fw-bold">
+            <div
+              class="mt-2 mb-4 d-flex justify-content-between align-items-center"
+            >
+              <h2 class="mb-0">Buonasera</h2>
+              <div class="d-sm-none fs-1">
                 <i class="bi bi-bell"></i>
-                <i class="bi bi-clock-history"></i>
+                <i class="bi bi-clock-history mx-4"></i>
                 <i class="bi bi-gear"></i>
               </div>
             </div>
             <div class="d-sm-none">
-              <button type="button" class="btn btn-dark d-">Musica</button>
-              <button type="button" class="btn btn-dark">Podcast e Show</button>
+              <button
+                type="button"
+                class="btn btn-dark headerButtons border-0 rounded-2"
+              >
+                Musica
+              </button>
+              <button
+                type="button"
+                class="btn btn-dark headerButtons border-0 rounded-2"
+              >
+                Podcast e Show
+              </button>
             </div>
-            <div class="col-6 col-sm-4">
-              <div class="d-flex align-items-center">
-                <img src="https://placekitten.com/60" alt="" />
-                <div>
-                  <h2>playlist 1</h2>
-                  <p>di daidfa</p>
+            <div class="row mt-4 g-2">
+              <div class="col-6 col-sm-4">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="https://placekitten.com/60"
+                    class="rounded-start-2"
+                    alt=""
+                  />
+                  <div>
+                    <h6 class="ms-3">Early stage emily Syndr..</h6>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-4">
-              <div class="d-flex align-items-center">
-                <img src="https://placekitten.com/60" alt="" />
-                <div>
-                  <h2>playlist 1</h2>
-                  <p>di daidfa</p>
+              <div class="col-6 col-sm-4">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="https://placekitten.com/60"
+                    class="rounded-start-2"
+                    alt=""
+                  />
+                  <div>
+                    <h6 class="ms-3">Be the young</h6>
+                  </div>
                 </div>
               </div>
             </div>
             <!-- fine playlist personali -->
 
-            <!-- inizio playlist publliche -->
-            <div class="row" id="publicPlaylist" class="bg-secondary">
+            <!-- inizio playlist pubbliche -->
+            <div
+              class="row mt-3 g-2 bg-third rounded-2 p-2"
+              id="publicPlaylist"
+            >
               <div class="col-6">
-                <div class="row">
-                  <div class="col-6">img</div>
-                  <div class="col-6">img</div>
-                  <div class="col-6">img</div>
-                  <div class="col-6">img</div>
+                <div class="row px-3 pb-3">
+                  <div class="col-6 m-0 p-0">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      alt=""
+                      class="w-100"
+                    />
+                  </div>
+                  <div class="col-6 m-0 p-0">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      class="w-100"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-6 m-0 p-0">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      class="w-100"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-6 m-0 p-0">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      class="w-100"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
-              <div class="col-6">
-                <h6>Playlist</h6>
+              <div class="col-6 px-3 pt-1">
+                <h6 class="classGrey">Playlist</h6>
                 <p>Lorem ipsum dolor sit amet consectetur</p>
               </div>
               <div class="col-12 d-flex justify-content-between">
                 <div>
-                  <i class="bi bi-heart"></i>
-                  <i class="bi bi-heart-fill d-none"></i>
-                  <i class="bi bi-three-dots-vertical"></i>
+                  <div class="display-4">
+                    <i class="bi bi-heart d-non"></i>
+                    <i class="bi bi-heart-fill d-none text-primary"></i>
+                    <i class="bi bi-three-dots-vertical classGrey"></i>
+                  </div>
                 </div>
-                <div>
-                  <span>brani</span>
-                  <i class="bi bi-play-circle"></i>
+                <div class="d-flex align-items-center">
+                  <span class="grey me-4">brani</span>
+                  <div class="display-3">
+                    <i class="bi bi-caret-right-fill arrow px-1"></i>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- prova per footer -->
+
+            <!-- <div
+              class="row mt-3 g-2 bg-third rounded-2 p-2"
+              id="publicPlaylist"
+            >
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-6">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-6">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-6">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-6">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <h6 class="classGrey">Playlist</h6>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+              <div class="col-12 d-flex justify-content-between">
+                <div>
+                  <div class="display-4">
+                    <i class="bi bi-heart d-non"></i>
+                    <i class="bi bi-heart-fill d-none text-primary"></i>
+                    <i class="bi bi-three-dots-vertical classGrey"></i>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <span class="grey me-4">brani</span>
+                  <div class="display-3">
+                    <i class="bi bi-caret-right-fill arrow px-1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row mt-3 g-2 bg-third rounded-2 p-2"
+              id="publicPlaylist"
+            >
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-6">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-6">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-6">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-6">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <h6 class="classGrey">Playlist</h6>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+              <div class="col-12 d-flex justify-content-between">
+                <div>
+                  <div class="display-4">
+                    <i class="bi bi-heart d-non"></i>
+                    <i class="bi bi-heart-fill d-none text-primary"></i>
+                    <i class="bi bi-three-dots-vertical classGrey"></i>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <span class="grey me-4">brani</span>
+                  <div class="display-3">
+                    <i class="bi bi-caret-right-fill arrow px-1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row mt-3 g-2 bg-third rounded-2 p-2"
+              id="publicPlaylist"
+            >
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-6">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-6">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-6">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-6">
+                    <img
+                      src="../assets/imgs/main/image-1.jpg"
+                      width="50px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <h6 class="classGrey">Playlist</h6>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+              <div class="col-12 d-flex justify-content-between">
+                <div>
+                  <div class="display-4">
+                    <i class="bi bi-heart d-non"></i>
+                    <i class="bi bi-heart-fill d-none text-primary"></i>
+                    <i class="bi bi-three-dots-vertical classGrey"></i>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <span class="grey me-4">brani</span>
+                  <div class="display-3">
+                    <i class="bi bi-caret-right-fill arrow px-1"></i>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- fine prova per footer -->
           </div>
           <!-- fine playlist publliche -->
           <!-- fine sezione buonasera -->
 
           <!-- inizio sezione altro di cio che ti piace -->
-          <div class="row d-none d-sm-block">
+          <div class="row d-none d-sm-flex g-4" id="myRow">
             <h2>altro di cio che ti piace</h2>
-            <div class="col-3">
-              <div class="">
-                <img src="https://placekitten.com/60" alt="" />
-                <div>
-                  <h2>playlist 1</h2>
-                  <p>di daidfa</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="d-flex align-items-center">
-                <img src="https://placekitten.com/60" alt="" />
-                <div>
-                  <h2>playlist 1</h2>
-                  <p>di daidfa</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="d-flex align-items-center">
-                <img src="https://placekitten.com/60" alt="" />
-                <div>
-                  <h2>playlist 1</h2>
-                  <p>di daidfa</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="d-flex align-items-center">
-                <img src="https://placekitten.com/60" alt="" />
-                <div>
-                  <h2>playlist 1</h2>
-                  <p>di daidfa</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="d-flex align-items-center">
-                <img src="https://placekitten.com/60" alt="" />
-                <div>
-                  <h2>playlist 1</h2>
-                  <p>di daidfa</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="d-flex align-items-center">
-                <img src="https://placekitten.com/60" alt="" />
-                <div>
-                  <h2>playlist 6</h2>
-                  <p>di daidfa</p>
-                </div>
-              </div>
-            </div>
           </div>
           <!-- fine sezione altro di cio che ti piace -->
         </div>
@@ -234,44 +500,72 @@
     </div>
     <!-- fine container principale -->
 
-    <footer class="position-absolute bottom-0 w-100 bg-none d-md-none z-3">
-      <div class="d-flex justify-content-center mx-2 bg-secondary">
-        <span>song title</span>
-        <i class="bi bi-pc-display ms-2"></i>
-        <i class="bi bi-heart mx-3"></i>
-        <i class="bi bi-play-circle"></i>
+    <!-- footer mobile -->
+    <footer
+      id="footerMobile"
+      class="position-sticky bottom-0 w-100 bg-none d-md-none z-3"
+    >
+      <div
+        class="d-flex justify-content-center mx-2 bg-third align-items-center py-3 rounded-2"
+        id="player"
+      >
+        <span id="songTitle" class="fw-semibold">song title</span>
+        <div class="fs-2">
+          <i class="bi bi-pc-display ms-2"></i>
+          <i class="bi bi-heart mx-3 d-nonne"></i>
+          <i class="bi bi-heart-fill d-none text-primary"></i>
+          <i class="bi bi-caret-right-fill"></i>
+        </div>
       </div>
-      <div class="d-flex justify-content-around">
-        <i class="bi bi-house"></i>
-        <i class="bi bi-house-door-fill d-none"></i>
-        <i class="bi bi-search"></i>
-        <i class="bi bi-book"></i>
-      </div>
-      <div class="d-flex justify-content-center bg-black">
-        <i class="bi bi-square-fill me-4"></i>
-        <i class="bi bi-circle mx-5"></i>
-        <i class="bi bi-play-fill ms-4"></i>
+      <div class="d-flex justify-content-around mb-2 mt-4">
+        <div class="d-flex flex-column align-items-center">
+          <div class="display-4">
+            <i class="bi bi-house-door-fill classGrey"></i>
+          </div>
+          <span>Home</span>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <div class="display-4">
+            <i class="bi bi-search classGrey"></i>
+          </div>
+          <span>Cerca</span>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <div>
+            <i class="bi bi-book classGrey display-4"></i>
+          </div>
+          <span>La tua libreria</span>
+        </div>
       </div>
     </footer>
-    <footer class="position-absolute bottom-0 w-100 bg-secondary d-none d-md-block z-3">
-      <div class="d-flex justify-content-center mx-2 bg-secondary">
-        <span>song title</span>
-        <i class="bi bi-pc-display ms-2"></i>
-        <i class="bi bi-heart mx-3"></i>
-        <i class="bi bi-play-circle"></i>
-      </div>
-      <div class="d-flex justify-content-around">
-        <i class="bi bi-house"></i>
-        <i class="bi bi-house-door-fill d-none"></i>
-        <i class="bi bi-search"></i>
-        <i class="bi bi-book"></i>
-      </div>
-      <div class="d-flex justify-content-center ">
-        <i class="bi bi-square-fill me-4"></i>
-        <i class="bi bi-circle mx-5"></i>
-        <i class="bi bi-play-fill ms-4"></i>
+    <!-- fine footer mobile -->
+    <!-- footer  desktop -->
+    <footer
+      class="position-sticky bottom-0 w-100 bg-secondary d-none d-md-block z-3"
+    >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-2">
+            <div class="d-flex align-items-center">
+              <img src="https://placekitten.com/60" alt="" />
+              <div>
+                <h6>playlist 6</h6>
+                <p>di daidfa</p>
+              </div>
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-heart-fill d-none"></i>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-shuffle"></i>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
       </div>
     </footer>
+    <!-- fine footer desktop -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
