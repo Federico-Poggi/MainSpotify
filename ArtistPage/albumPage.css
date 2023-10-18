@@ -12044,10 +12044,6 @@ html, body {
   height: 100vh;
 }
 
-.card {
-  width: 10vw;
-}
-
 .imgCard {
   width: 10rem;
 }
@@ -12083,6 +12079,9 @@ nav {
 @media screen and (max-width: 768px) {
   #main {
     width: 100vw;
+  }
+  .card {
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
