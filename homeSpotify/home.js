@@ -32,7 +32,7 @@ const moreYouLike = (genre, par) => {
               <img src="${detail.data[i].album.cover_medium}" class="card-img-top img shadow" alt="${detail.data[i].album.title}">
               </div>
               <div class=" card-body d-flex flex-column justify-content-center text-center">
-              <h6 class="fw-bold card-title">${detail.data[i].title}</h6>
+              <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="fw-bold card-title">${detail.data[i].title}</a>
               <p class="card-text"></p>
               </div>
               <i class="grey bi bi-spotify" id="spotify-logo"></i>

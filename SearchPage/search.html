@@ -29,49 +29,86 @@
       <div class="row w-100">
         <!-- inizio sezione di sinistra -->
 
-        <div class="col-lg-3 d-sm-flex flex-column d-none col-3">
+        <div
+          class="col-lg-3 d-lg-flex flex-column bg-secondary d-none col-2 pe-0"
+        >
           <div>
             <ul class="list-group">
               <li>
                 <a
-                  href="../homeSpotify/home.html"
+                  href="../SearchPage/search.html"
                   class="btn btn-secondary text-light border-0"
+                  ><i class="bi bi-three-dots fs-4 classGrey"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="../SearchPage/search.html"
+                  class="btn btn-secondary text-light border-0"
+                  ><i class="bi bi-house-door-fill classGrey pe-2 fs-6"></i
                   >Home</a
                 >
               </li>
               <li>
                 <a
-                  href="./search.html"
-                  class="btn btn-secondary text-light bg border-0"
-                  >Cerca</a
+                  href="../SearchPage/search.html"
+                  class="btn btn-secondary text-light border-0"
+                  ><i class="bi bi-search classGrey pe-2 fs-6"></i>Cerca</a
                 >
               </li>
               <li>
                 <a href="#" class="btn btn-secondary text-light border-0"
-                  >La tua libreria</a
+                  ><i class="bi bi-book classGrey pe-2 fs-6"></i>La tua
+                  libreria</a
+                >
+              </li>
+              <!-- seconda lista -->
+            </ul>
+          </div>
+          <div>
+            <ul class="list-group ms-2 ps-1 mb-3">
+              <li class="d-flex align-items-center">
+                <div
+                  id="div-add"
+                  class="boxIcon d-flex justify-content-center align-items-center"
+                >
+                  <i id="add-icon" class="bi bi-plus"></i>
+                </div>
+                <a href="#" class="btn btn-secondary text-light border-0"
+                  >Crea Playlist</a
+                >
+              </li>
+              <li class="d-flex align-items-center">
+                <div
+                  id="div-heart"
+                  class="boxIcon d-flex justify-content-center align-items-center"
+                >
+                  <i id="heart-icon" class="bi bi-heart-fill"></i>
+                </div>
+                <a href="#" class="btn btn-secondary text-light border-0"
+                  >Brani che ti piacciono</a
+                >
+              </li>
+
+              <li class="d-flex align-items-center">
+                <div
+                  id="div-save"
+                  class="boxIcon d-flex justify-content-center align-items-center"
+                >
+                  <i id="save-icon" class="bi bi-bookmark-fill"></i>
+                </div>
+                <a href="#" class="btn btn-secondary text-light border-0"
+                  >I tuoi episodi</a
                 >
               </li>
             </ul>
           </div>
-          <div>
-            <ol>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-              <li>najfnafna</li>
-            </ol>
+          <hr class="w-90" />
+          <!-- div scrollbar -->
+          <div id="box">
+            <ul id="ulBox" class="fs-8 fw-bold p-1"></ul>
           </div>
+          <!-- fine scrollbar -->
         </div>
 
         <!-- fine sezione di sinistra -->

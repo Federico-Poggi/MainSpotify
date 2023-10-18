@@ -74,8 +74,9 @@
 }
 
 body {
-  font-family: "Circular", sans-serif;
+  font-family: "Circular", sans-serif !important;
 }
+
 #footerMobile {
   background-color: rgba(12, 12, 12, 0.934);
 }
@@ -126,8 +127,8 @@ body {
 #div-heart {
   background: linear-gradient(100deg, #3d1fa8, rgba(255, 0, 0, 0) 100%),
     linear-gradient(360deg, #b2b2b2, rgba(0, 0, 255, 0) 100%);
-  width: 18px;
-  height: 20px;
+  // width: 30px;
+  // height: 20px;
 }
 #save-icon {
   color: #149643;
@@ -145,8 +146,8 @@ body {
 }
 #div-add {
   background-color: #b2b2b2;
-  width: 18px;
-  height: 20px;
+  // width: 18px;
+  // height: 20px;
 }
 #add-icon {
   color: black;
@@ -155,8 +156,9 @@ body {
   width: auto;
   overflow: auto;
 }
+// scroll bar
 #main-section {
-  background-color: #2d2d2d;
+  background: linear-gradient(#242424 10%, rgb(13, 13, 13) 95%) !important;
   overflow-y: scroll;
   height: 100vh;
   &::-webkit-scrollbar {
@@ -194,11 +196,49 @@ body {
 }
 
 #header {
-  background: linear-gradient(217deg, #2d2d2d, rgba(255, 0, 0, 0) 40.71%),
-    linear-gradient(127deg, black, rgba(0, 255, 0, 0) 80%),
-    linear-gradient(336deg, black, rgba(0, 0, 255, 0) 80%);
+  background: linear-gradient(15deg, rgba(0, 0, 0, 8), rgba(0, 0, 0, 0) 90%),
+    linear-gradient(220deg, rgba(36, 36, 36, 8), rgba(0, 255, 0, 0) 100%),
+    linear-gradient(360deg, rgba(0, 0, 0, 8), rgba(0, 0, 0, 0) 10%);
+}
+.hideButton {
+  background-color: rgba(45, 45, 45, 0.537) !important;
 }
 
 .shadow {
-  box-shadow: #040404 0px 0px 6px 2px !important;
+  box-shadow: #040404 0px 0px 4px 1px !important;
+}
+#spotify-logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 0.9em;
+}
+
+#box {
+  overflow-y: scroll;
+  height: 615px;
+  &::-webkit-scrollbar {
+    width: 10px;
+    visibility: hidden;
+    background-color: #000000;
+    &:hover {
+      visibility: visible;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(101, 101, 101, 0.651);
+    visibility: hidden;
+    border-radius: 40px;
+    width: 50px;
+    &:hover {
+      visibility: visible;
+    }
+  }
+}
+.hover-text-black:hover {
+  color: #1ed760 !important;
+}
+#spinner {
+  width: 50px;
+  height: 50px;
 }
