@@ -60,7 +60,7 @@ const albumFetch = () => {
             <div class="px-3">#</div>
             <div>Titolo</div>
           </div>
-          <div class="col-1 d-flex justify-content-end">Riproduzioni</div>
+          <div class="col-1 d-none d-sm-flex justify-content-end">Riproduzioni</div>
           <div class="col-3 d-flex justify-content-end"><i class="bi bi-clock"></i></div>
         </div>
         <div id="myList" class="gray">
