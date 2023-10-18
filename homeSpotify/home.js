@@ -1,4 +1,7 @@
-const moreYouLike = (genre) => {
+const sidelist = document.getElementById(`ulBox`);
+
+// SEZIONE ALTRO DI CIO CHE TI PIACE
+const moreYouLike = (genre, par) => {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${genre}`)
     .then((res) => {
       if (res.ok) {
@@ -28,10 +31,9 @@ const moreYouLike = (genre) => {
               <div position-relative class=" ps-2 pt-2 pe-2">
               <img src="${detail.data[i].album.cover_medium}" class="card-img-top img shadow" alt="${detail.data[i].album.title}">
               </div>
-              <div class="card-body d-flex flex-column justify-content-center text-center">
-              <a href="../artistPage/artist.html?artist=${detail.data[i].artist.id}" class="fs-5 link-underline link-underline-opacity-0 card-title">${detail.data[i].artist.name}</a>
-              <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].album.title}</a>
-
+              <div class=" card-body d-flex flex-column justify-content-center text-center">
+              <h6 class="fw-bold card-title">${detail.data[i].title}</h6>
+              <p class="card-text"></p>
               </div>
               <i class="grey bi bi-spotify" id="spotify-logo"></i>
               </div>
