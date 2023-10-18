@@ -13,8 +13,9 @@
 
 $new-theme-colors: (
     'primary':    #1ED760,   //personalizza i colori che vuoi
-    "secondary":  #121212,
+    "secondary":  black,
     'third'    :  #2A2A2A,
+    "fourth" :   rgb(81, 81, 81) ,
     "success":    $success,
     "info":       $info,
     "warning":    $warning,
