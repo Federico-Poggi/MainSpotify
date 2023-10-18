@@ -25,11 +25,11 @@ const searchSongs = () => {
             <img src="${detail.data[0].album.cover_medium}" class="card-img-top ps-2 pt-2 pe-2 w-30 rounded-circle" alt="${detail.data[0].album.title}">
           </div>
           <div class=" ps-2 pt-3 pb-2 display-6 text-light"> ${detail.data[0].artist.name}
+          </div>
+          <span class=" ms-2 btn btn-secondary mb-2 rounded-5 fs-6 py-1">Artista</span>
         </div>
-        <span class=" ms-2 btn btn-secondary mb-2 rounded-5 fs-6 py-1">Artista</span>
-        </div>
-        <div class="col-5 offset-1" id="listCol">
-        </div>
+          <div class="col-5 offset-1 d-flex flex-column justify-content-center" id="listCol">
+          </div>
       </div>
        `;
       myHead.appendChild(myTitle);
@@ -41,7 +41,7 @@ const searchSongs = () => {
           <div class="col-3">
           <img src="${detail.data[i].album.cover_medium}" class="ps-2 pt-2 pe-2 w-100" alt="${detail.data[i].album.title}">
           </div>
-          <div class="col d-flex flex-column">
+          <div class="col d-flex flex-column justify-content-center">
           <div class="small"><a href="../artistPage/artist.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].album.title}</a></div>
           <div class="small"><a href="../artistPage/artist.html?artist=${detail.data[i].artist.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].artist.name}</a></div>
           </div>

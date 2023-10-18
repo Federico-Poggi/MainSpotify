@@ -25,7 +25,6 @@ const moreYouLike = (genre, par) => {
 
         const newDiv = document.createElement("div");
         newDiv.classList.add("col-4", "col-lg-3");
-        
 
         newDiv.innerHTML = `<a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="fw-bold text-white link-underline link-underline-opacity-0">
               <div class="card h-100 p-0  text-white border-0 " id="cardColor"   >
@@ -48,18 +47,6 @@ const moreYouLike = (genre, par) => {
     .catch((err) => {
       console.log("Error: ", err);
     });
-};
-
-const showIcon = document.getElementById(`showIcon`);
-const rigthIcon = document.getElementById(`rightCol`);
-const closeTab = function (e) {
-  rightCol.classList.remove(`d-xxl-block`);
-  showIcon.classList.remove(`d-none`);
-};
-
-const riShow = function (e) {
-  rightCol.classList.add(`d-xxl-block`);
-  showIcon.classList.add(`d-none`);
 };
 
 // SEZIONE BUONASERA
@@ -347,3 +334,57 @@ createPersonalPlaylist(`gianna nannini`, `My playlist of Gianna Nannini`);
 createCarousel(`trap`);
 
 friendsActivity(`pop`);
+
+// // entrata sezione destra
+// const secRightIn = document.getElementById("in");
+// const secRightOut = document.getElementById("showIcon");
+// const animationIn = function () {
+//   const selDiv = document.getElementById("rightCol");
+//   selDiv.classList.add("swing-in-right-fwd");
+//   selDiv.classList.remove("swing-out-right-bck");
+// };
+// secRightIn.addEventListener("click", animationIn);
+
+// // uscita sezione destra
+// const animationOut = function () {
+//   const selDiv = document.getElementById("rightCol");
+//   selDiv.classList.add("swing-out-right-bck");
+// };
+// secRightOut.addEventListener("click", animationOut);
+
+// const showIcon = document.getElementById(`showIcon`);
+// const rigthIcon = document.getElementById(`rightCol`);
+// const closeTab = function (e) {
+//   rightCol.classList.remove(`d-xxl-block`);
+//   showIcon.classList.remove(`d-none`);
+// };
+
+// const riShow = function (e) {
+//   rightCol.classList.add(`d-xxl-block`);
+//   showIcon.classList.add(`d-none`);
+// };
+const myCol = document.getElementById("rightCol");
+const btnOut = document.getElementById("btnOut");
+const btnIn = document.getElementById("showIcon");
+console.log(myCol);
+console.log(btnIn);
+console.log(btnOut);
+
+btnOut.addEventListener("click", () => {
+  myCol.classList.add("swing-out-right-bck");
+  myCol.classList.remove("swing-in-right-bck");
+  btnOut.classList.add("d-none");
+  btnIn.classList.remove(`d-none`);
+  const disappear = () => {
+    myCol.classList.remove("d-xxl-block");
+  };
+  setTimeout(disappear, 800);
+});
+
+btnIn.addEventListener("click", () => {
+  myCol.classList.add("d-xxl-block");
+  myCol.classList.remove("swing-out-right-bck");
+  myCol.classList.add("swing-in-right-bck");
+  btnIn.classList.add(`d-none`);
+  btnOut.classList.remove("d-none");
+});
