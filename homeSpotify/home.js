@@ -149,7 +149,7 @@ const createPersonalPlaylist = (genre, string) => {
         const row = document.createElement(`div`);
 
         row.classList.add(
-          `select-border`,
+          `select-border2`,
           `row`,
           `mt-3`,
           `g-2`,
