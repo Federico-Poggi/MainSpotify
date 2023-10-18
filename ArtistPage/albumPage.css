@@ -12083,6 +12083,10 @@ nav {
   .card {
     width: 100%;
   }
+  .scrollmenu {
+    visibility: visible;
+    overflow-x: auto;
+  }
 }
 @media screen and (min-width: 768px) {
   #main {
@@ -12093,6 +12097,9 @@ nav {
   }
   #content {
     display: flex;
+  }
+  .scrollmenu {
+    visibility: hidden;
   }
 }
 ::-webkit-scrollbar {
