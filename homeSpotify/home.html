@@ -33,28 +33,21 @@
           class="col-lg-3 d-lg-flex flex-column bg-secondary d-none col-2 pe-0"
         >
           <div>
-            <ul class="list-group">
-              <!-- <li>
-                <a
-                  href="../SearchPage/search.html"
-                  class="btn btn-secondary text-light border-0"
-                  ><i class="bi bi-three-dots fs-4 classGrey"></i
-                ></a>
-              </li> -->
-              <li>
+            <ul class="list-group list-unstyled">
+              <li class="list-group-item-disabled">
                 <a href="#" class="btn btn-secondary text-light border-0"
                   ><i class="bi bi-house-door-fill classGrey pe-2 fs-6"></i
                   >Home</a
                 >
               </li>
-              <li>
+              <li class="list-group-item-disabled">
                 <a
                   href="../SearchPage/search.html"
                   class="btn btn-secondary text-light border-0"
                   ><i class="bi bi-search classGrey pe-2 fs-6"></i>Cerca</a
                 >
               </li>
-              <li>
+              <li class="list-group-item-disabled">
                 <a href="#" class="btn btn-secondary text-light border-0"
                   ><i class="bi bi-book classGrey pe-2 fs-6"></i>La tua
                   libreria</a
@@ -252,7 +245,10 @@
 
         <!-- inizio sezione di destra -->
 
-        <div class="col-md-2 d-none d-xxl-block bg-secondary mt-2" id="rightCol">
+        <div
+          class="col-md-2 d-none d-xxl-block bg-secondary mt-2"
+          id="rightCol"
+        >
           <div class="d-flex justify-content-between">
             <h6 class="fw-bold">attivita amici</h6>
             <i class="bi bi-x-lg" onclick="closeTab(event)"></i>
@@ -294,6 +290,7 @@
         id="player"
       >
         <span id="songTitle" class="fw-semibold">song title</span>
+
         <div class="fs-2">
           <i class="bi bi-pc-display ms-2"></i>
           <i class="bi bi-heart mx-3 d-nonne"></i>
@@ -301,24 +298,35 @@
           <i class="bi bi-caret-right-fill"></i>
         </div>
       </div>
-      <div class="d-flex justify-content-around mb-2 mt-4">
-        <div class="d-flex flex-column align-items-center classGrey">
-          <div class="fs-3">
-            <i class="bi bi-house-door-fill"></i>
+      <div class="d-flex justify-content-center">
+        <div class="d-flex w-80 justify-content-around around mb-2 mt-">
+          <a href="home.html" class="link-underline link-underline-opacity-0">
+            <div class="d-flex flex-column align-items-center classGrey">
+              <div class="fs-3">
+                <i class="bi bi-house-door-fill"></i>
+              </div>
+              <span>Home</span>
+            </div>
+          </a>
+
+          <a
+            href="../SearchPage/search.html"
+            class="link-underline link-underline-opacity-0 d-flex flex-column align-items-center"
+          >
+            <div class="d-flex flex-column align-items-center classGrey">
+              <div class="fs-3">
+                <i class="bi bi-search"></i>
+              </div>
+
+              <span>Cerca</span>
+            </div>
+          </a>
+          <div class="d-flex flex-column align-items-center classGrey">
+            <div>
+              <i class="bi bi-book fs-3"></i>
+            </div>
+            <span>La tua libreria</span>
           </div>
-          <span>Home</span>
-        </div>
-        <div class="d-flex flex-column align-items-center classGrey">
-          <div class="fs-3">
-            <i class="bi bi-search"></i>
-          </div>
-          <span>Cerca</span>
-        </div>
-        <div class="d-flex flex-column align-items-center classGrey">
-          <div>
-            <i class="bi bi-book fs-3"></i>
-          </div>
-          <span>La tua libreria</span>
         </div>
       </div>
     </footer>
