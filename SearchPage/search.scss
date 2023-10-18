@@ -274,3 +274,36 @@ body {
 .img-albumList {
   width: 25px;
 }
+#heart-icon {
+  color: #b2b2b2;
+
+  font-size: 10px;
+}
+#div-heart {
+  background: linear-gradient(100deg, #3d1fa8, rgba(255, 0, 0, 0) 100%),
+    linear-gradient(360deg, #b2b2b2, rgba(0, 0, 255, 0) 100%);
+  // width: 30px;
+  // height: 20px;
+}
+#save-icon {
+  color: #149643;
+
+  font-size: 10px;
+}
+.boxIcon {
+  width: 20px;
+  height: 20px;
+}
+#div-save {
+  background-color: #004537;
+  // width: 20px;
+  // height: 20px;
+}
+#div-add {
+  background-color: #b2b2b2;
+  // width: 18px;
+  // height: 20px;
+}
+#add-icon {
+  color: black;
+}

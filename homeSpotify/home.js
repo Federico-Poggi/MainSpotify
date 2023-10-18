@@ -24,20 +24,22 @@ const moreYouLike = (genre, par) => {
         sidelist.appendChild(li);
 
         const newDiv = document.createElement("div");
-        newDiv.classList.add("w-20");
+        newDiv.classList.add("col-4", "col-lg-3");
+        
 
-        newDiv.innerHTML = `
+        newDiv.innerHTML = `<a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="fw-bold text-white link-underline link-underline-opacity-0">
               <div class="card h-100 p-0  text-white border-0 " id="cardColor"   >
               <div position-relative class=" ps-2 pt-2 pe-2">
               <img src="${detail.data[i].album.cover_medium}" class="card-img-top img shadow" alt="${detail.data[i].album.title}">
               </div>
               <div class=" card-body d-flex flex-column justify-content-center text-center">
-              <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="fw-bold card-title">${detail.data[i].title}</a>
-              <p class="card-text"></p>
+              
+              <p class="card-text">${detail.data[i].title}</p>
               </div>
               <i class="grey bi bi-spotify" id="spotify-logo"></i>
               </div>
         </div>
+        </a>
      `;
 
         myRow.appendChild(newDiv);
@@ -299,7 +301,6 @@ const friendsActivity = (genre) => {
     })
     .then((detail) => {
       console.log(detail);
-      
 
       for (let i = 0; i < 6; i++) {
         const newDiv = document.createElement("div");
