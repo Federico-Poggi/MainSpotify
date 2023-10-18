@@ -38,7 +38,7 @@ html,body{
 }
 
 main{
-  width: 100vw;
+    width: 100vw;
     height: 100vh;
     overflow-y: scroll;
     background: linear-gradient(180deg, rgba(33,33,33,1) 26%, rgba(18,18,18,1) 92%);
@@ -47,12 +47,16 @@ main{
 nav {
 //    font-size: 11px;;
     width: 100%;
+    z-index: 3;
+    background-color: rgba(65, 65, 65, 0.756);
 }
 
 section{
-  margin-top: 30%;
+  margin-top: 5em;
   background: linear-gradient(180deg, rgba(33,33,33,1) 26%, rgba(18,18,18,1) 92%);
-
+  
+  position: static;
+  top: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -77,6 +81,7 @@ section{
         position: absolute;
         right: 0;
         width: 80%;
+        
     }
 
     #content{

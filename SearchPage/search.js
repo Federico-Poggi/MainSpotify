@@ -2,6 +2,7 @@ const search = document.getElementById("searchBtn");
 const searchSongs = () => {
   const searchWrap = document.getElementById("search");
   const searchValue = searchWrap.value;
+  localStorage.setItem("query", searchValue);
   fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/search?q=${searchValue}`
   )
