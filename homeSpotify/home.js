@@ -51,12 +51,12 @@ const moreYouLike = (genre, par) => {
 const showIcon = document.getElementById(`showIcon`);
 const rigthIcon = document.getElementById(`rightCol`);
 const closeTab = function (e) {
-  rightCol.classList.remove(`d-lg-block`);
+  rightCol.classList.remove(`d-xxl-block`);
   showIcon.classList.remove(`d-none`);
 };
 
 const riShow = function (e) {
-  rightCol.classList.add(`d-lg-block`);
+  rightCol.classList.add(`d-xxl-block`);
   showIcon.classList.add(`d-none`);
 };
 
@@ -287,6 +287,52 @@ const toggle = function (e) {
   e.target.classList.toggle(`text-primary`);
 };
 
+const rightCol = document.getElementById(`rightCol`);
+const friendsActivity = (genre) => {
+  fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${genre}`)
+    .then((res) => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        throw new Error("Errore getting the datas");
+      }
+    })
+    .then((detail) => {
+      console.log(detail);
+      
+
+      for (let i = 0; i < 6; i++) {
+        const newDiv = document.createElement("div");
+
+        newDiv.innerHTML = `
+                <div class="d-flex justify-content-between align-items-center mt-4">
+            <div>
+              <div class="d-flex align-items-start mt-2 ms-2">
+                <img
+                  src="${detail.data[i].album.cover_medium}"
+                  class="rounded-5 me-2"
+                  alt=""
+                  width="40"
+                />
+                <div class="fs-9">
+                  <h6 class="m-0">${detail.data[i].artist.name}</h6>
+                  <p class="m-0">${detail.data[i].album.title}</p>
+                  <p class="m-0">${detail.data[i].title}</p>
+                </div>
+              </div>
+            </div>
+            <span class="mb-4">5h</span>
+          </div>
+     `;
+
+        rightCol.appendChild(newDiv);
+      }
+    })
+    .catch((err) => {
+      console.log("Error: ", err);
+    });
+};
+
 let s1 = "rock";
 let s2 = "classica";
 let s3 = "rap";
@@ -298,3 +344,5 @@ createPersonalPlaylist(`metal`, `Metal composition`);
 createPersonalPlaylist(`gianna nannini`, `My playlist of Gianna Nannini`);
 
 createCarousel(`trap`);
+
+friendsActivity(`pop`);
