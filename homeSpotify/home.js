@@ -85,7 +85,7 @@ const createPersonalSection = (genre) => {
         sidelist.appendChild(li);
 
         const col = document.createElement(`div`);
-        col.classList.add(`col-6`,`col-xs-12`, `col-sm-4`,`h-100`);
+        col.classList.add(`col-6`, `col-xs-12`, `col-sm-4`, `h-100`);
 
         col.innerHTML = `
         <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="text-white link-underline link-underline-opacity-0">
@@ -240,7 +240,7 @@ const createCarousel = function (par) {
 
       for (let i = 0; i < 10; i++) {
         const col = document.createElement(`div`);
-       
+
         col.innerHTML = `
         <div class="carousel-item  ">
                     <div class="row d-flex " >
@@ -415,15 +415,13 @@ btnIn.addEventListener("click", () => {
   btnOut.classList.remove("d-none");
 });
 
-
 const footerHeart2 = document.getElementById(`heart`);
 const footerHeartFill2 = document.getElementById(`heart-fill`);
 // console.log(footerHeart2)
 
-
-footerHeart2.addEventListener(`click`, function(e){
+footerHeart2.addEventListener(`click`, function (e) {
   e.target.classList.toggle("bi-heart-fill");
   e.target.classList.toggle("bi-heart");
   e.target.classList.toggle("text-primary");
-  console.log(e.target)
+  console.log(e.target);
 });
