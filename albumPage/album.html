@@ -30,87 +30,93 @@
         <!-- inizio sezione di sinistra -->
 
         <div
-        class="col-lg-3 d-lg-flex flex-column bg-secondary d-none col-2 pe-0"
-      >
-        <div>
-          <ul class="list-group list-unstyled ">
-            <li class="list-group-item-disabled select ">
-              <a href="#" class="btn grey border-0  fw-bold ">
-                <i class="bi bi-spotify text-primary pe-1 fs-6 scale  me-3"></i
-                >Home</a
-              >
-            </li>
-            <li
-              class="list-group-item-disabled d-flex align-items-center  select"
-            >
-              <a
-                href="../SearchPage/search.html"
-                class="btn grey border-0 d-flex  fw-bold align-items-center "
-              >
-                <div
-                  id="div-heart"
-                  class="boxIcon select-border2 d-flex justify-content-center me-3 align-items-center"
+          class="col-lg-3 d-lg-flex flex-column bg-secondary d-none col-2 pe-0"
+        >
+          <div>
+            <ul class="list-group list-unstyled">
+              <li class="list-group-item-disabled select">
+                <a
+                  href="../homeSpotify/home.html"
+                  class="btn grey border-0 fw-bold"
                 >
-                  <i class="bi bi-search text-white fs-6"></i>
-                </div>
-                Cerca</a
+                  <i class="bi bi-spotify text-primary pe-1 fs-6 scale me-3"></i
+                  >Home</a
+                >
+              </li>
+              <li
+                class="list-group-item-disabled d-flex align-items-center select"
               >
-            </li>
-            <li class="list-group-item-disabled p-s1 select">
-              <a href="#" class="btn grey border-0  fw-bold d-flex align-items-center">
+                <a
+                  href="../SearchPage/search.html"
+                  class="btn grey border-0 d-flex fw-bold align-items-center"
+                >
+                  <div
+                    id="div-heart"
+                    class="boxIcon select-border2 d-flex justify-content-center me-3 align-items-center"
+                  >
+                    <i class="bi bi-search text-white fs-6"></i>
+                  </div>
+                  Cerca</a
+                >
+              </li>
+              <li class="list-group-item-disabled p-s1 select">
+                <a
+                  href="#"
+                  class="btn grey border-0 fw-bold d-flex align-items-center"
+                >
+                  <div
+                    id="div-add"
+                    class="boxIcon select-border2 d-flex me-3 justify-content-center align-items-center"
+                  >
+                    <i class="bi bi-book text-dark fs-7"></i>
+                  </div>
+                  La tua libreria
+                </a>
+              </li>
+              <!-- seconda lista -->
+            </ul>
+          </div>
+          <div>
+            <ul class="list-group mb-3">
+              <li class="d-flex padding-start align-items-center select">
                 <div
                   id="div-add"
-                  class="boxIcon select-border2 d-flex me-3 justify-content-center align-items-center"
+                  class="boxIcon select-border2 d-flex justify-content-center me-1 align-items-center"
                 >
-                  <i class="bi bi-book text-dark fs-7"></i>
+                  <i id="add-icon" class="bi bi-plus"></i>
                 </div>
-                La tua libreria
-              </a>
-            </li>
-            <!-- seconda lista -->
-          </ul>
-        </div>
-        <div>
-          <ul class="list-group mb-3">
-            <li class="d-flex padding-start align-items-center select">
-              <div
-                id="div-add"
-                class="boxIcon select-border2 d-flex justify-content-center me-1 align-items-center"
-              >
-                <i id="add-icon" class="bi bi-plus"></i>
-              </div>
-              <a href="#" class="btn grey  fw-bold border-0">Crea Playlist</a>
-            </li>
-            <li class="d-flex padding-start align-items-center select">
-              <div
-                id="div-heart"
-                class="boxIcon select-border2 d-flex me-1 justify-content-center align-items-center"
-              >
-                <i id="heart-icon" class="bi bi-heart-fill"></i>
-              </div>
-              <a href="#" class="btn grey  fw-bold me-1 border-0"
-                >Brani che ti piacciono</a
-              >
-            </li>
+                <a href="#" class="btn grey fw-bold border-0">Crea Playlist</a>
+              </li>
+              <li class="d-flex padding-start align-items-center select">
+                <div
+                  id="div-heart"
+                  class="boxIcon select-border2 d-flex me-1 justify-content-center align-items-center"
+                >
+                  <i id="heart-icon" class="bi bi-heart-fill"></i>
+                </div>
+                <a href="#" class="btn grey fw-bold me-1 border-0"
+                  >Brani che ti piacciono</a
+                >
+              </li>
 
-            <li class="d-flex padding-start align-items-center select">
-              <div
-                id="div-save"
-                class="boxIcon me-1 select-border2 d-flex justify-content-center align-items-center"
-              >
-                <i id="save-icon" class="bi bi-bookmark-fill"></i>
-              </div>
-              <a href="#" class="btn grey  fw-bold border-0">I tuoi episodi</a>
-            </li>
-          </ul>
+              <li class="d-flex padding-start align-items-center select">
+                <div
+                  id="div-save"
+                  class="boxIcon me-1 select-border2 d-flex justify-content-center align-items-center"
+                >
+                  <i id="save-icon" class="bi bi-bookmark-fill"></i>
+                </div>
+                <a href="#" class="btn grey fw-bold border-0">I tuoi episodi</a>
+              </li>
+            </ul>
+          </div>
+          <hr class="w-90" />
+          <!-- div scrollbar -->
+          <div id="box">
+            <ul id="ulBox" class="fs-8 fw-bold p-1"></ul>
+          </div>
+          <!-- fine scrollbar -->
         </div>
-        <hr class="w-90" />
-        <!-- div scrollbar -->
-        <div id="box">
-          <ul id="ulBox" class="fs-8 fw-bold p-1"></ul>
-        </div>
-        <!-- fine scrollbar -->
-      </div>
 
         <!-- fine sezione di sinistra -->
 
@@ -174,7 +180,10 @@
       </div>
       <div class="d-flex justify-content-center mt-3">
         <div class="d-flex w-80 justify-content-around around mb-2 mt-">
-          <a href="../homeSpotify/home.html" class="link-underline link-underline-opacity-0">
+          <a
+            href="../homeSpotify/home.html"
+            class="link-underline link-underline-opacity-0"
+          >
             <div class="d-flex flex-column align-items-center classGrey">
               <div class="fs-3">
                 <i class="bi bi-house-door-fill"></i>
