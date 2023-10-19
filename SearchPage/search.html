@@ -118,7 +118,7 @@
           <form class="d-flex" role="search">
             <div
               id="searchWrap"
-              class="d-flex bg-dark border-0 border-white rounded-5 my-2 w-75"
+              class="d-flex justify-content-center bg-dark border-0 border-white rounded-5 my-2 w-80 mx-auto"
             >
               <button
                 id="searchBtn"
@@ -128,25 +128,27 @@
                 <i class="bi bi-search text-white"></i></button
               ><input
                 id="search"
-                class="form-control me-2 bg-dark text-white border-0 my-2"
+                class="form-control me-2 bg-dark text-white border border-0 my-2 w-100"
                 type="search"
                 placeholder="Search"
               />
             </div>
           </form>
           <div class="container">
-            <div class="row">
-              <div class="col-6 py-2">
-                <h5>Risultato più rilevante</h5>
+            <div id="myH4Div" class="row d-none">
+              <div
+                class="col-12 col-lg-5 d-flex justify-content-center py-3 d-lg-block fw-bold"
+              >
+                <h5 class="fw-bold fs-4">Risultato più rilevante</h5>
               </div>
-              <div class="col-5 offset-1 py-2">
-                <h5>Album</h5>
+              <div class="col offset-1 d-none d-lg-block py-3">
+                <h5 class="fw-bold fs-4">Album</h5>
               </div>
             </div>
             <div id="myHead" class="row"></div>
           </div>
           <div class="container">
-            <h5 id="myH4"></h5>
+            <h5 id="myH4" class="fw-bold fs-4"></h5>
             <div id="myRow" class="row"></div>
           </div>
         </div>
