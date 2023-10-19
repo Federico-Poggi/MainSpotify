@@ -46,12 +46,12 @@ const searchSongs = () => {
         newCol.classList.add(`select-border`, `bg-fourth`, `mb-2`);
         newCol.innerHTML = `
         <div class="row">
-          <div class="col d-flex my-2">
+          <div class="col d-flex my-2 ms-2 rounded">
             <img src="${detail.data[i].album.cover_medium}" class="imgList me-2" alt="${detail.data[i].album.title}">
             <div class="col d-flex flex-column justify-content-center">
-              <div class="small"><a href="../artistPage/artist.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title fw-bold">${detail.data[i].album.title}</a>
+              <div class="small"><a href="../artistPage/artist.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title fw-bold ">${detail.data[i].album.title}</a>
               </div>
-              <div class="small"><a href="../artistPage/artist.html?artist=${detail.data[i].artist.id}" class="link-underline link-underline-opacity-0 card-title gray">${detail.data[i].artist.name}</a>
+              <div class="small"><a href="../artistPage/artist.html?artist=${detail.data[i].artist.id}" class="link-underline link-underline-opacity-0 card-title gray ">${detail.data[i].artist.name}</a>
               </div>
             </div>
           </div>
@@ -72,20 +72,25 @@ const searchSongs = () => {
       myH.classList.add("mt-4", "pt-4");
       myH.innerHTML = ``;
       myH.innerHTML = `Altro di ${detail.data[0].artist.name}`;
-      for (let i = 0; i < 8; i++) {
+      for (let i = 0; i < 12; i++) {
         const newDiv = document.createElement("div");
-        newDiv.classList.add("col-6", "col-sm-4", "col-md-3", "col-xl-2");
+        newDiv.classList.add(
+          "mb-4",
+          "col-6",
+          "col-sm-4",
+          "col-lg-3",
+          "col-xxl-2"
+        );
 
         newDiv.innerHTML = `
               
-              <div class="card h-100 p-0 text-white border-0 bg-fourth select-border " id="cardColor"   >
+              <div class="card h-100 p-0 text-white border-0 bg-fourth select-border" id="cardColor">
               <div class="w-100  ps-2 pt-2 pe-2">
               <img src="${detail.data[i].album.cover_medium}" class="card-img-top shadow w-100  img" alt="${detail.data[i].album.title}">
               </div>
               <div class="card-body d-flex flex-column justify-content-center text-center">
               <a id="artist" href="../artistPage/artist.html?artist=${detail.data[i].artist.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].artist.name}</a>
               <a  href="../albumPage/album.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title">${detail.data[i].album.title}</a>
-             
               </div>
               </div>
         </div>
