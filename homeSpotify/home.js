@@ -19,8 +19,9 @@ const moreYouLike = (genre, par) => {
       for (let i = 0; i < 10; i++) {
         arrayList.push(detail.data[i].title);
         const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`, `select`);
-        li.innerText = arrayList[i];
+        li.classList.add(`mb-2`, `classGrey`, `select`,`fs-5`);
+
+        li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
         sidelist.appendChild(li);
 
         const newDiv = document.createElement("div");
@@ -80,8 +81,9 @@ const createPersonalSection = (genre) => {
       for (let i = 0; i < 6; i++) {
         arrayList.push(detail.data[i].title);
         const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`, `select`);
-        li.innerText = arrayList[i];
+        li.classList.add(`mb-2`, `classGrey`, `select`,`fs-5`);
+        li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
+        sidelist.appendChild(li);
         sidelist.appendChild(li);
 
         const col = document.createElement(`div`);
@@ -130,8 +132,9 @@ const createPersonalPlaylist = (genre, string) => {
       for (let i = 0; i < 1; i++) {
         arrayList.push(detail.data[i].title);
         const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`, `select`);
-        li.innerText = arrayList[i];
+        li.classList.add(`mb-2`, `classGrey`, `select`,`fs-5`);
+        li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
+        sidelist.appendChild(li);
         sidelist.appendChild(li);
 
         const row = document.createElement(`div`);
@@ -146,13 +149,7 @@ const createPersonalPlaylist = (genre, string) => {
           `p-2`,
           `d-md-none`
         );
-        // const col = document.createElement(`div`);
-        // const col2 = document.createElement(`div`);
-        // const col3 = document.createElement(`div`);
-        // col.classList.add(`col-6`);
-
-        // col2.classList.add(`col-6`);
-        // col3.classList.add(`col-12`, `d-flex`, `justify-content-between`);
+  
         row.innerHTML = ` 
         <a href="../albumPage/album.html?album=${
           detail.data[i].album.id

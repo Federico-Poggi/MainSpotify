@@ -1,3 +1,6 @@
+const addressBarContent = new URLSearchParams(location.search);
+const myArtist = addressBarContent.get(`artist`);
+
 // bisogna salvare in Local Storage il valore della query
 // e poi estrapolarlo e inserirlo come valore nella funzione
 const sectionPopular = document.getElementById("contentpopular");
@@ -15,9 +18,7 @@ console.log(query);
 
 // cosi ho ottenuto un htmlCollection
 
-fetch(
-  `https://striveschool-api.herokuapp.com/api/deezer/search?q=${searchName}`
-)
+fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${myArtist}`)
   .then((res) => {
     if (res.ok) {
       return res.json();

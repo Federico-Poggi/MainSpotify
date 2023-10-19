@@ -75,7 +75,7 @@
 
 body {
   font-family: "Circular", sans-serif !important;
-  // overflow-y:hidden ;
+  // overflow-y: hidden;
 }
 
 #footerMobile {
@@ -402,5 +402,11 @@ body {
    }
    .footer-mobile{
     bottom: 0;
-    position: sticky;
+    position: fixed;
    }
+.marginBottom{
+  margin-bottom: 120px !important;
+}
+.underline{
+text-decoration: none !important}
+  
