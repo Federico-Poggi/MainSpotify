@@ -74,9 +74,8 @@ section{
 header{
   padding-top:10vh ;
   padding-bottom: 10vh;
-  z-index: 3;
+  z-index: 0;
   background-image: url(freddy.png);
-  background-position-y: top;
 }
 
 li{
@@ -91,6 +90,15 @@ li{
   flex-grow: 1;
 }
 
+.duration{
+  margin: 0;
+  color: rgba(128, 128, 128, 0.79);
+}
+
+.rank{
+  color: rgba(128, 128, 128, 0.79);
+}
+
 @media screen and (max-width: 768px) {
   #main{
     width:100vw;
@@ -103,6 +111,25 @@ li{
     visibility: visible;
     overflow-x: auto;
   }
+  #nameArtist{
+    font-size: 50px;
+  }
+
+  #section{
+    width: 100%;
+  }
+  .counter{
+    font-size: 100%;
+  }
+  
+  .rank{
+    display: none;
+  }
+
+  .title{
+    font-size: 80%;
+  }
+ 
 }
 
 @media screen and (min-width: 768px) {
@@ -121,6 +148,10 @@ li{
 
     .scrollmenu{
       visibility: hidden;
+    }
+
+    #section{
+      width: 70%;
     }
 }
 

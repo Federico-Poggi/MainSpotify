@@ -14,10 +14,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
+
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -60,11 +61,33 @@
         </nav>
 
         <section class="overflow-hidden">
-          <header class="px-4">
-            <h1 class="text-light">Freddie Mercury</h1>
+          <header id="header" class="px-4 pb-2">
+            <i
+              class="bi bi-patch-check-fill d-flex fs-5 align-items-center"
+              style="color: #3d91f4"
+            >
+              <p class="text-light fs-7 px-2 m-0">Verified</p></i
+            >
+
+            <h1 id="nameArtist" class="text-light"></h1>
+            <p class="text-light fs-8">
+              <span id="listener" class="text-light px-2"></span>Mothly Listener
+            </p>
           </header>
-          <h2 class="text-light fs-4 px-4">Popular</h2>
-          <ul id="section" class="w-60 list-group px-4"></ul>
+
+          <div class="col-2 d-flex align-items-center px-4 mt-2">
+            <i class="bi bi-play-circle-fill fs-1" style="color: #1ed760"></i>
+            <button
+              class="btn bg-transparent rounded-5 border-1 border-light h-25 text-light mx-3"
+              style="font-size: 80%"
+            >
+              segui
+            </button>
+            <i class="bi bi-three-dots fs-5" style="color: grey"></i>
+          </div>
+
+          <h2 class="text-light fs-4 px-4 mt-5">Popular</h2>
+          <ul id="section" class="list-group px-4"></ul>
           <p class="text-light fs-7 px-5 pt-3 fw-medium">See More</p>
           <h3 class="h3 text-light px-4 pt-3">Popular Release</h3>
 
@@ -72,79 +95,9 @@
             id="contentpopular"
             class="d-none d-md-flex p-3 w-100 px-4 justify-content-around"
           ></div>
-          <div class="d-flex scrollmenu">
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-          </div>
+          <div class="d-flex scrollmenu"></div>
 
           <h3 class="text-light h3 pt-3 px-4">Relatives</h3>
-          <div class="d-none d-md-flex p-3 w-100 px-4 justify-content-around">
-            <div class="card mx-0 bg-transparent border-0 w-10">
-              <img class="card-img" src="https://placekitten.com/110" alt="" />
-
-              <div class="card-body p-0 text-center">
-                <h4 class="h4 text-light fs-7">Nome album</h4>
-                <p class="h6 text-light fs-8">2019 - Album</p>
-              </div>
-            </div>
-            <div class="card mx-0 bg-transparent border-0 w-10">
-              <img class="card-img" src="https://placekitten.com/110" alt="" />
-
-              <div class="card-body p-0 text-center">
-                <h4 class="h4 text-light fs-7">Nome album</h4>
-                <p class="h6 text-light fs-8">2019 - Album</p>
-              </div>
-            </div>
-            <div class="card mx-0 bg-transparent border-0 w-10">
-              <img class="card-img" src="https://placekitten.com/110" alt="" />
-
-              <div class="card-body p-0 text-center">
-                <h4 class="h4 text-light fs-7">Nome album</h4>
-                <p class="h6 text-light fs-8">2019 - Album</p>
-              </div>
-            </div>
-            <div class="card mx-0 bg-transparent border-0 w-10">
-              <img class="card-img" src="https://placekitten.com/110" alt="" />
-
-              <div class="card-body p-0 text-center">
-                <h4 class="h4 text-light fs-7">Nome album</h4>
-                <p class="h6 text-light fs-8">2019 - Album</p>
-              </div>
-            </div>
-            <div class="card mx-0 bg-transparent border-0 w-10">
-              <img class="card-img" src="https://placekitten.com/110" alt="" />
-
-              <div class="card-body p-0 text-center">
-                <h4 class="h4 text-light fs-7">Nome album</h4>
-                <p class="h6 text-light fs-8">2019 - Album</p>
-              </div>
-            </div>
-            <div class="card mx-0 bg-transparent border-0 w-10">
-              <img class="card-img" src="https://placekitten.com/110" alt="" />
-
-              <div class="card-body p-0 text-center">
-                <h4 class="h4 text-light fs-7">Nome album</h4>
-                <p class="h6 text-light fs-8">2019 - Album</p>
-              </div>
-            </div>
-          </div>
-
-          <div id="" class="d-flex scrollmenu">
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-            <img class="px-2" src="https://placekitten.com/100" alt="" />
-          </div>
-
-          <h3 class="text-light h3 pt-1 px-4">Relatives</h3>
           <div class="d-none d-md-flex p-3 w-100 px-4 justify-content-around">
             <div class="card mx-0 bg-transparent border-0 w-10">
               <img class="card-img" src="https://placekitten.com/110" alt="" />
