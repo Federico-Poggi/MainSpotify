@@ -378,7 +378,7 @@ body {
         visibility: visible;
       }
     }
-  }
+  }}
 
   .bg-songBar{
     background-color: #181818;
@@ -389,14 +389,15 @@ body {
       border: 2px solid ;
       
      }
-     .footer-desktop{
-      top: 89%;
-      position: fixed !important;
-     }
-     
-     
-      .footer-mobile{
-        top: 83%;
-        position: fixed !important;
-       }
+    
+    
+    .footer-desktop{
+     top: 89%;
+     position: fixed !important;
+    }
+    
+    
+     .footer-mobile{
+       top: 83%;
+       position: fixed !important;
       }

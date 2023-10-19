@@ -414,3 +414,16 @@ btnIn.addEventListener("click", () => {
   btnIn.classList.add(`d-none`);
   btnOut.classList.remove("d-none");
 });
+
+
+const footerHeart2 = document.getElementById(`heart`);
+const footerHeartFill2 = document.getElementById(`heart-fill`);
+// console.log(footerHeart2)
+
+
+footerHeart2.addEventListener(`click`, function(e){
+  e.target.classList.toggle("bi-heart-fill");
+  e.target.classList.toggle("bi-heart");
+  e.target.classList.toggle("text-primary");
+  console.log(e.target)
+});

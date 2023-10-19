@@ -24571,6 +24571,7 @@ textarea.form-control-lg {
 }
 body {
   font-family: "Circular", sans-serif !important;
+  min-height: 100vh !important;
 }
 
 #footerMobile {
@@ -24870,6 +24871,15 @@ body {
   width: 50px;
 }
 #custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  visibility: visible;
+}
+#custom-scrollbar::-webkit-scrollbar-thumb::-webkit-scrollbar-thumb {
+  background: rgba(146, 146, 146, 0.651);
+  visibility: hidden;
+  border-radius: 40px;
+  width: 50px;
+}
+#custom-scrollbar::-webkit-scrollbar-thumb::-webkit-scrollbar-thumb:hover {
   visibility: visible;
 }
 
