@@ -1,5 +1,7 @@
 // bisogna salvare in Local Storage il valore della query
 // e poi estrapolarlo e inserirlo come valore nella funzione
+const addressBarContent = new URLSearchParams(location.search);
+const myArtist = addressBarContent.get("artist");
 const sectionPopular = document.getElementById("contentpopular");
 const btnBar = document.getElementById("search");
 const query = localStorage.getItem("query");
@@ -8,6 +10,8 @@ const divSmall = document.getElementsByClassName("scrollmenu")[0];
 const artistName = document.getElementById("header");
 const artistTitle = document.getElementById("nameArtist");
 const listener = document.getElementById("listener");
+const relatives = document.getElementById("relatives");
+
 const searchName = query;
 console.log(query);
 
@@ -15,9 +19,7 @@ console.log(query);
 
 // cosi ho ottenuto un htmlCollection
 
-fetch(
-  `https://striveschool-api.herokuapp.com/api/deezer/search?q=${searchName}`
-)
+fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`)
   .then((res) => {
     if (res.ok) {
       return res.json();
@@ -65,8 +67,8 @@ fetch(
           }" alt="img"/>
         </div>
 
-        <p  class=' title m-0 text-light w-20 style="padding-left: 2%">${
-          content.data[i].title_short
+        <p  class= "title m-0 text-light w-20 style="padding-left: 2%">${
+          content.data[i].album.title
         }</p>
 
         <span class='px-2 m-0  w-20 rank'>${content.data[i].rank}</span>
@@ -93,8 +95,7 @@ fetch(
         .then((dataAlbum) => {
           console.log(dataAlbum);
           const sectionDiv = document.createElement("div");
-          // const divSmall = document.createElement("div");
-          // divSmall.className = "d-flex , scrollmenu";
+
           sectionDiv.className =
             "d-none , d-sm-flex , col-12 col-lg-3 , card col-xl-3 , col-xxl-2 , mx-0 bg-transparent , border-0";
 
@@ -113,14 +114,25 @@ fetch(
           imgRel.setAttribute("alt", "img");
           console.log(imgRel);
           divSmall.appendChild(imgRel);
+          // return dataAlbum.genres;
+          fetch(
+            `https://striveschool-api.herokuapp.com/api/deezer/search?q=${dataAlbum.genres.data[0].name}`
+          )
+            .then((res) => {
+              if (res.ok) {
+                return res.json();
+              }
+            })
+            .then((genyes) => {
+              console.log(genyes);
+            });
         })
 
-        .catch((err) => {
-          console.log("error", err);
+        .catch((erro) => {
+          console.log("ciao", erro);
+        })
+        .catch((erros) => {
+          console.log("ciao", erros);
         });
     }
-  })
-
-  .catch((err) => {
-    console.log("error", err);
   });
