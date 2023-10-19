@@ -12556,7 +12556,7 @@ body {
 
 .footer-desktop {
   bottom: 0;
-  position: sticky;
+  position: fixed;
 }
 
 .footer-mobile {
