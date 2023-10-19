@@ -75,6 +75,7 @@
 
 body {
   font-family: "Circular", sans-serif !important;
+  // overflow-y:hidden ;
 }
 
 #footerMobile {
@@ -378,4 +379,26 @@ body {
 }
 .padding-start {
   padding-left: 11.5px !important;
+}
+@media screen and (max-width: 576px) {
+  .smaller {
+    font-size: 0.7em !important;
+  }
+}
+
+.bg-songBar {
+  background-color: #181818;
+  border-color: rgb(56, 56, 56) !important;
+}
+.sound-timer {
+  // height: 20px !important;
+  border: 2px solid;
+}
+.footer-desktop {
+  bottom: 0;
+  position: fixed;
+}
+.footer-mobile {
+  bottom: 0;
+  position: sticky;
 }

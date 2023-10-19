@@ -191,42 +191,54 @@
 
     <!-- footer mobile -->
     <footer
-      id="footerMobile"
-      class="position-sticky bottom-0 w-100 bg-none d-md-none z-3"
+    id="footerMobile"
+    class=" w-100 bg-none d-md-none z-3 footer-mobile"
+  >
+    <div
+      class="d-flex justify-content-between mx-2 pe-4 bg-songBar align-items-center py-2 rounded-2"
+      id="player"
     >
-      <div
-        class="d-flex justify-content-center mx-2 bg-third align-items-center py-3 rounded-2"
-        id="player"
-      >
-        <span id="songTitle" class="fw-semibold">song title</span>
-        <div class="fs-2">
-          <i class="bi bi-pc-display ms-2"></i>
-          <i class="bi bi-heart mx-3 d-nonne"></i>
-          <i class="bi bi-heart-fill d-none text-primary"></i>
-          <i class="bi bi-caret-right-fill"></i>
-        </div>
+      <span id="songTitle" class="fw-semibold ms-4">song title</span>
+
+      <div class="fs-2 ">
+        <i class="bi bi-pc-display ms-2"></i>
+        <i class="bi bi-heart mx-3 d-nonne"></i>
+        <i class="bi bi-heart-fill d-none text-primary"></i>
+        <i class="bi bi-caret-right-fill"></i>
       </div>
-      <div class="d-flex justify-content-around mb-2 mt-4">
-        <div class="d-flex flex-column align-items-center">
-          <div class="display-4">
-            <i class="bi bi-house-door-fill classGrey"></i>
+    </div>
+    <div class="d-flex justify-content-center mt-3">
+        <div class="d-flex w-80 justify-content-around around mb-2 mt-">
+        <a href="home.html" class="link-underline link-underline-opacity-0">
+          <div class="d-flex flex-column align-items-center classGrey">
+            <div class="fs-3">
+              <i class="bi bi-house-door-fill"></i>
+            </div>
+            <span>Home</span>
           </div>
-          <span>Home</span>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-          <div class="display-4">
-            <i class="bi bi-search classGrey"></i>
+        </a>
+
+        <a
+          href="../SearchPage/search.html"
+          class="link-underline link-underline-opacity-0 d-flex flex-column align-items-center"
+        >
+          <div class="d-flex flex-column align-items-center classGrey">
+            <div class="fs-3">
+              <i class="bi bi-search"></i>
+            </div>
+
+            <span>Cerca</span>
           </div>
-          <span>Cerca</span>
-        </div>
-        <div class="d-flex flex-column align-items-center">
+        </a>
+        <div class="d-flex flex-column align-items-center classGrey">
           <div>
-            <i class="bi bi-book classGrey display-4"></i>
+            <i class="bi bi-book fs-3"></i>
           </div>
           <span>La tua libreria</span>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
     <!-- fine footer mobile -->
     <footer
       class="positioy footer-desktop w-100 bg-songBar d-none d-md-block z-3"
@@ -291,30 +303,66 @@
     </footer>
     <!-- footer  desktop -->
     <footer
-      class="position-absolute bottom-0 w-100 bg-secondary d-none d-md-bloc z-3"
-    >
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-2">
-            <div class="d-flex align-items-center">
-              <img src="https://placekitten.com/60" alt="" />
-              <div>
-                <h6>playlist 6</h6>
-                <p>di daidfa</p>
+    class="positioy footer-desktop w-100 bg-songBar d-none d-md-block z-3 border-top border-2"
+  >
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 d-flex align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="https://placekitten.com/60" alt="" />
+            <div
+              class="d-flex align-items-start ms-2 flex-column justify-content-center"
+            >
+              <h6 class="m-0 fs-6 fw-bold">playlist 6</h6>
+              <p class="m-0 fs-8">di daidfa</p>
+            </div>
+            <i class="bi bi-heart ms-5 classGrey" id="heart"></i>
+            <!-- <i class="bi bi-heart-fill d-none ms-5 btn" id="heart-fill"></i> -->
+          </div>
+        </div>
+        <div
+          class="col-8 d-flex align-items-center justify-content-center flex-column"
+        >
+          <div class="d-flex align-items-center flex">
+            <i
+              class="bi bi-shuffle classGrey btn classGrey border-0 fs-4"
+            ></i>
+            <i
+              class="bi bi-skip-backward-fill classGrey btn classGrey border-0 fs-4"
+            ></i>
+            <i
+              class="bi bi-play-circle-fill p-2 mx-1 display-5 btn classGrey border-0 fs-2"
+            ></i>
+            <i
+              class="bi bi-skip-forward-fill btn classGrey border-0 fs-4"
+            ></i>
+            <i class="bi bi-arrow-clockwise btn classGrey border-0 fs-4"></i>
+          </div>
+          <div class="container w-100">
+            <div class="row align-items-center">
+              <div class="col-2 d-flex justify-content-end">
+                <span class="">hh</span>
               </div>
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-heart-fill d-none"></i>
+              <div class="col-8">
+                <hr class="w-100 classGrey sound-timer" />
+              </div>
+              <div class="col-2 d-flex justify-content-start">
+                <span class="">hh</span>
+              </div>
             </div>
           </div>
-          <div class="col-8">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-shuffle"></i>
-            </div>
-          </div>
-          <div class="col-2"></div>
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-end">
+          <i class="fs-4 classGrey bi bi-subscript"></i>
+          <i class="fs-5 ms-2 classGrey bi bi-list"></i>
+          <i class="fs-5 ms-2 classGrey bi bi-pc-display ms-2 ms-2"></i>
+          <i class="fs-5 ms-2 classGrey bi bi-volume-up"></i>
+          <i class="fs-5 ms-2 classGrey bi bi-volume-mute d-none"></i>
+          <hr class="w-30 sound-timer classGrey me-3 ms-2 " />
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
     <!-- fine footer desktop -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

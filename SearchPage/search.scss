@@ -243,6 +243,9 @@ body {
 #spinner {
   width: 50px;
   height: 50px;
+  body {
+    min-height: 100vh !important;
+  }
 }
 
 #footerMobile {
@@ -367,16 +370,33 @@ body {
     &:hover {
       visibility: visible;
     }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(146, 146, 146, 0.651);
+      visibility: hidden;
+      border-radius: 40px;
+      width: 50px;
+      &:hover {
+        visibility: visible;
+      }
+    }
   }
 }
+
 .bg-songBar {
   background-color: #181818;
+  border-color: rgb(56, 56, 56) !important;
 }
 .sound-timer {
   // height: 20px !important;
   border: 2px solid;
 }
 .footer-desktop {
-  bottom: 0;
-  position: sticky;
+  top: 89%;
+  position: fixed !important;
+}
+
+.footer-mobile {
+  top: 83%;
+  position: fixed !important;
 }
