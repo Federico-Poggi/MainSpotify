@@ -12538,4 +12538,13 @@ body {
 
 .padding-start {
   padding-left: 11.5px !important;
+}
+
+@media screen and (max-width: 576px) {
+  .smaller {
+    font-size: 0.7em !important;
+  }
+}
+.bg-songBar {
+  background-color: rgba(61, 61, 61, 0.565);
 }/*# sourceMappingURL=homeStyle.css.map */

@@ -110,7 +110,7 @@ const createPersonalSection = (genre) => {
          />
          
          <div class="d-flex align-items-center">
-         <h6 class="ms-2 fs-7 fw-bold text-white link-underline link-underline-opacity-0">${detail.data[i].album.title}</h6>
+         <h6 class="ms-2 fs-7 fw-bold text-white link-underline link-underline-opacity-0 smaller">${detail.data[i].album.title}</h6>
          </div>
          
          </div>
