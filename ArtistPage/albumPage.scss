@@ -99,7 +99,7 @@ li{
   color: rgba(128, 128, 128, 0.79);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px)  {
   #main{
     width:100vw;
   }
@@ -132,6 +132,8 @@ li{
  
 }
 
+// 769 to 1915
+
 @media screen and (min-width: 768px) {
     #main{
         float: right;
@@ -146,9 +148,9 @@ li{
     }
 
 
-    .scrollmenu{
-      visibility: hidden;
-    }
+    // .scrollmenu{
+    //   visibility: hidden;
+    // }
 
     #section{
       width: 70%;

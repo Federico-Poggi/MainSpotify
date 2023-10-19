@@ -65,7 +65,7 @@ fetch(
           }" alt="img"/>
         </div>
 
-        <p  class=' title m-0 text-light w-20' style="padding-left: 2%">${
+        <p  class=' title m-0 text-light w-20 style="padding-left: 2%">${
           content.data[i].title_short
         }</p>
 
@@ -78,7 +78,7 @@ fetch(
   })
 
   .then((dates) => {
-    for (let j = 0; j < 7; j++) {
+    for (let j = 0; j < 12; j++) {
       fetch(
         `https://striveschool-api.herokuapp.com/api/deezer/album/${dates[j].album.id}`
       )
@@ -96,7 +96,7 @@ fetch(
           // const divSmall = document.createElement("div");
           // divSmall.className = "d-flex , scrollmenu";
           sectionDiv.className =
-            "card , mx-0 bg-transparent , border-0 , w-10 , remove ";
+            "d-none , d-sm-flex , col-12 col-lg-3 , card col-xl-3 , col-xxl-2 , mx-0 bg-transparent , border-0";
 
           sectionDiv.innerHTML = `<img class="card-img" src="${dates[j].album.cover_medium}" alt="" />
     
