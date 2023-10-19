@@ -379,15 +379,14 @@ body {
 }
 .padding-start {
   padding-left: 11.5px !important;
- }
- @media screen and (max-width :576px) {
-  .smaller{
+}
+@media screen and (max-width: 576px) {
+  .smaller {
     font-size: 0.7em !important;
   }
-  
- }
+}
 
- .bg-songBar{
+.bg-songBar {
   background-color: #181818;
   border-color: rgb(56, 56, 56) !important;
    }

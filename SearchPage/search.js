@@ -18,6 +18,7 @@ const searchSongs = () => {
       const myHead = document.getElementById("myHead");
       myHead.innerHTML = ``;
       const myTitle = document.createElement("div");
+      myTitle.classList.add("hover");
 
       myTitle.innerHTML = `
       <div id="myTitle" class="col-12 d-flex">
@@ -73,13 +74,14 @@ const searchSongs = () => {
       myRow.classList.add("d-flex", "flex-row");
       myRow.innerText = ``;
       const myH = document.getElementById("myH4");
-      myH.classList.add("mt-4", "pt-4");
+      myH.classList.add("py-4", "mt-5");
       myH.innerHTML = ``;
       myH.innerHTML = `Altro di ${detail.data[0].artist.name}`;
       for (let i = 0; i < 12; i++) {
         const newDiv = document.createElement("div");
         newDiv.classList.add(
           "mb-4",
+          "hover",
           "col-6",
           "col-sm-4",
           "col-lg-3",
