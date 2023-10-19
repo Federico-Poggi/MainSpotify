@@ -28,7 +28,7 @@ const albumFetch = () => {
         </div>
         <div></div>
       </div>
-      <div class=" d-flex flex-row">
+      <div class=" d-flex flex-row flex-wrap">
         <div class="d-flex align-items-end mb-1 me-3">
           <img id="mainImg" src="${detail.cover_big}" class="card-img " alt="${detail.title}" />
         </div>
@@ -69,7 +69,7 @@ const albumFetch = () => {
         </div>
       </div>
                 </div>`;
-      
+
       myRow.appendChild(newDiv);
       const durationAlbum = document.getElementById("durationAlbum");
       const durationNumberAlbum = parseInt(durationAlbum.innerText);
@@ -80,12 +80,10 @@ const albumFetch = () => {
         durationAlbum.innerText = `${hours}h ${min}m ${sec}s`;
       }
       const mySongsList = document.getElementById("myList");
-      
-     
 
       for (let i = 0; i < detail.tracks.data.length; i++) {
         const newListDiv = document.createElement("div");
-        newListDiv.classList.add("row", "py-2","select");
+        newListDiv.classList.add("row", "py-2", "select");
         newListDiv.innerHTML = `
         <div class="col d-flex ">
         <div class="px-3 d-flex align-items-center">${i + 1}</div>
@@ -103,11 +101,9 @@ const albumFetch = () => {
         detail.tracks.data[i].duration
       }</div>`;
         mySongsList.appendChild(newListDiv);
-        
-      
+
         const convert = () => {
           const duration = document.querySelectorAll(".duration");
-       
 
           for (let y = 0; y < duration.length; y++) {
             const durationNumber = parseInt(duration[y].innerText);
@@ -121,83 +117,71 @@ const albumFetch = () => {
         };
         convert();
       }
-      const play=document.getElementById("playmusic");
-      const pause=document.getElementById("pausemusic");
-      pause.style.visibility="hidden"
-      
-      
-      //CLICK SU UNA CANZONE PER RIPRODURLA
-      const songer=document.getElementsByClassName("prova d-flex justify-content-start")
-      const songer2= Array.from(songer)
-      for(let i=0;i<songer2.length;i++)
-      {
-        songer2[i].addEventListener("click",function()
-        {
-          console.log(songer2[i])
-          play.style.visibility="hidden"
-          pause.style.visibility="visible"
-          let song2= new Audio(detail.tracks.data[i].preview)
-          song2.pause()
-          song2.currentTime=0
-          song2.play()
+      const play = document.getElementById("playmusic");
+      const pause = document.getElementById("pausemusic");
+      pause.style.visibility = "hidden";
 
-          pause.addEventListener("click",function()
-          {
+      //CLICK SU UNA CANZONE PER RIPRODURLA
+      const songer = document.getElementsByClassName(
+        "prova d-flex justify-content-start"
+      );
+      const songer2 = Array.from(songer);
+      for (let i = 0; i < songer2.length; i++) {
+        songer2[i].addEventListener("click", function () {
+          console.log(songer2[i]);
+          play.style.visibility = "hidden";
+          pause.style.visibility = "visible";
+          let song2 = new Audio(detail.tracks.data[i].preview);
+          song2.pause();
+          song2.currentTime = 0;
+          song2.play();
+
+          pause.addEventListener("click", function () {
             song2.pause();
-            play.style.visibility="visible"
-            pause.style.visibility="hidden"
-          })
-        })
+            play.style.visibility = "visible";
+            pause.style.visibility = "hidden";
+          });
+        });
       }
       //FINE CLICK SU UNA CANZONE PER RIPRODURLA
 
       //FUNZIONE RIPRODUZIONE DA BOTTONE
-      
-      
-      play.addEventListener("click",function()
-      {
-        play.style.visibility="hidden"
-        pause.style.visibility="visible"
+
+      play.addEventListener("click", function () {
+        play.style.visibility = "hidden";
+        pause.style.visibility = "visible";
         var seconds = 0;
-        let i=0;
-        function incrementSeconds() 
-        {
-          if(seconds===30)
-          {
-            i++
-            song= new Audio(detail.tracks.data[i].preview)
-            song.play()
-            seconds=0
-            if(i===detail.tracks.data.length)
-            {
-              i=0;
+        let i = 0;
+        function incrementSeconds() {
+          if (seconds === 30) {
+            i++;
+            song = new Audio(detail.tracks.data[i].preview);
+            song.play();
+            seconds = 0;
+            if (i === detail.tracks.data.length) {
+              i = 0;
             }
-          }
-          else
-          {
-            if(isPaused===false)
-            {
+          } else {
+            if (isPaused === false) {
               seconds += 1;
             }
           }
         }
         let cancel = setInterval(incrementSeconds, 1000);
-        let song= new Audio(detail.tracks.data[i].preview)
-        song.play()
-        let isPaused=false
-        
-        pause.addEventListener("click",function()
-        {
+        let song = new Audio(detail.tracks.data[i].preview);
+        song.play();
+        let isPaused = false;
+
+        pause.addEventListener("click", function () {
           song.pause();
-          isPaused= true
-          play.style.visibility="visible"
-          pause.style.visibility="hidden"
-        })
-      })
+          isPaused = true;
+          play.style.visibility = "visible";
+          pause.style.visibility = "hidden";
+        });
+      });
       // FINE FUNZIONE RIPRODUZIONE DA BOTTONE
-      
-  })
-    
+    })
+
     .catch((err) => {
       console.log("Error: ", err);
     });
@@ -209,4 +193,17 @@ const toggle = (e) => {
   e.target.classList.toggle("bi-heart-fill");
   e.target.classList.toggle("bi-heart");
   e.target.classList.toggle("text-primary");
+  console.log(e.target);
 };
+const footerHeart2 = document.getElementById(`heart`);
+const footerHeartFill2 = document.getElementById(`heart-fill`);
+// console.log(footerHeart2)
+
+
+footerHeart2.addEventListener(`click`, function(e){
+  e.target.classList.toggle("bi-heart-fill");
+  e.target.classList.toggle("bi-heart");
+  e.target.classList.toggle("text-primary");
+  console.log(e.target)
+});
+// footerHeartFill2.addEventListener(`click`, toggle(event));

@@ -1,7 +1,9 @@
 @import "./../assets/css/custom-bootstrap/personal";
 
 
-
+body{
+  min-height: 100vh !important;
+}
 
 #footerMobile {
   background-color: rgba(12, 12, 12, 0.842);
@@ -117,3 +119,24 @@
       }
     }
   }
+
+  .bg-songBar{
+    background-color: #181818;
+    border-color: rgb(56, 56, 56) !important;
+     }
+     .sound-timer{
+      // height: 20px !important;
+      border: 2px solid ;
+      
+     }
+     .footer-desktop{
+      top: 89%;
+      position: fixed !important;
+     }
+     
+     
+      .footer-mobile{
+        top: 83%;
+        position: fixed !important;
+       }
+     

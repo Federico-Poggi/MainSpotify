@@ -12248,6 +12248,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  min-height: 100vh !important;
+}
+
 #footerMobile {
   background-color: rgba(12, 12, 12, 0.842);
 }
@@ -12363,4 +12367,23 @@ textarea.form-control-lg {
 }
 #custom-scrollbar::-webkit-scrollbar-thumb:hover {
   visibility: visible;
+}
+
+.bg-songBar {
+  background-color: #181818;
+  border-color: rgb(56, 56, 56) !important;
+}
+
+.sound-timer {
+  border: 2px solid;
+}
+
+.footer-desktop {
+  top: 89%;
+  position: fixed !important;
+}
+
+.footer-mobile {
+  top: 83%;
+  position: fixed !important;
 }/*# sourceMappingURL=search.css.map */

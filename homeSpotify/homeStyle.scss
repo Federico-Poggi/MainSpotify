@@ -305,5 +305,19 @@ body {
  }
 
  .bg-songBar{
-background-color: rgba(61, 61, 61, 0.565);
- }
+  background-color: #181818;
+  border-color: rgb(56, 56, 56) !important;
+   }
+   .sound-timer{
+    // height: 20px !important;
+    border: 2px solid ;
+ 
+   }
+   .footer-desktop{
+    bottom: 0;
+    position: sticky;
+   }
+   .footer-mobile{
+    bottom: 0;
+    position: sticky;
+   }

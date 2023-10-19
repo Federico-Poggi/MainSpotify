@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  min-height: 100vh !important;
+}
+
 #mainCard {
   background: linear-gradient(to bottom, darkgreen, black, black);
 }
@@ -12551,4 +12555,45 @@ body {
 
 .shadow {
   box-shadow: #040404 0px 0px 4px 1px !important;
+}
+
+.bg-songBar {
+  background-color: #181818;
+  border-color: rgb(56, 56, 56) !important;
+}
+
+.sound-timer {
+  border: 2px solid;
+}
+
+.footer-desktop {
+  top: 89%;
+  position: fixed !important;
+}
+
+.footer-mobile {
+  top: 83%;
+  position: fixed !important;
+}
+
+#custom-scrollbar {
+  overflow-y: scroll;
+  height: 100vh;
+}
+#custom-scrollbar::-webkit-scrollbar {
+  width: 15px;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0);
+}
+#custom-scrollbar::-webkit-scrollbar:hover {
+  visibility: visible;
+}
+#custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(146, 146, 146, 0.651);
+  visibility: hidden;
+  border-radius: 40px;
+  width: 50px;
+}
+#custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  visibility: visible;
 }/*# sourceMappingURL=albumPage.css.map */
