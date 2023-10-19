@@ -49,11 +49,13 @@ const albumFetch = () => {
         </div>
       </div>
       <div id="songList">
-        <div class="d-flex py-4 display-flex align-items-center">
-          <i class="bi bi-play-circle-fill p-2 mx-1 display-5 text-primary"></i>
+        <div class="d-flex py-4 display-flex align-items-center ">
+          <i class="bi bi-play-circle-fill p-2 mx-1 display-5 text-primary" id="playmusic"></i>
+          <i class="bi bi-stop-circle-fill p-2 mx-1 display-5 text-primary position-absolute" id="pausemusic"></i>
           <i class="bi bi-heart p-2 mx-1 fs-4 gray" onclick="toggle(event)"></i>
           <i class="bi bi-arrow-down-circle p-2 fs-4 mx-1 gray"></i>
           <i class="bi bi-three-dots p-2 fs-4 mx-1 gray"></i>
+        
         </div>
         <div class="row gray">
           <div class="col d-flex">
@@ -67,7 +69,7 @@ const albumFetch = () => {
         </div>
       </div>
                 </div>`;
-
+      
       myRow.appendChild(newDiv);
       const durationAlbum = document.getElementById("durationAlbum");
       const durationNumberAlbum = parseInt(durationAlbum.innerText);
@@ -78,6 +80,9 @@ const albumFetch = () => {
         durationAlbum.innerText = `${hours}h ${min}m ${sec}s`;
       }
       const mySongsList = document.getElementById("myList");
+      
+     
+
       for (let i = 0; i < detail.tracks.data.length; i++) {
         const newListDiv = document.createElement("div");
         newListDiv.classList.add("row", "py-2","select");
@@ -85,7 +90,7 @@ const albumFetch = () => {
         <div class="col d-flex ">
         <div class="px-3 d-flex align-items-center">${i + 1}</div>
         <div class="d-flex flex-column">
-          <div class="d-flex justify-content-start">${
+          <div class="prova d-flex justify-content-start" id="tracker">${
             detail.tracks.data[i].title
           }</div>
           <div>${detail.tracks.data[i].artist.name}</div>
@@ -98,8 +103,11 @@ const albumFetch = () => {
         detail.tracks.data[i].duration
       }</div>`;
         mySongsList.appendChild(newListDiv);
+        
+      
         const convert = () => {
           const duration = document.querySelectorAll(".duration");
+       
 
           for (let y = 0; y < duration.length; y++) {
             const durationNumber = parseInt(duration[y].innerText);
@@ -113,7 +121,83 @@ const albumFetch = () => {
         };
         convert();
       }
-    })
+      const play=document.getElementById("playmusic");
+      const pause=document.getElementById("pausemusic");
+      pause.style.visibility="hidden"
+      
+      
+      //CLICK SU UNA CANZONE PER RIPRODURLA
+      const songer=document.getElementsByClassName("prova d-flex justify-content-start")
+      const songer2= Array.from(songer)
+      for(let i=0;i<songer2.length;i++)
+      {
+        songer2[i].addEventListener("click",function()
+        {
+          console.log(songer2[i])
+          play.style.visibility="hidden"
+          pause.style.visibility="visible"
+          let song2= new Audio(detail.tracks.data[i].preview)
+          song2.pause()
+          song2.currentTime=0
+          song2.play()
+
+          pause.addEventListener("click",function()
+          {
+            song2.pause();
+            play.style.visibility="visible"
+            pause.style.visibility="hidden"
+          })
+        })
+      }
+      //FINE CLICK SU UNA CANZONE PER RIPRODURLA
+
+      //FUNZIONE RIPRODUZIONE DA BOTTONE
+      
+      
+      play.addEventListener("click",function()
+      {
+        play.style.visibility="hidden"
+        pause.style.visibility="visible"
+        var seconds = 0;
+        let i=0;
+        function incrementSeconds() 
+        {
+          if(seconds===30)
+          {
+            i++
+            song= new Audio(detail.tracks.data[i].preview)
+            song.play()
+            seconds=0
+            if(i===detail.tracks.data.length)
+            {
+              i=0;
+            }
+          }
+          else
+          {
+            if(isPaused===false)
+            {
+              seconds += 1;
+            }
+          }
+        }
+        let cancel = setInterval(incrementSeconds, 1000);
+        let song= new Audio(detail.tracks.data[i].preview)
+        song.play()
+        let isPaused=false
+        
+        pause.addEventListener("click",function()
+        {
+          song.pause();
+          isPaused= true
+          play.style.visibility="visible"
+          pause.style.visibility="hidden"
+        })
+      })
+      // FINE FUNZIONE RIPRODUZIONE DA BOTTONE
+      
+  })
+    
     .catch((err) => {
       console.log("Error: ", err);
     });
