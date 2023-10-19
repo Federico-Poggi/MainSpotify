@@ -15,7 +15,7 @@
 }
 
 .smaller {
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 
 #myH1 {
@@ -12541,7 +12541,7 @@ body {
   transition: 0.8s;
 }
 .select-border2:hover {
-  box-shadow: #1ED760 0px 0px 9px 3px;
+  box-shadow: #1ed760 0px 0px 9px 3px;
   transition: 0.8s;
 }
 
@@ -12551,4 +12551,14 @@ body {
 
 .shadow {
   box-shadow: #040404 0px 0px 4px 1px !important;
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+
+.grayBorder {
+  border-color: rgba(148, 148, 148, 0.7) !important;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
 }/*# sourceMappingURL=albumPage.css.map */

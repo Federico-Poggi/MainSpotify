@@ -24871,4 +24871,17 @@ body {
 }
 #custom-scrollbar::-webkit-scrollbar-thumb:hover {
   visibility: visible;
+}
+
+.bg-songBar {
+  background-color: #181818;
+}
+
+.sound-timer {
+  border: 2px solid;
+}
+
+.footer-desktop {
+  bottom: 0;
+  position: sticky;
 }/*# sourceMappingURL=search.css.map */

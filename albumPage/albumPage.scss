@@ -12,7 +12,7 @@
   margin-right: 5px;
 }
 .smaller {
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 #myH1 {
   font-size: 2.8em;
@@ -271,30 +271,37 @@ body {
   width: 50px;
   height: 50px;
 }
-.padding-start{
+.padding-start {
   padding-left: 11.5px !important;
- }
- .select-border{
-  &:hover{
+}
+.select-border {
+  &:hover {
     box-shadow: rgb(107, 107, 107) 0px 0px 8px 2px;
     transition: all 0.8s;
   }
   transition: all 0.8s;
 }
-.select-border2{
-  &:hover{
-    box-shadow: #1ED760   0px 0px 9px 3px;
-    transition:  0.8s;
+.select-border2 {
+  &:hover {
+    box-shadow: #1ed760 0px 0px 9px 3px;
+    transition: 0.8s;
   }
-  transition:  0.8s;
+  transition: 0.8s;
 }
-.select{
-    &:hover{
-
-      background-color: rgba(100, 100, 100, 0.697);
-    }
+.select {
+  &:hover {
+    background-color: rgba(100, 100, 100, 0.697);
+  }
 }
 
 .shadow {
   box-shadow: #040404 0px 0px 4px 1px !important;
+}
+.hover:hover {
+  cursor: pointer;
+}
+.grayBorder {
+  border-color: rgba(148, 148, 148, 0.7) !important;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
 }

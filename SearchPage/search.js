@@ -17,6 +17,7 @@ const searchSongs = () => {
       const myHead = document.getElementById("myHead");
       myHead.innerHTML = ``;
       const myTitle = document.createElement("div");
+      myTitle.classList.add("hover");
 
       myTitle.innerHTML = `
       <div id="myTitle" class="col-12 d-flex">
@@ -49,7 +50,7 @@ const searchSongs = () => {
           <div class="col d-flex my-2 ms-2 rounded">
             <img src="${detail.data[i].album.cover_medium}" class="imgList me-2" alt="${detail.data[i].album.title}">
             <div class="col d-flex flex-column justify-content-center">
-              <div class="small"><a href="../artistPage/artist.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title fw-bold ">${detail.data[i].album.title}</a>
+              <div class="small"><a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="link-underline link-underline-opacity-0 card-title fw-bold ">${detail.data[i].album.title}</a>
               </div>
               <div class="small"><a href="../artistPage/artist.html?artist=${detail.data[i].artist.id}" class="link-underline link-underline-opacity-0 card-title gray ">${detail.data[i].artist.name}</a>
               </div>
@@ -69,13 +70,14 @@ const searchSongs = () => {
       myRow.classList.add("d-flex", "flex-row");
       myRow.innerText = ``;
       const myH = document.getElementById("myH4");
-      myH.classList.add("mt-4", "pt-4");
+      myH.classList.add("py-4", "mt-5");
       myH.innerHTML = ``;
       myH.innerHTML = `Altro di ${detail.data[0].artist.name}`;
       for (let i = 0; i < 12; i++) {
         const newDiv = document.createElement("div");
         newDiv.classList.add(
           "mb-4",
+          "hover",
           "col-6",
           "col-sm-4",
           "col-lg-3",

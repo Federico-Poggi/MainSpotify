@@ -15,15 +15,16 @@ const albumFetch = () => {
       console.log(detail);
       const myRow = document.getElementById("myRow");
       const newDiv = document.createElement("div");
+
       newDiv.innerHTML = `
       <div id="mainCard" class="cardWrap px-5">
       <div id="head" class="">
         <div id="btn-wrap">
-          <button class="btn p-3">
-            <i class="bi bi-arrow-left-circle p-2 fs-5"></i>
+          <button id="backBtn" class="btn p-1">
+            <i class="bi bi-arrow-left-circle p-2 my-2 fs-3"></i>
           </button>
-          <button class="btn p-3">
-            <i class="bi bi-arrow-right-circle p-2 fs-5"></i>
+          <button id="frwBtn" class="btn p-1 my-2">
+            <i class="bi bi-arrow-right-circle p-2 fs-3"></i>
           </button>
         </div>
         <div></div>
@@ -35,15 +36,15 @@ const albumFetch = () => {
         <div
           class="card-body d-flex flex-column justify-content-end"
         >
-          <div class="my-0 small text-light d-flex">ALBUM</div>
-          <h1 id="myH1" class="card-title pb-3 pt-1">${detail.tracks.data[0].album.title}</h1>
+          <div class="my-0 small text-light d-flex pt-1">ALBUM</div>
+          <h1 id="myH1" class="hover card-title pb-3 pt-1">${detail.tracks.data[0].album.title}</h1>
           <div class="card-text d-flex align-items-center justify-content-start">         
             <img id="smallImg" src="${detail.artist.picture_medium}" alt="/" class=" rounded-circle"  />
             <div class="d-flex">
-            <span class="smaller fw-bold me-1">${detail.artist.name}</span>
-            <span class="smaller d-none d-xl-block me-1"> - ${detail.release_date}</span>
-            <span class="smaller d-none d-xl-block me-1"> - ${detail.tracks.data.length} Brani,</span>
-            <span id="durationAlbum" class="smaller gray d-none d-xl-block"> ${detail.duration}</span>
+            <span class="hover text-light smaller me-1">${detail.artist.name}</span>
+            <span class="smaller hover d-none d-xl-block me-1"> - ${detail.release_date}</span>
+            <span class="smaller hover d-none d-xl-block me-1"> - ${detail.tracks.data.length} Brani,</span>
+            <span id="durationAlbum" class="smaller hover gray d-none d-xl-block"> ${detail.duration}</span>
             </div>
             </div>
         </div>
@@ -55,20 +56,28 @@ const albumFetch = () => {
           <i class="bi bi-arrow-down-circle p-2 fs-4 mx-1 gray"></i>
           <i class="bi bi-three-dots p-2 fs-4 mx-1 gray"></i>
         </div>
-        <div class="row gray">
+        <div class="row gray border-bottom grayBorder">
           <div class="col d-flex">
             <div class="px-3">#</div>
-            <div>Titolo</div>
+            <div>TITOLO</div>
           </div>
-          <div class="col-1 d-none d-sm-flex justify-content-end">Riproduzioni</div>
+          <div class="col-1 d-none d-sm-flex justify-content-end">RIPRODUZIONI</div>
           <div class="col-3 d-flex justify-content-end"><i class="bi bi-clock"></i></div>
         </div>
         <div id="myList" class="gray">
         </div>
       </div>
-                </div>`;
+    </div>`;
 
       myRow.appendChild(newDiv);
+      const back = document.getElementById("backBtn");
+      const forward = document.getElementById("frwBtn");
+      back.addEventListener("click", () => {
+        history.back();
+      });
+      forward.addEventListener("click", () => {
+        history.forward();
+      });
       const durationAlbum = document.getElementById("durationAlbum");
       const durationNumberAlbum = parseInt(durationAlbum.innerText);
       if (durationNumberAlbum > 60) {
@@ -80,7 +89,7 @@ const albumFetch = () => {
       const mySongsList = document.getElementById("myList");
       for (let i = 0; i < detail.tracks.data.length; i++) {
         const newListDiv = document.createElement("div");
-        newListDiv.classList.add("row", "py-2","select");
+        newListDiv.classList.add("row", "py-2", "select", "hover");
         newListDiv.innerHTML = `
         <div class="col d-flex ">
         <div class="px-3 d-flex align-items-center">${i + 1}</div>
