@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>artist page</title>
+    <title>SPotify Clone - Artist Page</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,6 +22,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="albumPage.css" />
+    <link rel="stylesheet" href="artistPage.css" />
   </head>
   <body class="text-white bg-secondary">
     <!-- inizio container principale -->
@@ -30,87 +31,93 @@
         <!-- inizio sezione di sinistra -->
 
         <div
-        class="col-lg-3 d-lg-flex flex-column bg-secondary d-none col-2 pe-0"
-      >
-        <div>
-          <ul class="list-group list-unstyled ">
-            <li class="list-group-item-disabled select ">
-              <a href="#" class="btn grey border-0  fw-bold ">
-                <i class="bi bi-spotify text-primary pe-1 fs-6 scale  me-3"></i
-                >Home</a
-              >
-            </li>
-            <li
-              class="list-group-item-disabled d-flex align-items-center  select"
-            >
-              <a
-                href="../SearchPage/search.html"
-                class="btn grey border-0 d-flex  fw-bold align-items-center "
-              >
-                <div
-                  id="div-heart"
-                  class="boxIcon select-border2 d-flex justify-content-center me-3 align-items-center"
+          class="col-lg-3 d-lg-flex flex-column bg-secondary d-none col-2 pe-0"
+        >
+          <div>
+            <ul class="list-group list-unstyled">
+              <li class="list-group-item-disabled select">
+                <a
+                  href="../homeSpotify/home.html"
+                  class="btn grey border-0 fw-bold"
                 >
-                  <i class="bi bi-search text-white fs-6"></i>
-                </div>
-                Cerca</a
+                  <i class="bi bi-spotify text-primary pe-1 fs-6 scale me-3"></i
+                  >Home</a
+                >
+              </li>
+              <li
+                class="list-group-item-disabled d-flex align-items-center select"
               >
-            </li>
-            <li class="list-group-item-disabled p-s1 select">
-              <a href="#" class="btn grey border-0  fw-bold d-flex align-items-center">
+                <a
+                  href="../SearchPage/search.html"
+                  class="btn grey border-0 d-flex fw-bold align-items-center"
+                >
+                  <div
+                    id="div-heart"
+                    class="boxIcon select-border2 d-flex justify-content-center me-3 align-items-center"
+                  >
+                    <i class="bi bi-search text-white fs-6"></i>
+                  </div>
+                  Cerca</a
+                >
+              </li>
+              <li class="list-group-item-disabled p-s1 select">
+                <a
+                  href="#"
+                  class="btn grey border-0 fw-bold d-flex align-items-center"
+                >
+                  <div
+                    id="div-add"
+                    class="boxIcon select-border2 d-flex me-3 justify-content-center align-items-center"
+                  >
+                    <i class="bi bi-book text-dark fs-7"></i>
+                  </div>
+                  La tua libreria
+                </a>
+              </li>
+              <!-- seconda lista -->
+            </ul>
+          </div>
+          <div>
+            <ul class="list-group mb-3">
+              <li class="d-flex padding-start align-items-center select">
                 <div
                   id="div-add"
-                  class="boxIcon select-border2 d-flex me-3 justify-content-center align-items-center"
+                  class="boxIcon select-border2 d-flex justify-content-center me-1 align-items-center"
                 >
-                  <i class="bi bi-book text-dark fs-7"></i>
+                  <i id="add-icon" class="bi bi-plus"></i>
                 </div>
-                La tua libreria
-              </a>
-            </li>
-            <!-- seconda lista -->
-          </ul>
-        </div>
-        <div>
-          <ul class="list-group mb-3">
-            <li class="d-flex padding-start align-items-center select">
-              <div
-                id="div-add"
-                class="boxIcon select-border2 d-flex justify-content-center me-1 align-items-center"
-              >
-                <i id="add-icon" class="bi bi-plus"></i>
-              </div>
-              <a href="#" class="btn grey  fw-bold border-0">Crea Playlist</a>
-            </li>
-            <li class="d-flex padding-start align-items-center select">
-              <div
-                id="div-heart"
-                class="boxIcon select-border2 d-flex me-1 justify-content-center align-items-center"
-              >
-                <i id="heart-icon" class="bi bi-heart-fill"></i>
-              </div>
-              <a href="#" class="btn grey  fw-bold me-1 border-0"
-                >Brani che ti piacciono</a
-              >
-            </li>
+                <a href="#" class="btn grey fw-bold border-0">Crea Playlist</a>
+              </li>
+              <li class="d-flex padding-start align-items-center select">
+                <div
+                  id="div-heart"
+                  class="boxIcon select-border2 d-flex me-1 justify-content-center align-items-center"
+                >
+                  <i id="heart-icon" class="bi bi-heart-fill"></i>
+                </div>
+                <a href="#" class="btn grey fw-bold me-1 border-0"
+                  >Brani che ti piacciono</a
+                >
+              </li>
 
-            <li class="d-flex padding-start align-items-center select">
-              <div
-                id="div-save"
-                class="boxIcon me-1 select-border2 d-flex justify-content-center align-items-center"
-              >
-                <i id="save-icon" class="bi bi-bookmark-fill"></i>
-              </div>
-              <a href="#" class="btn grey  fw-bold border-0">I tuoi episodi</a>
-            </li>
-          </ul>
+              <li class="d-flex padding-start align-items-center select">
+                <div
+                  id="div-save"
+                  class="boxIcon me-1 select-border2 d-flex justify-content-center align-items-center"
+                >
+                  <i id="save-icon" class="bi bi-bookmark-fill"></i>
+                </div>
+                <a href="#" class="btn grey fw-bold border-0">I tuoi episodi</a>
+              </li>
+            </ul>
+          </div>
+          <hr class="w-90" />
+          <!-- div scrollbar -->
+          <div id="box">
+            <ul id="ulBox" class="fs-8 fw-bold p-1"></ul>
+          </div>
+          <!-- fine scrollbar -->
         </div>
-        <hr class="w-90" />
-        <!-- div scrollbar -->
-        <div id="box">
-          <ul id="ulBox" class="fs-8 fw-bold p-1"></ul>
-        </div>
-        <!-- fine scrollbar -->
-      </div>
 
         <!-- fine sezione di sinistra -->
 
@@ -128,7 +135,7 @@
               </div>
               <div class="text-light fs-1">Login</div>
             </nav> -->
-          
+
             <section class="overflow-hidden mt-0">
               <header id="header" class="px-4 pb-2">
                 <i
@@ -169,95 +176,14 @@
                 class="row g-4 d-none d-lg-flex p-3 w-100 px-4 justify-content-around"
               ></div>
 
-              <div class="d-flex d-md-none scrollmenu"></div>
+              <div class="d-flex d-lg-none scrollmenu"></div>
 
               <h3 class="text-light h3 pt-3 px-4">Relatives</h3>
               <div
-                class="d-none d-md-flex p-3 w-100 px-4 justify-content-around"
-              >
-                <div class="card mx-0 bg-transparent border-0 w-10">
-                  <img
-                    class="card-img"
-                    src="https://placekitten.com/110"
-                    alt=""
-                  />
+                class="d-none d-lg-flex p-3 w-100 px-4 mb-4 justify-content-around"
+              ></div>
 
-                  <div class="card-body p-0 text-center">
-                    <h4 class="h4 text-light fs-7">Nome album</h4>
-                    <p class="h6 text-light fs-8">2019 - Album</p>
-                  </div>
-                </div>
-                <div class="card mx-0 bg-transparent border-0 w-10">
-                  <img
-                    class="card-img"
-                    src="https://placekitten.com/110"
-                    alt=""
-                  />
-
-                  <div class="card-body p-0 text-center">
-                    <h4 class="h4 text-light fs-7">Nome album</h4>
-                    <p class="h6 text-light fs-8">2019 - Album</p>
-                  </div>
-                </div>
-                <div class="card mx-0 bg-transparent border-0 w-10">
-                  <img
-                    class="card-img"
-                    src="https://placekitten.com/110"
-                    alt=""
-                  />
-
-                  <div class="card-body p-0 text-center">
-                    <h4 class="h4 text-light fs-7">Nome album</h4>
-                    <p class="h6 text-light fs-8">2019 - Album</p>
-                  </div>
-                </div>
-                <div class="card mx-0 bg-transparent border-0 w-10">
-                  <img
-                    class="card-img"
-                    src="https://placekitten.com/110"
-                    alt=""
-                  />
-
-                  <div class="card-body p-0 text-center">
-                    <h4 class="h4 text-light fs-7">Nome album</h4>
-                    <p class="h6 text-light fs-8">2019 - Album</p>
-                  </div>
-                </div>
-                <div class="card mx-0 bg-transparent border-0 w-10">
-                  <img
-                    class="card-img"
-                    src="https://placekitten.com/110"
-                    alt=""
-                  />
-
-                  <div class="card-body p-0 text-center">
-                    <h4 class="h4 text-light fs-7">Nome album</h4>
-                    <p class="h6 text-light fs-8">2019 - Album</p>
-                  </div>
-                </div>
-                <div class="card mx-0 bg-transparent border-0 w-10">
-                  <img
-                    class="card-img"
-                    src="https://placekitten.com/110"
-                    alt=""
-                  />
-
-                  <div class="card-body p-0 text-center">
-                    <h4 class="h4 text-light fs-7">Nome album</h4>
-                    <p class="h6 text-light fs-8">2019 - Album</p>
-                  </div>
-                </div>
-              </div>
-
-              <div id="" class="d-flex scrollmenu">
-                <img class="px-2" src="https://placekitten.com/100" alt="" />
-                <img class="px-2" src="https://placekitten.com/100" alt="" />
-                <img class="px-2" src="https://placekitten.com/100" alt="" />
-                <img class="px-2" src="https://placekitten.com/100" alt="" />
-                <img class="px-2" src="https://placekitten.com/100" alt="" />
-                <img class="px-2" src="https://placekitten.com/100" alt="" />
-                <img class="px-2" src="https://placekitten.com/100" alt="" />
-              </div>
+              <div id="relativScroll" class="d-flex scrollmenu"></div>
             </section>
           </main>
         </div>
@@ -265,7 +191,7 @@
         <!-- fine sezione principale -->
 
         <!-- inizio sezione di destra -->
-<!-- 
+        <!-- 
         <div
           class="col-md-2 bg-secondary mt-2 d-none d-xxl-block"
           id="rightCol"
