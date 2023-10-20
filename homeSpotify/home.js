@@ -192,10 +192,15 @@ const createPersonalPlaylist = (genre, string) => {
           />
         </div>
       </div>
+      </a>
           </div>
+          <a href="../albumPage/album.html?album=${
+            detail.data[i].album.id
+          }" class="text-white link-underline link-underline-opacity-0">
           <div class="col-6">
-          <h6 class="classGrey">Playlist</h6>
+          <h6 class="">Playlist</h6>
           <p>${string}</p>
+          </a>
           </div>
           <div class="col-12 d-flex justify-content-between">
           <div>
@@ -213,7 +218,7 @@ const createPersonalPlaylist = (genre, string) => {
 
           </div>
           </div>
-          </a>
+          
              `;
 
         publicPlaylist.appendChild(row);
