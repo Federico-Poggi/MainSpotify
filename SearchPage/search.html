@@ -32,71 +32,74 @@
           class="col-lg-3 d-lg-flex flex-column bg-secondary d-none col-2 pe-0"
         >
           <div>
-            <ul class="list-group">
-              <!-- <li>
-              <a
-                href="../SearchPage/search.html"
-                class="btn btn-secondary text-light border-0"
-                ><i class="bi bi-three-dots fs-4 classGrey"></i
-              ></a>
-            </li> -->
-              <li>
-                <a
-                  href="../homeSpotify/home.html"
-                  class="btn btn-secondary text-light border-0"
-                  ><i class="bi bi-house-door-fill classGrey pe-2 fs-6"></i
+            <ul class="list-group list-unstyled ">
+              <li class="list-group-item-disabled select ">
+                <a href="#" class="btn grey border-0  fw-bold ">
+                  <i class="bi bi-spotify text-primary pe-1 fs-6 scale  me-3"></i
                   >Home</a
                 >
               </li>
-              <li>
-                <a href="#" class="btn btn-secondary text-light border-0"
-                  ><i class="bi bi-search classGrey pe-2 fs-6"></i>Cerca</a
+              <li
+                class="list-group-item-disabled d-flex align-items-center  select"
+              >
+                <a
+                  href="../SearchPage/search.html"
+                  class="btn grey border-0 d-flex  fw-bold align-items-center "
+                >
+                  <div
+                    id="div-heart"
+                    class="boxIcon select-border2 d-flex justify-content-center me-3 align-items-center"
+                  >
+                    <i class="bi bi-search text-white fs-6"></i>
+                  </div>
+                  Cerca</a
                 >
               </li>
-              <li>
-                <a href="#" class="btn btn-secondary text-light border-0"
-                  ><i class="bi bi-book classGrey pe-2 fs-6"></i>La tua
-                  libreria</a
-                >
+              <li class="list-group-item-disabled p-s1 select">
+                <a href="#" class="btn grey border-0  fw-bold d-flex align-items-center">
+                  <div
+                    id="div-add"
+                    class="boxIcon select-border2 d-flex me-3 justify-content-center align-items-center"
+                  >
+                    <i class="bi bi-book text-dark fs-7"></i>
+                  </div>
+                  La tua libreria
+                </a>
               </li>
               <!-- seconda lista -->
             </ul>
           </div>
           <div>
-            <ul class="list-group ms-2 ps-1 mb-3">
-              <li class="d-flex align-items-center">
+            <ul class="list-group mb-3">
+              <li class="d-flex padding-start align-items-center select">
                 <div
                   id="div-add"
-                  class="boxIcon d-flex justify-content-center align-items-center"
+                  class="boxIcon select-border2 d-flex justify-content-center me-1 align-items-center"
                 >
                   <i id="add-icon" class="bi bi-plus"></i>
                 </div>
-                <a href="#" class="btn btn-secondary text-light border-0"
-                  >Crea Playlist</a
-                >
+                <a href="#" class="btn grey  fw-bold border-0">Crea Playlist</a>
               </li>
-              <li class="d-flex align-items-center">
+              <li class="d-flex padding-start align-items-center select">
                 <div
                   id="div-heart"
-                  class="boxIcon d-flex justify-content-center align-items-center"
+                  class="boxIcon select-border2 d-flex me-1 justify-content-center align-items-center"
                 >
                   <i id="heart-icon" class="bi bi-heart-fill"></i>
                 </div>
-                <a href="#" class="btn btn-secondary text-light border-0"
+                <a href="#" class="btn grey  fw-bold me-1 border-0"
                   >Brani che ti piacciono</a
                 >
               </li>
 
-              <li class="d-flex align-items-center">
+              <li class="d-flex padding-start align-items-center select">
                 <div
                   id="div-save"
-                  class="boxIcon d-flex justify-content-center align-items-center"
+                  class="boxIcon me-1 select-border2 d-flex justify-content-center align-items-center"
                 >
                   <i id="save-icon" class="bi bi-bookmark-fill"></i>
                 </div>
-                <a href="#" class="btn btn-secondary text-light border-0"
-                  >I tuoi episodi</a
-                >
+                <a href="#" class="btn grey  fw-bold border-0">I tuoi episodi</a>
               </li>
             </ul>
           </div>
@@ -111,39 +114,41 @@
         <!-- fine sezione di sinistra -->
 
         <!-- inizio sezione principale -->
-        <div class="col">
+        <div class="col" id="custom-scrollbar">
           <form class="d-flex" role="search">
             <div
               id="searchWrap"
-              class="d-flex bg-dark border-0 border-white rounded-5 my-2 w-75"
+              class="d-flex justify-content-center bg-dark border-0 border-white rounded-5 my-2 w-80 mx-auto select-border2"
             >
               <button
                 id="searchBtn"
-                class="btn btn-outline-secondary w-20 border-0"
+                class="btn  w-10 border-0"
                 type="button"
               >
-                <i class="bi bi-search text-white"></i></button
+                <i class="bi bi-search text-white "></i></button
               ><input
                 id="search"
-                class="form-control me-2 bg-dark text-white border-0 my-2"
+                class="form-control me-2 bg-dark text-white border border-0 my-2 w-100 shadow-none fw-bold fs-5"
                 type="search"
                 placeholder="Search"
               />
             </div>
           </form>
           <div class="container">
-            <div class="row">
-              <div class="col-6 py-2">
-                <h5>Risultato più rilevante</h5>
+            <div id="myH4Div" class="row d-none">
+              <div
+                class="col-12 col-lg-5 d-flex justify-content-center py-3 d-lg-block fw-bold"
+              >
+                <h5 class="fw-bold fs-4">Risultato più rilevante</h5>
               </div>
-              <div class="col-5 offset-1 py-2">
-                <h5>Album</h5>
+              <div class="col offset-1 d-none d-lg-block py-3">
+                <h5 class="fw-bold fs-4">Album</h5>
               </div>
             </div>
             <div id="myHead" class="row"></div>
           </div>
           <div class="container">
-            <h5 id="myH4"></h5>
+            <h5 id="myH4" class="fw-bold fs-4"></h5>
             <div id="myRow" class="row"></div>
           </div>
         </div>
@@ -185,15 +190,13 @@
     <!-- fine container principale -->
 
     <!-- footer mobile -->
-    <footer
-      id="footerMobile"
-      class="position-sticky bottom-0 w-100 bg-none d-md-none z-3"
-    >
+    <footer id="footerMobile" class="w-100 bg-none d-md-none z-3 footer-mobile">
       <div
-        class="d-flex justify-content-center mx-2 bg-third align-items-center py-3 rounded-2"
+        class="d-flex justify-content-between mx-2 pe-4 bg-songBar align-items-center py-2 rounded-2"
         id="player"
       >
-        <span id="songTitle" class="fw-semibold">song title</span>
+        <span id="songTitle" class="fw-semibold ms-4">song title</span>
+
         <div class="fs-2">
           <i class="bi bi-pc-display ms-2"></i>
           <i class="bi bi-heart mx-3 d-nonne"></i>
@@ -201,51 +204,162 @@
           <i class="bi bi-caret-right-fill"></i>
         </div>
       </div>
-      <div class="d-flex justify-content-around mb-2 mt-4">
-        <div class="d-flex flex-column align-items-center">
-          <div class="display-4">
-            <i class="bi bi-house-door-fill classGrey"></i>
+      <div class="d-flex justify-content-center mt-3">
+        <div class="d-flex w-80 justify-content-around around mb-2 mt-">
+          <a
+            href="../homeSpotify/home.html"
+            class="link-underline link-underline-opacity-0"
+          >
+            <div class="d-flex flex-column align-items-center classGrey">
+              <div class="fs-3">
+                <i class="bi bi-house-door-fill"></i>
+              </div>
+              <span>Home</span>
+            </div>
+          </a>
+
+          <a
+            href="../SearchPage/search.html"
+            class="link-underline link-underline-opacity-0 d-flex flex-column align-items-center"
+          >
+            <div class="d-flex flex-column align-items-center classGrey">
+              <div class="fs-3">
+                <i class="bi bi-search"></i>
+              </div>
+
+              <span>Cerca</span>
+            </div>
+          </a>
+          <div class="d-flex flex-column align-items-center classGrey">
+            <div>
+              <i class="bi bi-book fs-3"></i>
+            </div>
+            <span>La tua libreria</span>
           </div>
-          <span>Home</span>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-          <div class="display-4">
-            <i class="bi bi-search classGrey"></i>
-          </div>
-          <span>Cerca</span>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-          <div>
-            <i class="bi bi-book classGrey display-4"></i>
-          </div>
-          <span>La tua libreria</span>
         </div>
       </div>
     </footer>
     <!-- fine footer mobile -->
-    <!-- footer  desktop -->
     <footer
-      class="position-absolute bottom-0 w-100 bg-secondary d-none d-md-bloc z-3"
+      class="positioy footer-desktop w-100 bg-songBar d-none d-md-block z-3"
     >
       <div class="container-fluid">
         <div class="row">
-          <div class="col-2">
+          <div class="col-2 d-flex align-items-center">
             <div class="d-flex align-items-center">
               <img src="https://placekitten.com/60" alt="" />
-              <div>
-                <h6>playlist 6</h6>
-                <p>di daidfa</p>
+              <div
+                class="d-flex align-items-start ms-2 flex-column justify-content-center"
+              >
+                <h6 class="m-0 fs-6 fw-bold">playlist 6</h6>
+                <p class="m-0 fs-8">di daidfa</p>
               </div>
-              <i class="bi bi-heart"></i>
-              <i class="bi bi-heart-fill d-none"></i>
+              <i class="bi bi-heart ms-5 classGrey" id="heart"></i>
+              <!-- <i class="bi bi-heart-fill d-none ms-5 btn" id="heart-fill"></i> -->
             </div>
           </div>
-          <div class="col-8">
+          <div
+            class="col-8 d-flex align-items-center justify-content-center flex-column"
+          >
+            <div class="d-flex align-items-center flex">
+              <i
+                class="bi bi-shuffle classGrey btn classGrey border-0 fs-4"
+              ></i>
+              <i
+                class="bi bi-skip-backward-fill classGrey btn classGrey border-0 fs-4"
+              ></i>
+              <i
+                class="bi bi-play-circle-fill p-2 mx-1 display-5 btn classGrey border-0 fs-4"
+              ></i>
+              <i
+                class="bi bi-skip-forward-fill btn classGrey border-0 fs-4"
+              ></i>
+              <i class="bi bi-arrow-clockwise btn classGrey border-0 fs-4"></i>
+            </div>
+            <div class="container w-100">
+              <div class="row align-items-center">
+                <div class="col-2 d-flex justify-content-end">
+                  <span>hh</span>
+                </div>
+                <div class="col-8">
+                  <hr class="w-100 classGrey sound-timer" />
+                </div>
+                <div class="col-2 d-flex justify-content-start">
+                  <span>hh</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2 d-flex align-items-center justify-content-end">
+            <i class="fs-4 classGrey bi bi-subscript"></i>
+            <i class="fs-5 ms-2 classGrey bi bi-list"></i>
+            <i class="fs-5 ms-2 classGrey bi bi-pc-display ms-2 ms-2"></i>
+            <i class="fs-5 ms-2 classGrey bi bi-volume-up"></i>
+            <i class="fs-5 ms-2 classGrey bi bi-volume-mute d-none"></i>
+            <hr class="w-30 ms-2 sound-timer classGrey" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer  desktop -->
+    <footer
+      class="positioy footer-desktop w-100 bg-songBar d-none d-md-block z-3 border-top border-2"
+    >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-2 d-flex align-items-center">
             <div class="d-flex align-items-center">
-              <i class="bi bi-shuffle"></i>
+              <img src="https://placekitten.com/60" alt="" />
+              <div
+                class="d-flex align-items-start ms-2 flex-column justify-content-center"
+              >
+                <h6 class="m-0 fs-6 fw-bold">playlist 6</h6>
+                <p class="m-0 fs-8">di daidfa</p>
+              </div>
+              <i class="bi bi-heart ms-5 classGrey" id="heart"></i>
+              <!-- <i class="bi bi-heart-fill d-none ms-5 btn" id="heart-fill"></i> -->
             </div>
           </div>
-          <div class="col-2"></div>
+          <div
+            class="col-8 d-flex align-items-center justify-content-center flex-column"
+          >
+            <div class="d-flex align-items-center flex">
+              <i
+                class="bi bi-shuffle classGrey btn classGrey border-0 fs-4"
+              ></i>
+              <i
+                class="bi bi-skip-backward-fill classGrey btn classGrey border-0 fs-4"
+              ></i>
+              <i
+                class="bi bi-play-circle-fill p-2 mx-1 display-5 btn classGrey border-0 fs-2"
+              ></i>
+              <i
+                class="bi bi-skip-forward-fill btn classGrey border-0 fs-4"
+              ></i>
+              <i class="bi bi-arrow-clockwise btn classGrey border-0 fs-4"></i>
+            </div>
+            <div class="container w-100">
+              <div class="row align-items-center">
+                <div class="col-2 d-flex justify-content-end">
+                  <span class="">hh</span>
+                </div>
+                <div class="col-8">
+                  <hr class="w-100 classGrey sound-timer" />
+                </div>
+                <div class="col-2 d-flex justify-content-start">
+                  <span class="">hh</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2 d-flex align-items-center justify-content-end">
+            <i class="fs-4 classGrey bi bi-subscript"></i>
+            <i class="fs-5 ms-2 classGrey bi bi-list"></i>
+            <i class="fs-5 ms-2 classGrey bi bi-pc-display ms-2 ms-2"></i>
+            <i class="fs-5 ms-2 classGrey bi bi-volume-up"></i>
+            <i class="fs-5 ms-2 classGrey bi bi-volume-mute d-none"></i>
+            <hr class="w-30 sound-timer classGrey me-3 ms-2" />
+          </div>
         </div>
       </div>
     </footer>

@@ -1,5 +1,251 @@
 @import "./../assets/css/custom-bootstrap/personal";
 
+@import "./../assets/css/custom-bootstrap/personal";
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-Black.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-BlackItalic.otf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-BoldiItalic.otf");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-Light.otf");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-LightItalic.otf");
+  font-weight: lighter;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-Black.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-BlackItalic.otf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-BoldItalic.otf");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-Light.otf");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../assets/fonts/CircularStd-LightItalic.otf");
+  font-weight: lighter;
+  font-style: italic;
+}
+
+body {
+  font-family: "Circular", sans-serif !important;
+  min-height: 100vh !important;
+}
+
+#footerMobile {
+  background-color: rgba(12, 12, 12, 0.934);
+}
+.headerButtons {
+  background-color: rgb(19, 19, 19);
+}
+.grey {
+  color: grey;
+}
+.grey {
+  color: grey;
+}
+.classGrey {
+  color: grey;
+  &:hover {
+    color: white;
+  }
+}
+
+.arrow {
+  border-radius: 100% !important;
+  background-color: #121212;
+}
+#player {
+  box-shadow: grey 0px -1px 2px 0px;
+}
+// #cardSize{
+//   height: 95%;
+// }
+
+#cardColor {
+  background-color: #50505015;
+  box-shadow: #59595be6 0px 0px 1px 0px;
+}
+.img {
+  border-radius: 5px;
+}
+
+#add-icon {
+  color: #b2b2b2;
+}
+
+#heart-icon {
+  color: #b2b2b2;
+
+  font-size: 10px;
+}
+#div-heart {
+  background: linear-gradient(100deg, #3d1fa8, rgba(255, 0, 0, 0) 100%),
+    linear-gradient(360deg, #b2b2b2, rgba(0, 0, 255, 0) 100%);
+  // width: 30px;
+  // height: 20px;
+}
+#save-icon {
+  color: #149643;
+
+  font-size: 10px;
+}
+.boxIcon {
+  width: 20px;
+  height: 20px;
+}
+#div-save {
+  background-color: #004537;
+  // width: 20px;
+  // height: 20px;
+}
+#div-add {
+  background-color: #b2b2b2;
+  // width: 18px;
+  // height: 20px;
+}
+#add-icon {
+  color: black;
+}
+#box {
+  width: auto;
+  overflow: auto;
+}
+// scroll bar
+#main-section {
+  background: linear-gradient(#242424 10%, rgb(13, 13, 13) 95%) !important;
+  overflow-y: scroll;
+  height: 100vh;
+  &::-webkit-scrollbar {
+    width: 15px;
+    visibility: hidden;
+    //  background: linear-gradient(#242424 10% , rgb(13, 13, 13) 95%) !important;
+    background: rgba($color: #000000, $alpha: 0);
+    &:hover {
+      visibility: visible;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(146, 146, 146, 0.651);
+    visibility: hidden;
+    border-radius: 40px;
+    width: 50px;
+    &:hover {
+      visibility: visible;
+    }
+  }
+}
+
+///scroll bar
+
+.button-car {
+  background-color: black;
+  border: 0;
+  border-radius: 100%;
+}
+#showIcon {
+  right: 20px !important;
+  position: absolute;
+  top: 0;
+}
+
+#header {
+  background: linear-gradient(15deg, rgba(0, 0, 0, 8), rgba(0, 0, 0, 0) 90%),
+    linear-gradient(220deg, rgba(36, 36, 36, 8), rgba(0, 255, 0, 0) 100%),
+    linear-gradient(360deg, rgba(0, 0, 0, 8), rgba(0, 0, 0, 0) 10%);
+}
+.hideButton {
+  background-color: rgba(45, 45, 45, 0.537) !important;
+}
+
+.shadow {
+  box-shadow: #040404 0px 0px 4px 1px !important;
+}
+#spotify-logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 0.9em;
+}
+
+#box {
+  overflow-y: scroll;
+  height: 615px;
+  &::-webkit-scrollbar {
+    width: 10px;
+    visibility: hidden;
+    background-color: #000000;
+    &:hover {
+      visibility: visible;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(101, 101, 101, 0.651);
+    visibility: hidden;
+    border-radius: 40px;
+    width: 50px;
+    &:hover {
+      visibility: visible;
+    }
+  }
+}
+.hover-text-black:hover {
+  color: #1ed760 !important;
+}
+#spinner {
+  width: 50px;
+  height: 50px;
+}
+
 #footerMobile {
   background-color: rgba(12, 12, 12, 0.842);
 }
@@ -62,3 +308,130 @@
 #add-icon {
   color: black;
 }
+#myHead {
+  max-height: 250px;
+}
+.imgList {
+  width: 50px;
+  height: 50px;
+}
+#artistImg {
+  width: 100px;
+}
+.gray {
+  color: rgb(206, 206, 206);
+}
+.padding-start {
+  padding-left: 11.5px !important;
+}
+.select-border {
+  &:hover {
+    box-shadow: rgb(107, 107, 107) 0px 0px 8px 2px;
+    transition: all 0.8s;
+  }
+  transition: all 0.8s;
+}
+.select-border2 {
+  &:hover {
+    box-shadow: #1ed760 0px 0px 9px 3px;
+    transition: 0.8s;
+  }
+  transition: 0.8s;
+}
+.select {
+  &:hover {
+    background-color: rgba(100, 100, 100, 0.697);
+  }
+}
+.shadow {
+  box-shadow: #040404 0px 0px 4px 1px !important;
+}
+
+#custom-scrollbar {
+  overflow-y: scroll;
+  height: 100vh;
+  &::-webkit-scrollbar {
+    width: 15px;
+    visibility: hidden;
+    //  background: linear-gradient(#242424 10% , rgb(13, 13, 13) 95%) !important;
+    background: rgba($color: #000000, $alpha: 0);
+    &:hover {
+      visibility: visible;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(146, 146, 146, 0.651);
+    visibility: hidden;
+    border-radius: 40px;
+    width: 50px;
+    &:hover {
+      visibility: visible;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: rgba(146, 146, 146, 0.651);
+      visibility: hidden;
+      border-radius: 40px;
+      width: 50px;
+      &:hover {
+        visibility: visible;
+      }
+    }
+  }}
+
+  .bg-songBar{
+    background-color: #181818;
+    border-color: rgb(56, 56, 56) !important;
+     }
+     .sound-timer{
+      // height: 20px !important;
+      border: 2px solid ;
+      
+     }
+    
+    
+    .footer-desktop{
+     top: 89%;
+     position: fixed !important;
+    }
+    
+    
+     .footer-mobile{
+       top: 83%;
+       position: fixed !important;
+      }
+
+      @keyframes scale {
+        from {
+        }
+        to {
+          transform: scale(1.1);
+        }
+      }
+      @keyframes resize {
+        from {
+          transform: scale(1.1);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+      
+      .scale {
+        // transform: scale(1.2);
+        animation: scale;
+        animation-duration: 0.3s;
+        animation-timing-function: linear;
+        animation-delay: 0;
+        animation-fill-mode: forwards;
+        z-index: 1;
+      }
+      .resize {
+        animation: resize;
+        animation-duration: 0.3s;
+        animation-timing-function: linear;
+        animation-delay: 0;
+        z-index: 0;
+      }
+      
