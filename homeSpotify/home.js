@@ -39,7 +39,7 @@ const moreYouLike = (genre, par) => {
         newDiv.classList.add("col-4", "col-lg-3");
 
         newDiv.innerHTML = `<a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="fw-bold text-white link-underline link-underline-opacity-0">
-              <div class="card h-100 p-0  text-white border-0 " id="cardColor"   >
+              <div class="card h-100 p-0  text-white border-0 cardShadow " id="cardColor"   >
               <div position-relative class=" ps-2 pt-2 pe-2">
               <img src="${detail.data[i].album.cover_medium}" class="card-img-top img shadow" alt="${detail.data[i].album.title}">
               </div>

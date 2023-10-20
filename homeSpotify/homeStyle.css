@@ -12402,7 +12402,6 @@ body {
 }
 
 #main-section {
-  background: linear-gradient(#242424 10%, rgb(13, 13, 13) 95%) !important;
   overflow-y: scroll;
   height: 100vh;
 }
@@ -12424,6 +12423,19 @@ body {
   visibility: visible;
 }
 
+@media screen and (min-width: 768px) {
+  #main-section {
+    background: linear-gradient(#242424, rgb(13, 13, 13) 40%) !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main-section {
+    background-color: #000000;
+  }
+  #publicPlaylist {
+    margin-bottom: 2em !important;
+  }
+}
 .button-car {
   background-color: black;
   border: 0;
@@ -12603,4 +12615,8 @@ body {
 
 .underline {
   text-decoration: none !important;
+}
+
+.cardShadow {
+  box-shadow: rgb(63, 63, 63) 0px 0px 4px 1px !important;
 }/*# sourceMappingURL=homeStyle.css.map */
