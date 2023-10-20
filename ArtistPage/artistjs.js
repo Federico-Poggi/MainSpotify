@@ -153,7 +153,10 @@ const createRelatives = () => {
       artistName.style.backgroundSize = "";
       artistName.style.height = "400px";
       artistName.classList.add("p-5");
-
+      const newDiv = document.createElement("div");
+      console.log(dataid.data[0].artist.name);
+      newDiv.innerHTML = ` ${dataid.data[0].artist.name}`;
+      artistTitle.prepend(newDiv);
       fetch(
         `https://striveschool-api.herokuapp.com/api/deezer/album/${dataid.data[0].album.id}`
       )
