@@ -129,31 +129,55 @@ const albumFetch = () => {
 
       const play = document.getElementById("playmusic");
       const pause = document.getElementById("pausemusic");
-      pause.style.visibility = "hidden";
-
-      //CLICK SU UNA CANZONE PER RIPRODURLA
+      const play2=document.getElementById("playmusic2")
+      const pause2=document.getElementById("pausemusic2")
+      const playm=document.getElementById("playmusicm")
+      const stopm=document.getElementById("musicstop")
+      const annanz=document.getElementById("annanz")
+      const arret=document.getElementById("arret")
+      pause.style.visibility = "hidden"
+      pause2.style.visibility="hidden"
+      stopm.style.visibility="hidden"
+      
       const songer = document.getElementsByClassName(
         "prova d-flex justify-content-start"
       );
       const songer2 = Array.from(songer);
       let j = 0;
+      let h=0
       let cancel;
       let song2 = new Audio();
-
+      let song= new Audio()
+      //CLICK SU UNA CANZONE PER RIPRODURLA 
       for (let i = 0; i < songer2.length; i++) {
         songer2[i].style.cursor = "pointer";
-        songer2[i].addEventListener("click", function () {
-          play.style.visibility = "hidden";
-          pause.style.visibility = "visible";
-          // song2.src=detail.tracks.data[i].preview
-          // song2.pause()
-          // song2.play()
-
+        songer2[i].addEventListener("click", function () 
+        {
+          
+          const image1=document.getElementById("footerDesktop")
+          const title=document.getElementById("songTitle")
+          const title2=document.getElementById("songTitle2")
+          const artist2=document.getElementById("artistName2")
+          image1.setAttribute("src",detail.cover_small)
+          title.innerText=detail.tracks.data[i].title
+          title2.innerText=detail.tracks.data[i].title
+          artist2.innerText=detail.artist.name
+          play.style.visibility = "hidden"
+          pause.style.visibility = "visible"
+          play2.style.visibility="hidden"
+          pause2.style.visibility="visible"
+          playm.style.visibility="hidden"
+          stopm.style.visibility="visible"
           if (cancel) {
             clearInterval(cancel);
           }
           let seconds = 0;
+          
           j = i;
+          h=i+1
+          console.log("i",i)
+          console.log("h",h)
+          song.src=""
           song2.src = detail.tracks.data[j].preview;
           console.log("canzone selezionata dall'utente", j);
           song2.pause();
@@ -167,6 +191,7 @@ const albumFetch = () => {
               song2.src = detail.tracks.data[j].preview;
               song2.pause();
               song2.play();
+              
               if (j === detail.tracks.data.length) {
                 j = 0;
               }
@@ -177,28 +202,79 @@ const albumFetch = () => {
             }
           }
           cancel = setInterval(incrementSeconds, 1000);
-
+          
+          annanz.addEventListener("click",function()
+          {
+            
+            song2.src = detail.tracks.data[h].preview
+            song2.pause()
+            song2.play()
+            image1.setAttribute("src",detail.cover_small)
+            title.innerText=detail.tracks.data[h].title
+            title2.innerText=detail.tracks.data[h].title
+            artist2.innerText=detail.artist.name
+            console.log("valore h alla fine di annanz",h)
+            h++
+            j=0
+          })
+          arret.addEventListener("click",function()
+          {
+            song2.src = detail.tracks.data[j-1].preview
+            song2.pause()
+            song2.play()
+            j++
+          })
+          pause2.addEventListener("click", function()
+          {
+            song2.pause();
+            isPaused = true;
+            play2.style.visibility = "visible";
+            pause2.style.visibility = "hidden";
+            play.style.visibility="visible"
+            pause.style.visibility="hidden"
+            playm.style.visibility="visible"
+            stopm.style.visibility="hidden"
+          })
           pause.addEventListener("click", function () {
             song2.pause();
             isPaused = true;
             play.style.visibility = "visible";
             pause.style.visibility = "hidden";
+            play2.style.visibility="visible"
+            pause2.style.visibility="hidden"
+            playm.style.visibility="visible"
+            stopm.style.visibility="hidden"
           });
+          stopm.addEventListener("click",function()
+        {
+          song2.pause();
+          isPaused = true;
+          stopm.style.visibility="hidden"
+          playm.style.visibility="visible"
+          play.style.visibility="visible"
+          pause.style.visibility="hidden"
+          play2.style.visibility="visible"
+          pause2.style.visibility="hidden"
+        })
         });
       }
       //FINE CLICK SU UNA CANZONE PER RIPRODURLA
 
-      //FUNZIONE RIPRODUZIONE DA BOTTONE
-
-      play.addEventListener("click", function () {
+      //FUNZIONE RIPRODUZIONE DA FOOTER
+      play2.addEventListener("click",function()
+      {
         play.style.visibility = "hidden";
         pause.style.visibility = "visible";
+        play2.style.visibility="hidden"
+        pause2.style.visibility="visible"
+        playm.style.visibility="hidden"
+        stopm.style.visibility="visible"
         let seconds = 0;
         let i = 0;
         function incrementSeconds() {
           if (seconds === 30) {
             i++;
-            song = new Audio(detail.tracks.data[i].preview);
+            song.src = detail.tracks.data[i].preview;
             song.play();
             seconds = 0;
             if (i === detail.tracks.data.length) {
@@ -211,16 +287,154 @@ const albumFetch = () => {
           }
         }
         let cancel = setInterval(incrementSeconds, 1000);
-        let song = new Audio(detail.tracks.data[i].preview);
+        song.src = detail.tracks.data[i].preview;
         song.play();
         let isPaused = false;
-
+        pause2.addEventListener("click", function()
+          {
+            song.pause();
+            isPaused = true;
+            play2.style.visibility = "visible";
+            pause2.style.visibility = "hidden";
+            play.style.visibility="visible"
+            pause.style.visibility="hidden"
+            stopm.style.visibility="hidden"
+          playm.style.visibility="visible"
+          })
         pause.addEventListener("click", function () {
           song.pause();
           isPaused = true;
           play.style.visibility = "visible";
           pause.style.visibility = "hidden";
+          play2.style.visibility="visible"
+          pause2.style.visibility="hidden"
+          stopm.style.visibility="hidden"
+          playm.style.visibility="visible"
         });
+        stopm.addEventListener("click",function()
+        {
+          song.pause();
+          isPaused = true;
+          stopm.style.visibility="hidden"
+          playm.style.visibility="visible"
+          play.style.visibility="visible"
+          pause.style.visibility="hidden"
+          play2.style.visibility="visible"
+          pause2.style.visibility="hidden"
+        })
+      });
+      
+      //FINE RIPRODUZIONE DA FOOTER
+
+
+      //FUNZIONE RIPRODUZIONE DA FOOTER MOBILE
+      playm.addEventListener("click",function()
+      {
+        playm.style.visibility="hidden"
+        stopm.style.visibility="visible"
+        play.style.visibility = "hidden";
+        pause.style.visibility = "visible";
+        play2.style.visibility="hidden"
+        pause2.style.visibility="visible"
+
+        let seconds = 0;
+        let i = 0;
+        function incrementSeconds() {
+          if (seconds === 30) {
+            i++;
+            song.src = detail.tracks.data[j].preview;
+            song.play();
+            seconds = 0;
+            if (i === detail.tracks.data.length) {
+              i = 0;
+            }
+          } else {
+            if (isPaused === false) {
+              seconds += 1;
+            }
+          }
+        }
+        let cancel = setInterval(incrementSeconds, 1000);
+         song.src = detail.tracks.data[j].preview;
+        song.play();
+        let isPaused = false;
+        stopm.addEventListener("click",function()
+        {
+          song.pause();
+          isPaused = true;
+          stopm.style.visibility="hidden"
+          playm.style.visibility="visible"
+          play.style.visibility="visible"
+          pause.style.visibility="hidden"
+          play2.style.visibility="visible"
+          pause2.style.visibility="hidden"
+        })
+      })
+
+
+      //FINE FUNZIONE RIPRODUZIONE DA FOOTER MOBILE
+
+      //FUNZIONE RIPRODUZIONE DA BOTTONE
+      play.addEventListener("click", function () {
+        play.style.visibility = "hidden";
+        pause.style.visibility = "visible";
+        play2.style.visibility="hidden"
+        pause2.style.visibility="visible"
+        playm.style.visibility="hidden"
+        stopm.style.visibility="visible"
+        let seconds = 0;
+        let i = 0;
+        function incrementSeconds() {
+          if (seconds === 30) {
+            i++;
+            song.src = detail.tracks.data[j].preview;
+            song.play();
+            seconds = 0;
+            if (i === detail.tracks.data.length) {
+              i = 0;
+            }
+          } else {
+            if (isPaused === false) {
+              seconds += 1;
+            }
+          }
+        }
+        let cancel = setInterval(incrementSeconds, 1000);
+         song.src = detail.tracks.data[j].preview;
+        song.play();
+        let isPaused = false;
+        pause2.addEventListener("click", function()
+          {
+            song2.pause();
+            isPaused = true;
+            play2.style.visibility = "visible";
+            pause2.style.visibility = "hidden";
+            play.style.visibility="visible"
+            pause.style.visibility="hidden"
+            stopm.style.visibility="hidden"
+          playm.style.visibility="visible"
+          })
+        pause.addEventListener("click", function () {
+          song.pause();
+          isPaused = true;
+          play.style.visibility = "visible";
+          pause.style.visibility = "hidden";
+          play2.style.visibility="visible"
+          pause2.style.visibility="hidden"
+          stopm.style.visibility="hidden"
+          playm.style.visibility="visible"
+        });
+        stopm.addEventListener("click",function()
+        {
+          song.pause();
+          isPaused = true;
+          stopm.style.visibility="hidden"
+          playm.style.visibility="visible"
+          play.style.visibility="visible"
+          pause.style.visibility="hidden"
+          play2.style.visibility="visible"
+          pause2.style.visibility="hidden"
+        })
       });
       // FINE FUNZIONE RIPRODUZIONE DA BOTTONE
     })
