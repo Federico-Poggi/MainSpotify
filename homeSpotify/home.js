@@ -1,5 +1,5 @@
-const sidelist = document.getElementById(`ulBox`);
 
+const sidelist = document.getElementById(`ulBox`);
 // SEZIONE ALTRO DI CIO CHE TI PIACE
 const moreYouLike = (genre, par) => {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${genre}`)
@@ -14,15 +14,15 @@ const moreYouLike = (genre, par) => {
       console.log(detail);
       const myRow = document.getElementById("myRow");
       myRow.classList.add("d-flex", "flex-row");
-      const arrayList = [];
+      // const arrayList = [];
 
       for (let i = 0; i < 10; i++) {
-        arrayList.push(detail.data[i].title);
-        const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`, `select`, `fs-5`);
+        // arrayList.push(detail.data[i].title);
+        // const li = document.createElement(`li`);
+        // li.classList.add(`mb-2`, `classGrey`, `select`, `fs-5`);
 
-        li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
-        sidelist.appendChild(li);
+        // li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
+        // sidelist.appendChild(li);
 
         const newDiv = document.createElement("div");
         newDiv.addEventListener(`mouseover`, function (e) {
@@ -77,17 +77,17 @@ const createPersonalSection = (genre) => {
       const spinner = document.getElementById(`spinner`);
       spinner.classList.add(`d-none`);
       console.group(detail);
-      const arrayList = [];
+      // const arrayList = [];
       for (let i = 0; i < 6; i++) {
-        arrayList.push(detail.data[i].title);
-        const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`, `select`, `fs-5`);
-        li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
-        sidelist.appendChild(li);
-        sidelist.appendChild(li);
+        // arrayList.push(detail.data[i].title);
+        // const li = document.createElement(`li`);
+        // li.classList.add(`mb-2`, `classGrey`, `select`, `fs-5`);
+        // li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
+        // sidelist.appendChild(li);
+        // sidelist.appendChild(li);
 
         const col = document.createElement(`div`);
-        col.classList.add(`col-12`, `col-xs-12`,`col-md-6`, `h-100`);
+        col.classList.add(`col-12`, `col-xs-12`, `col-md-6`, `h-100`,`col-lg-4`,`col-xl-3`);
 
         col.innerHTML = `
         <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="text-white link-underline link-underline-opacity-0">
@@ -128,14 +128,14 @@ const createPersonalPlaylist = (genre, string) => {
     })
     .then((detail) => {
       console.group(detail);
-      const arrayList = [];
+      // const arrayList = [];
       for (let i = 0; i < 1; i++) {
-        arrayList.push(detail.data[i].title);
-        const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`, `select`, `fs-5`);
-        li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
-        sidelist.appendChild(li);
-        sidelist.appendChild(li);
+        // arrayList.push(detail.data[i].title);
+        // const li = document.createElement(`li`);
+        // li.classList.add(`mb-2`, `classGrey`, `select`, `fs-5`);
+        // li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
+        // sidelist.appendChild(li);
+        // sidelist.appendChild(li);
 
         const row = document.createElement(`div`);
 
@@ -240,7 +240,7 @@ const createCarousel = function (par) {
 
         col.innerHTML = `
         <div class="carousel-item  ">
-                    <div class="row d-flex " >
+                    <div class="row d-flex flex-nowrap" >
         <div class="col-3 d-flex align-items-center">
         <img
           src="${detail.data[i].album.cover_medium}"
@@ -354,7 +354,7 @@ createPersonalPlaylist(`noyz narcos`, `best of Noyz Narcos`);
 createPersonalPlaylist(`metal`, `Metal composition`);
 createPersonalPlaylist(`gianna nannini`, `My playlist of Gianna Nannini`);
 
-createCarousel(`trap`);
+createCarousel(`pop`);
 
 friendsActivity(`pop`);
 
@@ -422,3 +422,39 @@ footerHeart2.addEventListener(`click`, function (e) {
   e.target.classList.toggle("text-primary");
   console.log(e.target);
 });
+
+const arrayList = [];
+const arrayId = [];
+
+const createLeftCol = (genre) => {
+  fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${genre}`)
+    .then((res) => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        throw new Error("Errore getting the datas");
+      }
+    })
+    .then((detail) => {
+      for (let i = 0; i < 5; i++) {
+        arrayList.push(detail.data[i].title);
+        arrayId.push(detail.data[i].album.id);
+        const li = document.createElement(`li`);
+        li.classList.add(`mb-2`, `select`, `fs-5`);
+        li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${detail.data[i].title}</a>`;
+        sidelist.appendChild(li);
+      } 
+      sessionStorage.setItem(`list`,JSON.stringify(arrayList))
+      sessionStorage.setItem(`Id`,JSON.stringify(arrayId))
+      console.log(arrayList);
+    });
+};
+
+createLeftCol(`gianni morandi`);
+createLeftCol(`rock`);
+createLeftCol(`rap`);
+createLeftCol(`metal`);
+createLeftCol(`baglioni`);
+createLeftCol(`tenacious d`);
+createLeftCol(`noyz narcos`);
+

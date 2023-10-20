@@ -96,6 +96,7 @@ body {
   color: grey;
   &:hover {
     color: white;
+    transition: 0.5s !important;
   }
 }
 
@@ -341,6 +342,7 @@ body {
 .select {
   &:hover {
     background-color: rgba(100, 100, 100, 0.697);
+    transition: 1s;
   }
 }
 .shadow {
@@ -435,3 +437,9 @@ body {
         z-index: 0;
       }
       
+      .underline{
+        text-decoration: none !important}
+          
+        .footer-bg{
+          background-color:rgba(18, 18, 18, 0.930) !important;
+        }

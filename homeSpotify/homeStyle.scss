@@ -89,10 +89,15 @@ body {
 }
 
 .classGrey {
+
   color: grey;
   &:hover {
-    color: white;
+    transition: 0.5s !important;
+    color: white !important;
   }
+  // &:active {
+  //   color: white;
+// }
 }
 
 .arrow {
@@ -389,6 +394,8 @@ background-color: #000000;
 .select {
   &:hover {
     background-color: rgba(100, 100, 100, 0.697);
+    transition: 1s;
+    
   }
 }
 .padding-start {
@@ -425,4 +432,12 @@ text-decoration: none !important}
   
 .cardShadow{
  box-shadow: rgb(63, 63, 63) 0px 0px 4px 1px !important; 
+}
+
+.footer-bg{
+  background-color:rgba(18, 18, 18, 0.930) !important;
+}
+
+#carouselRow{
+  min-height: 320px;
 }

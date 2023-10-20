@@ -249,3 +249,18 @@ footerHeart2.addEventListener(`click`, function (e) {
   console.log(e.target);
 });
 // footerHeartFill2.addEventListener(`click`, toggle(event));
+const sidelist = document.getElementById(`ulBox`);
+const list = JSON.parse(sessionStorage.getItem(`list`));
+const Id = JSON.parse(sessionStorage.getItem(`Id`));
+console.log(list);
+console.log(Id);
+
+const createRightCol = function () {
+  for (j = 0; j < list.length; j++) {
+    const li = document.createElement(`li`);
+    li.classList.add(`mb-2`, `classGrey`, `select`, `fs-5`);
+    li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${Id[j]}">${list[j]}</a>`;
+    sidelist.appendChild(li);
+  }
+};
+createRightCol();

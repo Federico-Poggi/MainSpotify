@@ -12384,6 +12384,7 @@ body {
 }
 .classGrey:hover {
   color: white;
+  transition: 0.5s !important;
 }
 
 .arrow {
@@ -12551,6 +12552,7 @@ body {
 
 .select:hover {
   background-color: rgba(100, 100, 100, 0.697);
+  transition: 1s;
 }
 
 .shadow {
@@ -12586,24 +12588,32 @@ body {
   position: fixed !important;
 }
 
-#custom-scrollbar {
+.custom-scrollbar {
   overflow-y: scroll;
   height: 100vh;
 }
-#custom-scrollbar::-webkit-scrollbar {
+.custom-scrollbar::-webkit-scrollbar {
   width: 15px;
   visibility: hidden;
   background: rgba(0, 0, 0, 0);
 }
-#custom-scrollbar::-webkit-scrollbar:hover {
+.custom-scrollbar::-webkit-scrollbar:hover {
   visibility: visible;
 }
-#custom-scrollbar::-webkit-scrollbar-thumb {
+.custom-scrollbar::-webkit-scrollbar-thumb {
   background: rgba(146, 146, 146, 0.651);
   visibility: hidden;
   border-radius: 40px;
   width: 50px;
 }
-#custom-scrollbar::-webkit-scrollbar-thumb:hover {
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
   visibility: visible;
+}
+
+.underline {
+  text-decoration: none !important;
+}
+
+.footer-bg {
+  background-color: rgba(18, 18, 18, 0.93) !important;
 }/*# sourceMappingURL=albumPage.css.map */
