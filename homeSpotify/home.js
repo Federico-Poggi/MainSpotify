@@ -19,9 +19,8 @@ const moreYouLike = (genre, par) => {
       for (let i = 0; i < 10; i++) {
         arrayList.push(detail.data[i].title);
         const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`, `select`,`fs-5`);
-
-        li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
+        li.classList.add(`mb-2`, `classGrey`, `select`);
+        li.innerText = arrayList[i];
         sidelist.appendChild(li);
 
         const newDiv = document.createElement("div");
@@ -61,6 +60,18 @@ const moreYouLike = (genre, par) => {
     });
 };
 
+const showIcon = document.getElementById(`showIcon`);
+const rigthIcon = document.getElementById(`rightCol`);
+const closeTab = function (e) {
+  rightCol.classList.remove(`d-xxl-block`);
+  showIcon.classList.remove(`d-none`);
+};
+
+const riShow = function (e) {
+  rightCol.classList.add(`d-xxl-block`);
+  showIcon.classList.add(`d-none`);
+};
+
 // SEZIONE BUONASERA
 const personalPlaylist = document.getElementById(`personalPlaylist`);
 
@@ -81,13 +92,12 @@ const createPersonalSection = (genre) => {
       for (let i = 0; i < 6; i++) {
         arrayList.push(detail.data[i].title);
         const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`, `select`,`fs-5`);
-        li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
-        sidelist.appendChild(li);
+        li.classList.add(`mb-2`, `classGrey`, `select`);
+        li.innerText = arrayList[i];
         sidelist.appendChild(li);
 
         const col = document.createElement(`div`);
-        col.classList.add(`col-6`, `col-xs-12`, `col-sm-4`, `h-100`);
+        col.classList.add(`col-6`, `col-sm-4`);
 
         col.innerHTML = `
         <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="text-white link-underline link-underline-opacity-0">
@@ -100,7 +110,7 @@ const createPersonalSection = (genre) => {
          />
          
          <div class="d-flex align-items-center">
-         <h6 class="ms-2 fs-7 fw-bold text-white link-underline link-underline-opacity-0 smaller">${detail.data[i].album.title}</h6>
+         <h6 class="ms-2 fs-7 fw-bold text-white link-underline link-underline-opacity-0">${detail.data[i].album.title}</h6>
          </div>
          
          </div>
@@ -132,15 +142,14 @@ const createPersonalPlaylist = (genre, string) => {
       for (let i = 0; i < 1; i++) {
         arrayList.push(detail.data[i].title);
         const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`, `select`,`fs-5`);
-        li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
-        sidelist.appendChild(li);
+        li.classList.add(`mb-2`, `classGrey`, `select`);
+        li.innerText = arrayList[i];
         sidelist.appendChild(li);
 
         const row = document.createElement(`div`);
 
         row.classList.add(
-          `select-border2`,
+          `select-border`,
           `row`,
           `mt-3`,
           `g-2`,
@@ -149,7 +158,13 @@ const createPersonalPlaylist = (genre, string) => {
           `p-2`,
           `d-md-none`
         );
-  
+        // const col = document.createElement(`div`);
+        // const col2 = document.createElement(`div`);
+        // const col3 = document.createElement(`div`);
+        // col.classList.add(`col-6`);
+
+        // col2.classList.add(`col-6`);
+        // col3.classList.add(`col-12`, `d-flex`, `justify-content-between`);
         row.innerHTML = ` 
         <a href="../albumPage/album.html?album=${
           detail.data[i].album.id
@@ -237,7 +252,17 @@ const createCarousel = function (par) {
 
       for (let i = 0; i < 10; i++) {
         const col = document.createElement(`div`);
+        col.addEventListener(`mouseover`, function (e) {
+          col.classList.remove(`resize`);
+          col.classList.add(`scale`);
 
+          console.log(col);
+        });
+        col.addEventListener(`mouseleave`, function (e) {
+          col.classList.add(`resize`);
+
+          console.log(col);
+        });
         col.innerHTML = `
         <div class="carousel-item  ">
                     <div class="row d-flex " >
@@ -348,8 +373,7 @@ let s2 = "classica";
 let s3 = "rap";
 moreYouLike(s3);
 moreYouLike(s2);
-createPersonalSection(`punk-pop`);
-createPersonalSection(`pop`);
+createPersonalSection(`gianni morandi`);
 createPersonalPlaylist(`noyz narcos`, `best of Noyz Narcos`);
 createPersonalPlaylist(`metal`, `Metal composition`);
 createPersonalPlaylist(`gianna nannini`, `My playlist of Gianna Nannini`);
@@ -357,68 +381,3 @@ createPersonalPlaylist(`gianna nannini`, `My playlist of Gianna Nannini`);
 createCarousel(`trap`);
 
 friendsActivity(`pop`);
-
-// // entrata sezione destra
-// const secRightIn = document.getElementById("in");
-// const secRightOut = document.getElementById("showIcon");
-// const animationIn = function () {
-//   const selDiv = document.getElementById("rightCol");
-//   selDiv.classList.add("swing-in-right-fwd");
-//   selDiv.classList.remove("swing-out-right-bck");
-// };
-// secRightIn.addEventListener("click", animationIn);
-
-// // uscita sezione destra
-// const animationOut = function () {
-//   const selDiv = document.getElementById("rightCol");
-//   selDiv.classList.add("swing-out-right-bck");
-// };
-// secRightOut.addEventListener("click", animationOut);
-
-// const showIcon = document.getElementById(`showIcon`);
-// const rigthIcon = document.getElementById(`rightCol`);
-// const closeTab = function (e) {
-//   rightCol.classList.remove(`d-xxl-block`);
-//   showIcon.classList.remove(`d-none`);
-// };
-
-// const riShow = function (e) {
-//   rightCol.classList.add(`d-xxl-block`);
-//   showIcon.classList.add(`d-none`);
-// };
-const myCol = document.getElementById("rightCol");
-const btnOut = document.getElementById("btnOut");
-const btnIn = document.getElementById("showIcon");
-console.log(myCol);
-console.log(btnIn);
-console.log(btnOut);
-
-btnOut.addEventListener("click", () => {
-  myCol.classList.add("swing-out-right-bck");
-  myCol.classList.remove("swing-in-right-bck");
-  btnOut.classList.add("d-none");
-  btnIn.classList.remove(`d-none`);
-  const disappear = () => {
-    myCol.classList.remove("d-xxl-block");
-  };
-  setTimeout(disappear, 800);
-});
-
-btnIn.addEventListener("click", () => {
-  myCol.classList.add("d-xxl-block");
-  myCol.classList.remove("swing-out-right-bck");
-  myCol.classList.add("swing-in-right-bck");
-  btnIn.classList.add(`d-none`);
-  btnOut.classList.remove("d-none");
-});
-
-const footerHeart2 = document.getElementById(`heart`);
-const footerHeartFill2 = document.getElementById(`heart-fill`);
-// console.log(footerHeart2)
-
-footerHeart2.addEventListener(`click`, function (e) {
-  e.target.classList.toggle("bi-heart-fill");
-  e.target.classList.toggle("bi-heart");
-  e.target.classList.toggle("text-primary");
-  console.log(e.target);
-});
