@@ -19,7 +19,7 @@ const moreYouLike = (genre, par) => {
       for (let i = 0; i < 10; i++) {
         arrayList.push(detail.data[i].title);
         const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`, `select`,`fs-5`);
+        li.classList.add(`mb-2`, `classGrey`, `select`, `fs-5`);
 
         li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
         sidelist.appendChild(li);
@@ -81,13 +81,13 @@ const createPersonalSection = (genre) => {
       for (let i = 0; i < 6; i++) {
         arrayList.push(detail.data[i].title);
         const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`, `select`,`fs-5`);
+        li.classList.add(`mb-2`, `classGrey`, `select`, `fs-5`);
         li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
         sidelist.appendChild(li);
         sidelist.appendChild(li);
 
         const col = document.createElement(`div`);
-        col.classList.add(`col-6`, `col-xs-12`, `col-sm-4`, `h-100`);
+        col.classList.add(`col-12`, `col-xs-12`,`col-md-6`, `h-100`);
 
         col.innerHTML = `
         <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="text-white link-underline link-underline-opacity-0">
@@ -132,7 +132,7 @@ const createPersonalPlaylist = (genre, string) => {
       for (let i = 0; i < 1; i++) {
         arrayList.push(detail.data[i].title);
         const li = document.createElement(`li`);
-        li.classList.add(`mb-2`, `classGrey`, `select`,`fs-5`);
+        li.classList.add(`mb-2`, `classGrey`, `select`, `fs-5`);
         li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
         sidelist.appendChild(li);
         sidelist.appendChild(li);
@@ -149,7 +149,7 @@ const createPersonalPlaylist = (genre, string) => {
           `p-2`,
           `d-md-none`
         );
-  
+
         row.innerHTML = ` 
         <a href="../albumPage/album.html?album=${
           detail.data[i].album.id
@@ -254,12 +254,12 @@ const createCarousel = function (par) {
         <p>${detail.data[i].artist.name}</p>
         <p>ascolta il nuovo singolo dell'album ${detail.data[i].album.title}</p>
         <div class="align-items-center d-flex">
-          <button
+        <a href="../albumPage/album.html?album=${detail.data[i].album.id}"><button
             type="button"
             class="btn rounded-5 px-4 py-2 btn-outline-dark fw-bold bg-primary"
           >
             Play
-          </button>
+          </button></a>
           <button
             type="button"
             class="btn rounded-5 px-4  py-2 border hover-text-black  border-2 border-fourth text-white fw-bold mx-4"

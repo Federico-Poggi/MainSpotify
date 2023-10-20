@@ -1,4 +1,5 @@
 const search = document.getElementById("searchBtn");
+const search2 = document.getElementById("search");
 const searchSongs = () => {
   const searchWrap = document.getElementById("search");
   const searchValue = searchWrap.value;
@@ -119,10 +120,15 @@ const searchSongs = () => {
     });
 };
 search.addEventListener("click", searchSongs);
+search2.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("searchBtn").click();
+  }
+});
 
 const footerHeart2 = document.getElementById(`heart`);
 const footerHeartFill2 = document.getElementById(`heart-fill`);
-// console.log(footerHeart2)
 
 footerHeart2.addEventListener(`click`, function (e) {
   e.target.classList.toggle("bi-heart-fill");

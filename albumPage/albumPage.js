@@ -50,7 +50,7 @@ const albumFetch = () => {
         </div>
       </div>
       <div id="songList">
-        <div class="d-flex py-4 display-flex align-items-center ">
+        <div class="d-flex py-4 display-flex align-items-center position-relative">
           <i class="bi bi-play-circle-fill p-2 mx-1 display-5 text-primary" id="playmusic"></i>
           <i class="bi bi-stop-circle-fill p-2 mx-1 display-5 text-primary position-absolute" id="pausemusic"></i>
           <i class="bi bi-heart p-2 mx-1 fs-4 gray" onclick="toggle(event)"></i>
@@ -126,6 +126,7 @@ const albumFetch = () => {
         };
         convert();
       }
+
       const play = document.getElementById("playmusic");
       const pause = document.getElementById("pausemusic");
       pause.style.visibility = "hidden";
@@ -135,18 +136,51 @@ const albumFetch = () => {
         "prova d-flex justify-content-start"
       );
       const songer2 = Array.from(songer);
+      let j = 0;
+      let cancel;
+      let song2 = new Audio();
+
       for (let i = 0; i < songer2.length; i++) {
+        songer2[i].style.cursor = "pointer";
         songer2[i].addEventListener("click", function () {
-          console.log(songer2[i]);
           play.style.visibility = "hidden";
           pause.style.visibility = "visible";
-          let song2 = new Audio(detail.tracks.data[i].preview);
+          // song2.src=detail.tracks.data[i].preview
+          // song2.pause()
+          // song2.play()
+
+          if (cancel) {
+            clearInterval(cancel);
+          }
+          let seconds = 0;
+          j = i;
+          song2.src = detail.tracks.data[j].preview;
+          console.log("canzone selezionata dall'utente", j);
           song2.pause();
-          song2.currentTime = 0;
           song2.play();
+          let isPaused = false;
+          function incrementSeconds() {
+            if (seconds === 30) {
+              j += 1;
+              seconds = 0;
+              console.log("canzone successiva automatica", j);
+              song2.src = detail.tracks.data[j].preview;
+              song2.pause();
+              song2.play();
+              if (j === detail.tracks.data.length) {
+                j = 0;
+              }
+            } else {
+              if (isPaused === false) {
+                seconds += 1;
+              }
+            }
+          }
+          cancel = setInterval(incrementSeconds, 1000);
 
           pause.addEventListener("click", function () {
             song2.pause();
+            isPaused = true;
             play.style.visibility = "visible";
             pause.style.visibility = "hidden";
           });
@@ -159,7 +193,7 @@ const albumFetch = () => {
       play.addEventListener("click", function () {
         play.style.visibility = "hidden";
         pause.style.visibility = "visible";
-        var seconds = 0;
+        let seconds = 0;
         let i = 0;
         function incrementSeconds() {
           if (seconds === 30) {
@@ -188,7 +222,7 @@ const albumFetch = () => {
           pause.style.visibility = "hidden";
         });
       });
-      // FINE FUNZIONE RIPRODUZIONE DA BOTTONE
+      // FINE FUNZIONE RIPRODUZIONE DA BOTTONE
     })
 
     .catch((err) => {
