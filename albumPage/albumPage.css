@@ -12361,6 +12361,7 @@ textarea.form-control-lg {
 }
 body {
   font-family: "Circular", sans-serif !important;
+  overflow-y: hidden !important;
 }
 
 #footerMobile {

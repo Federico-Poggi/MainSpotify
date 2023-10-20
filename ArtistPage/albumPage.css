@@ -12252,6 +12252,10 @@ html, body {
   height: 100vh;
 }
 
+body {
+  overflow-y: hidden !important;
+}
+
 #content {
   position: absolute;
   top: 0;

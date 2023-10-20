@@ -30,100 +30,101 @@
         <!-- inizio sezione di sinistra -->
 
         <div
-          class="col-lg-3 d-lg-flex flex-column bg-secondary d-none col-2 pe-0"
-        >
-          <div>
-            <ul class="list-group list-unstyled">
-              <li class="list-group-item-disabled select">
-                <a
-                  href="../homeSpotify/home.html"
-                  class="btn grey border-0 fw-bold"
-                >
-                  <i class="bi bi-spotify text-primary pe-1 fs-6 scale me-3"></i
-                  >Home</a
-                >
-              </li>
-              <li
-                class="list-group-item-disabled d-flex align-items-center select"
+        class="col-lg-3 d-lg-flex flex-column bg-secondary d-none col-2 pe-0"
+      >
+        <div>
+          <ul class="list-group list-unstyled mb-3">
+            <li class="list-group-item-disabled">
+              <i class="bi bi-three-dots fs-2 ms-2 classGrey"></i>
+            </li>
+            <li class="list-group-item-disabled select">
+              <a href="#" class="btn grey border-0 fw-bold">
+                <i class="bi bi-spotify text-primary pe-1 fs-6 scale me-3"></i
+                >Home</a
               >
-                <a
-                  href="../SearchPage/search.html"
-                  class="btn grey border-0 d-flex fw-bold align-items-center"
-                >
-                  <div
-                    id="div-heart"
-                    class="boxIcon select-border2 d-flex justify-content-center me-3 align-items-center"
-                  >
-                    <i class="bi bi-search text-white fs-6"></i>
-                  </div>
-                  Cerca</a
-                >
-              </li>
-              <li class="list-group-item-disabled p-s1 select">
-                <a
-                  href="#"
-                  class="btn grey border-0 fw-bold d-flex align-items-center"
-                >
-                  <div
-                    id="div-add"
-                    class="boxIcon select-border2 d-flex me-3 justify-content-center align-items-center"
-                  >
-                    <i class="bi bi-book text-dark fs-7"></i>
-                  </div>
-                  La tua libreria
-                </a>
-              </li>
-              <!-- seconda lista -->
-            </ul>
-          </div>
-          <div>
-            <ul class="list-group mb-3">
-              <li class="d-flex padding-start align-items-center select">
-                <div
-                  id="div-add"
-                  class="boxIcon select-border2 d-flex justify-content-center me-1 align-items-center"
-                >
-                  <i id="add-icon" class="bi bi-plus"></i>
-                </div>
-                <a href="#" class="btn grey fw-bold border-0">Crea Playlist</a>
-              </li>
-              <li class="d-flex padding-start align-items-center select">
+            </li>
+            <li
+              class="list-group-item-disabled d-flex align-items-center select"
+            >
+              <a
+                href="../SearchPage/search.html"
+                class="btn grey border-0 d-flex fw-bold align-items-center"
+              >
                 <div
                   id="div-heart"
-                  class="boxIcon select-border2 d-flex me-1 justify-content-center align-items-center"
+                  class="boxIcon select-border2 d-flex justify-content-center me-3 align-items-center"
                 >
-                  <i id="heart-icon" class="bi bi-heart-fill"></i>
+                  <i class="bi bi-search text-white fs-6"></i>
                 </div>
-                <a href="#" class="btn grey fw-bold me-1 border-0"
-                  >Brani che ti piacciono</a
-                >
-              </li>
-
-              <li class="d-flex padding-start align-items-center select">
+                Cerca</a
+              >
+            </li>
+            <li class="list-group-item-disabled p-s1 select">
+              <a
+                href="#"
+                class="btn grey border-0 fw-bold d-flex align-items-center"
+              >
                 <div
-                  id="div-save"
-                  class="boxIcon me-1 select-border2 d-flex justify-content-center align-items-center"
+                  id="div-add"
+                  class="boxIcon select-border2 d-flex me-3 justify-content-center align-items-center"
                 >
-                  <i id="save-icon" class="bi bi-bookmark-fill"></i>
+                  <i class="bi bi-book text-dark fs-7"></i>
                 </div>
-                <a href="#" class="btn grey fw-bold border-0">I tuoi episodi</a>
-              </li>
-            </ul>
-          </div>
-          <hr class="w-90" />
-          <!-- div scrollbar -->
-          <div id="box">
-            <ul id="ulBox" class="fs-8 fw-bold p-1"></ul>
-          </div>
-          <!-- fine scrollbar -->
+                La tua libreria
+              </a>
+            </li>
+            <!-- seconda lista -->
+          </ul>
         </div>
+        <div>
+          <ul class="list-group mb-3">
+            <li class="d-flex padding-start align-items-center select">
+              <div
+                id="div-add"
+                class="boxIcon select-border2 d-flex justify-content-center me-1 align-items-center"
+              >
+                <i id="add-icon" class="bi bi-plus"></i>
+              </div>
+              <a href="#" class="btn grey fw-bold border-0">Crea Playlist</a>
+            </li>
+            <li class="d-flex padding-start align-items-center select">
+              <div
+                id="div-heart"
+                class="boxIcon select-border2 d-flex me-1 justify-content-center align-items-center"
+              >
+                <i id="heart-icon" class="bi bi-heart-fill"></i>
+              </div>
+              <a href="#" class="btn grey fw-bold me-1 border-0"
+                >Brani che ti piacciono</a
+              >
+            </li>
+
+            <li class="d-flex padding-start align-items-center select">
+              <div
+                id="div-save"
+                class="boxIcon me-1 select-border2 d-flex justify-content-center align-items-center"
+              >
+                <i id="save-icon" class="bi bi-bookmark-fill"></i>
+              </div>
+              <a href="#" class="btn grey fw-bold border-0">I tuoi episodi</a>
+            </li>
+          </ul>
+        </div>
+        <hr class="w-90" />
+        <!-- div scrollbar -->
+        <div id="box">
+          <ul id="ulBox" class="fs-8 fw-bold p-1"></ul>
+        </div>
+        <!-- fine scrollbar -->
+      </div>
+
 
         <!-- fine sezione di sinistra -->
 
         <!-- inizio sezione principale -->
-        <div class="col custom-scrollbar" 
+        <div class="col custom-scrollbar">
           <div class="container">
-            <div id="myRow" class=""></div>
+            <div id="myRow" class="mb-5"></div>
           </div>
         </div>
 
@@ -166,9 +167,9 @@
     <!-- footer mobile -->
     <footer
       id="footerMobile"
-      class="position-sticky bottom-0 w-100  d-md-none z-3 footer-bg"
+      class="position-sticky bottom-0 w-100 d-md-none z-3 footer-bg"
     >
-      <!-- <div
+      <div
         class="d-flex justify-content-between mx-2 pe-4 bg-songBar align-items-center py-2 rounded-2"
         id="player"
       >
@@ -179,14 +180,16 @@
           <i class="bi bi-heart mx-3 d-nonne"></i>
           <i class="bi bi-heart-fill d-none text-primary"></i>
           <div class="position-relative">
-          <i id="playmusicm" class="bi bi-caret-right-fill"></i>
-          <i id="musicstop" class="bi bi-stop-fill position-absolute start-0"></i>
+            <i id="playmusicm" class="bi bi-caret-right-fill"></i>
+            <i
+              id="musicstop"
+              class="bi bi-stop-fill position-absolute start-0"
+            ></i>
+          </div>
         </div>
-        </div>
-      </div> -->
-      <div  class="d-flex justify-content-center">
-
-        <hr class="border border-1 p-0 m-0 w-90">
+      </div>
+      <div class="d-flex justify-content-center">
+        <hr class="border border-1 p-0 m-0 w-90" />
       </div>
       <div class="d-flex justify-content-center py-4">
         <div class="d-flex w-80 justify-content-around around mb-2 mt-">
@@ -219,11 +222,10 @@
           </div>
         </div>
       </div>
-      
     </footer>
     <!-- fine footer mobile -->
     <!-- footer  desktop -->
-    <footer 
+    <footer
       class="positioy footer-desktop w-100 bg-songBar d-none d-md-block z-3 border-top border-2"
     >
       <div class="container-fluid">
@@ -252,28 +254,34 @@
                 class="bi bi-skip-backward-fill classGrey btn classGrey border-0 fs-4"
               ></i>
               <div class="position-relative">
-                <i id="playmusic2"
+                <i
+                  id="playmusic2"
                   class="bi bi-play-circle-fill p-2 mx-1 display-5 btn classGrey border-0 fs-2"
                 ></i>
-                <i id="pausemusic2"
+                <i
+                  id="pausemusic2"
                   class="bi bi-stop-circle-fill p-2 mx-1 display-5 btn classGrey border-0 fs-2 position-absolute start-0"
                 ></i>
               </div>
-              <i id="annanz"
+              <i
+                id="annanz"
                 class="bi bi-skip-forward-fill btn classGrey border-0 fs-4"
               ></i>
-              <i id="arret" class="bi bi-arrow-clockwise btn classGrey border-0 fs-4"></i>
+              <i
+                id="arret"
+                class="bi bi-arrow-clockwise btn classGrey border-0 fs-4"
+              ></i>
             </div>
             <div class="container w-100">
               <div class="row align-items-center">
                 <div class="col-2 d-flex justify-content-end">
-                  <span class="">hh</span>
+                  <span class=""></span>
                 </div>
                 <div class="col-8">
                   <hr class="w-100 classGrey sound-timer" />
                 </div>
                 <div class="col-2 d-flex justify-content-start">
-                  <span class="">hh</span>
+                  <span class=""></span>
                 </div>
               </div>
             </div>

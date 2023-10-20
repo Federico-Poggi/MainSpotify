@@ -65,12 +65,7 @@ const searchSongs = () => {
       `;
         myCol.appendChild(newCol);
       }
-      // myTitle.classList.add("py-5", "display-1");
-      // myHead.style.background = `url("${detail.data[5].album.cover_xl}")`;
-      // myHead.style.backgroundSize = "cover";
-      // myHead.style.backgroundPosition = "center";
-      // myHead.style.backgroundRepeat = "no-repeat";
-
+    
       const myRow = document.getElementById("myRow");
       myRow.classList.add("d-flex", "flex-row");
       myRow.innerText = ``;
