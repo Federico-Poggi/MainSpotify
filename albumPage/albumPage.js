@@ -40,11 +40,11 @@ const albumFetch = () => {
           <h1 id="myH1" class="hover card-title pb-3 pt-1">${detail.tracks.data[0].album.title}</h1>
           <div class="card-text d-flex align-items-center justify-content-start">         
             <img id="smallImg" src="${detail.artist.picture_medium}" alt="/" class=" rounded-circle"  />
-            <div class="d-flex">
+            <div class="d-flex classGrey">
             <span class="hover text-light smaller me-1">${detail.artist.name}</span>
             <span class="smaller hover d-none d-xl-block me-1"> - ${detail.release_date}</span>
             <span class="smaller hover d-none d-xl-block me-1"> - ${detail.tracks.data.length} Brani,</span>
-            <span id="durationAlbum" class="smaller hover gray d-none d-xl-block"> ${detail.duration}</span>
+            <span id="durationAlbum" class="smaller hover classGrey d-none d-xl-block"> ${detail.duration}</span>
             </div>
             </div>
         </div>
@@ -66,7 +66,7 @@ const albumFetch = () => {
           <div class="col-1 d-none d-sm-flex justify-content-end">RIPRODUZIONI</div>
           <div class="col-3 d-flex justify-content-end"><i class="bi bi-clock"></i></div>
         </div>
-        <div id="myList" class="gray">
+        <div id="myList" class="grey">
         </div>
       </div>
     </div>`;
@@ -92,11 +92,11 @@ const albumFetch = () => {
 
       for (let i = 0; i < detail.tracks.data.length; i++) {
         const newListDiv = document.createElement("div");
-        newListDiv.classList.add("row", "py-2", "select", "hover");
+        newListDiv.classList.add("row", "py-2", "select", "hover","classGrey");
         newListDiv.innerHTML = `
-        <div class="col d-flex ">
+        <div class="col d-flex  ">
         <div class="px-3 d-flex align-items-center">${i + 1}</div>
-        <div class="d-flex flex-column">
+        <div class="d-flex flex-column  ">
           <div class="prova d-flex justify-content-start" id="tracker">${
             detail.tracks.data[i].title
           }</div>
