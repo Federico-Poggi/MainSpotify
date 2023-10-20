@@ -150,10 +150,11 @@ const createRelatives = () => {
     .then((dataid) => {
       console.log(dataid);
       artistName.style.background = `url(${dataid.data[0].artist.picture_xl})`;
-      artistName.style.backgroundPosition = "";
-      artistName.style.backgroundSize = "";
+      artistName.style.backgroundPosition = "top";
+      artistName.style.backgroundSize = "cover";
       artistName.style.height = "400px";
-    
+      artistName.classList.add(`kkk`);
+
       artistName.classList.add("p-5");
       const newDiv = document.createElement("div");
       console.log(dataid.data[0].artist.name);
