@@ -12255,13 +12255,8 @@ body {
 
 body {
   overflow-y: hidden !important;
-}
-
-#content {
-  position: absolute;
-  top: 0;
-  padding: 0.5em;
-  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .imgCard {
@@ -12286,9 +12281,7 @@ body {
 }
 
 main {
-  width: 100vw;
   height: 100vh;
-  width: 100vw;
   height: 100vh;
   overflow-y: scroll;
 }
@@ -12299,8 +12292,6 @@ main {
 }
 
 nav {
-  width: 100%;
-  z-index: 3;
   background-color: rgba(65, 65, 65, 0);
 }
 
@@ -12317,8 +12308,6 @@ section {
 }
 
 header {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
   z-index: 0;
   background-image: url(freddy.png);
 }
@@ -24821,29 +24810,6 @@ body {
   overflow: auto;
 }
 
-#main-section {
-  background: linear-gradient(#242424 10%, rgb(13, 13, 13) 95%) !important;
-  overflow-y: scroll;
-  height: 100vh;
-}
-#main-section::-webkit-scrollbar {
-  width: 15px;
-  visibility: hidden;
-  background: rgba(0, 0, 0, 0);
-}
-#main-section::-webkit-scrollbar:hover {
-  visibility: visible;
-}
-#main-section::-webkit-scrollbar-thumb {
-  background: rgba(146, 146, 146, 0.651);
-  visibility: hidden;
-  border-radius: 40px;
-  width: 50px;
-}
-#main-section::-webkit-scrollbar-thumb:hover {
-  visibility: visible;
-}
-
 .button-car {
   background-color: black;
   border: 0;
@@ -25015,4 +24981,12 @@ body {
 .footer-mobile {
   bottom: 0;
   position: sticky;
+}
+
+footer {
+  margin-top: 150px;
+}
+
+#main {
+  width: 100%;
 }/*# sourceMappingURL=albumPage.css.map */

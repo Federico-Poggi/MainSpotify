@@ -5,6 +5,7 @@ const btnBar = document.getElementById("search");
 const query = localStorage.getItem("query");
 const artistSection = document.getElementById("section");
 const divSmall = document.getElementsByClassName("scrollmenu")[0];
+divSmall.classList.add(`d-md-none`);
 const artistName = document.getElementById("header");
 const artistTitle = document.getElementById("nameArtist");
 const listener = document.getElementById("listener");
@@ -152,6 +153,7 @@ const createRelatives = () => {
       artistName.style.backgroundPosition = "";
       artistName.style.backgroundSize = "";
       artistName.style.height = "400px";
+    
       artistName.classList.add("p-5");
       const newDiv = document.createElement("div");
       console.log(dataid.data[0].artist.name);
@@ -194,22 +196,23 @@ const createRelatives = () => {
                   for (let j = 0; j < 12; j++) {
                     const sectionDiv = document.createElement("div");
                     sectionDiv.className =
-                      "d-none , d-sm-flex , col-12 col-lg-3 , card col-xl-3 , col-xxl-2 , mx-0 bg-transparent , border-0";
+                      " col-6 , col-lg-3 ,  bg-transparent , border-0";
                     sectionDiv.innerHTML = `<img class="card-img" src="${datas.data[j].album.cover_medium}" alt="" />
                         <div class="card-body p-0 text-center">
                           <h4 class="h4 text-light fs-7 sezione">${datas.data[j].album.title}</h4>
                           <p class="h6 text-light fs-8">${datas.data[j].release_date} - Album</p>
                         </div>`;
-                    // relatives.appendChild(sectionDiv);
+                    relativeSmall.appendChild(sectionDiv);
                     const imgRel = document.createElement("img");
-                    imgRel.className = "px-2 w-40";
+                    imgRel.className = "px-2 w-20 mx-2";
                     imgRel.setAttribute(
                       "src",
                       datas.data[j].album.cover_medium
                     );
                     imgRel.setAttribute("alt", "img");
                     console.log(imgRel);
-                    relativeSmall.appendChild(imgRel);
+
+                    // relativeSmall.appendChild(imgRel);
                   }
 
                   /////
