@@ -12248,7 +12248,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-html, body {
+html,
+body {
   height: 100vh;
 }
 

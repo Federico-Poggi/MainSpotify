@@ -1,7 +1,7 @@
-@import '../assets/css/custom-bootstrap/personal.scss';  
-html,body{
-    height: 100vh;
-    
+@import "../assets/css/custom-bootstrap/personal.scss";
+html,
+body {
+  height: 100vh;
 }
 
 body{
@@ -14,168 +14,145 @@ body{
     height: 100vh;
 }
 
-
-
-
-.imgCard{
+.imgCard {
   width: 10rem;
 }
 
-
-#sidebar{
-    height: 100%;
+#sidebar {
+  height: 100%;
 }
 
-
-#library h3{
-    font-size: 60%;
-    padding-left: 1em;
+#library h3 {
+  font-size: 60%;
+  padding-left: 1em;
 }
 
-#library i{
-    font-size: 100%;
+#library i {
+  font-size: 100%;
 }
-#containerAll{
-    height:100vh;
-}
-
-main{
-    width: 100vw;
-    height: 100vh;
-    width: 100vw;
-   height: 100vh;
-   overflow-y: scroll;
+#containerAll {
+  height: 100vh;
 }
 
-#mainSection{
- 
-  background: linear-gradient(180deg, rgba(33,33,33,1) 26%, rgba(18,18,18,1) 92%);
-  
+main {
+  width: 100vw;
+  height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+#mainSection {
+  background: linear-gradient(
+    180deg,
+    rgba(33, 33, 33, 1) 26%,
+    rgba(18, 18, 18, 1) 92%
+  );
+
   z-index: 1;
 }
 
 nav {
-//    font-size: 11px;;
-    width: 100%;
-    z-index: 3;
-    background-color: rgba(65, 65, 65, 0);
+  //    font-size: 11px;;
+  width: 100%;
+  z-index: 3;
+  background-color: rgba(65, 65, 65, 0);
 }
 
-h1{
+h1 {
   font-size: 10vh;
   font-family: Circular;
   font-weight: 900;
 }
 
-section{
+section {
   margin-top: 5em;
-  background: linear-gradient(180deg, rgba(33,33,33,1) 26%, rgba(18,18,18,1) 92%);
+  background: linear-gradient(
+    180deg,
+    rgba(33, 33, 33, 1) 26%,
+    rgba(18, 18, 18, 1) 92%
+  );
   font-family: Circular;
 }
 
-header{
-  padding-top:10vh ;
+header {
+  padding-top: 10vh;
   padding-bottom: 10vh;
   z-index: 0;
   background-image: url(freddy.png);
 }
 
-li{
+li {
   font-family: Circular;
   font-weight: 400;
   font-size: 0.8em;
-  
 }
 
-
-.title{
+.title {
   flex-grow: 1;
 }
 
-.duration{
+.duration {
   margin: 0;
   color: rgba(128, 128, 128, 0.79);
 }
 
-.rank{
+.rank {
   color: rgba(128, 128, 128, 0.79);
 }
 
-@media screen and (max-width: 800px)  {
-  #main{
-    width:100vw;
+@media screen and (max-width: 800px) {
+  #main {
+    width: 100vw;
   }
-  .card{
+  .card {
     width: 100%;
   }
 
-  .scrollmenu{
+  .scrollmenu {
     visibility: visible;
     overflow-x: auto;
   }
-  #nameArtist{
+  #nameArtist {
     font-size: 50px;
   }
 
-  #section{
+  #section {
     width: 100%;
   }
-  .counter{
+  .counter {
     font-size: 100%;
   }
-  
-  .rank{
+
+  .rank {
     display: none;
   }
 
-  .title{
+  .title {
     font-size: 80%;
   }
- 
 }
 
 // 769 to 1915
 
 @media screen and (min-width: 768px) {
-    // #main{
-    //     float: right;
-    //     position: absolute;
-    //     right: 0;
-    //     width: 80%;
-        
-    // }
+  #content {
+    display: flex;
+  }
 
-    #content{
-      display: flex;
-    }
-
-
-    // .scrollmenu{
-    //   visibility: hidden;
-    // }
-
-    #section{
-      width: 70%;
-    }
+  #section {
+    width: 70%;
+  }
 }
-
-
-
-
 
 // #containMain{
 //     height: 100vh;
 //     display: flex;
 // }
 
-
-
-
 // .card{
 //     background-image: linear-gradient(to right top, #121212, #161616, #191919, #1c1c1c, #1f1f1f);
 // }
-
-
 
 // #song li{
 //     background-color: transparent;
@@ -184,13 +161,6 @@ li{
 //     font-weight: 600;
 //     color: white;
 // }
-
-// #artistImg{
-//     background: url(https://placekitten.com/500);
-//     position: fixed;
-//     top: 0;
-// }
-
 
 ::-webkit-scrollbar {
   width: 2px;
@@ -225,7 +195,6 @@ li{
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
-
 
 @import "./../assets/css/custom-bootstrap/personal";
 @font-face {
@@ -608,28 +577,29 @@ body {
 }
 .padding-start {
   padding-left: 11.5px !important;
- }
- @media screen and (max-width :576px) {
-  .smaller{
+}
+@media screen and (max-width: 576px) {
+  .smaller {
     font-size: 0.7em !important;
   }
-  
- }
+}
 
- .bg-songBar{
+.bg-songBar {
   background-color: #181818;
   border-color: rgb(56, 56, 56) !important;
-   }
-   .sound-timer{
-    // height: 20px !important;
-    border: 2px solid ;
- 
-   }
-   .footer-desktop{
-    bottom: 0;
-    position: fixed;
-   }
-   .footer-mobile{
-    bottom: 0;
-    position: sticky;
-   }
+}
+.sound-timer {
+  // height: 20px !important;
+  border: 2px solid;
+}
+.footer-desktop {
+  bottom: 0;
+  position: fixed;
+}
+.footer-mobile {
+  bottom: 0;
+  position: sticky;
+}
+footer {
+  margin-top: 150px;
+}
