@@ -1,4 +1,9 @@
-
+const spinner = document.getElementById(`spinner`);
+const spinner1 = document.getElementById(`spinner1`);
+const spinner2 = document.getElementById(`spinner2`);
+const spinner3 = document.getElementById(`spinner3`);
+const spinner4 = document.getElementById(`spinner4`);
+const spinner5 = document.getElementById(`spinner5`);
 const sidelist = document.getElementById(`ulBox`);
 // SEZIONE ALTRO DI CIO CHE TI PIACE
 const moreYouLike = (genre, par) => {
@@ -11,6 +16,7 @@ const moreYouLike = (genre, par) => {
       }
     })
     .then((detail) => {
+      spinner1.classList.add(`d-none`);
       console.log(detail);
       const myRow = document.getElementById("myRow");
       myRow.classList.add("d-flex", "flex-row");
@@ -87,7 +93,7 @@ const createPersonalSection = (genre) => {
         // sidelist.appendChild(li);
 
         const col = document.createElement(`div`);
-        col.classList.add(`col-12`, `col-xs-12`, `col-md-6`, `h-100`,`col-lg-4`,`col-xl-3`);
+        col.classList.add(`col-12`, `col-xs-12`, `col-md-6`, `h-100`,`col-lg-4`,`col-xl-4`);
 
         col.innerHTML = `
         <a href="../albumPage/album.html?album=${detail.data[i].album.id}" class="text-white link-underline link-underline-opacity-0">
@@ -127,15 +133,11 @@ const createPersonalPlaylist = (genre, string) => {
       }
     })
     .then((detail) => {
+      spinner2.classList.add(`d-none`);
       console.group(detail);
-      // const arrayList = [];
+      
       for (let i = 0; i < 1; i++) {
-        // arrayList.push(detail.data[i].title);
-        // const li = document.createElement(`li`);
-        // li.classList.add(`mb-2`, `classGrey`, `select`, `fs-5`);
-        // li.innerHTML = `<a class=" classGrey underline fw-bold"  href="../albumPage/album.html?album=${detail.data[i].album.id}">${arrayList[i]}</a>`;
-        // sidelist.appendChild(li);
-        // sidelist.appendChild(li);
+       
 
         const row = document.createElement(`div`);
 
@@ -233,6 +235,7 @@ const createCarousel = function (par) {
       }
     })
     .then((detail) => {
+      spinner3.classList.add(`d-none`);
       console.group(detail);
 
       for (let i = 0; i < 10; i++) {
@@ -309,6 +312,7 @@ const friendsActivity = (genre) => {
       }
     })
     .then((detail) => {
+      spinner4.classList.add(`d-none`);
       console.log(detail);
 
       for (let i = 0; i < 6; i++) {
@@ -325,13 +329,13 @@ const friendsActivity = (genre) => {
                   width="40"
                 />
                 <div class="fs-9">
-                  <h6 class="m-0">${detail.data[i].artist.name}</h6>
-                  <p class="m-0">${detail.data[i].album.title}</p>
-                  <p class="m-0">${detail.data[i].title}</p>
+                  <h6 class="m-0 fw-bold">${detail.data[i].artist.name}</h6>
+                  <p class="m-0 fw-bold">${detail.data[i].album.title}</p>
+                  <p class="m-0 fw-bold">${detail.data[i].title}</p>
                 </div>
               </div>
             </div>
-            <span class="mb-4">5h</span>
+            <span class="mb-4 fs-8">5h</span>
           </div>
      `;
 
@@ -349,7 +353,7 @@ let s3 = "rap";
 moreYouLike(s3);
 moreYouLike(s2);
 createPersonalSection(`punk-pop`);
-createPersonalSection(`pop`);
+// createPersonalSection(`pop`);
 createPersonalPlaylist(`noyz narcos`, `best of Noyz Narcos`);
 createPersonalPlaylist(`metal`, `Metal composition`);
 createPersonalPlaylist(`gianna nannini`, `My playlist of Gianna Nannini`);
@@ -358,34 +362,7 @@ createCarousel(`pop`);
 
 friendsActivity(`pop`);
 
-// // entrata sezione destra
-// const secRightIn = document.getElementById("in");
-// const secRightOut = document.getElementById("showIcon");
-// const animationIn = function () {
-//   const selDiv = document.getElementById("rightCol");
-//   selDiv.classList.add("swing-in-right-fwd");
-//   selDiv.classList.remove("swing-out-right-bck");
-// };
-// secRightIn.addEventListener("click", animationIn);
 
-// // uscita sezione destra
-// const animationOut = function () {
-//   const selDiv = document.getElementById("rightCol");
-//   selDiv.classList.add("swing-out-right-bck");
-// };
-// secRightOut.addEventListener("click", animationOut);
-
-// const showIcon = document.getElementById(`showIcon`);
-// const rigthIcon = document.getElementById(`rightCol`);
-// const closeTab = function (e) {
-//   rightCol.classList.remove(`d-xxl-block`);
-//   showIcon.classList.remove(`d-none`);
-// };
-
-// const riShow = function (e) {
-//   rightCol.classList.add(`d-xxl-block`);
-//   showIcon.classList.add(`d-none`);
-// };
 const myCol = document.getElementById("rightCol");
 const btnOut = document.getElementById("btnOut");
 const btnIn = document.getElementById("showIcon");
@@ -436,6 +413,7 @@ const createLeftCol = (genre) => {
       }
     })
     .then((detail) => {
+      spinner5.classList.add(`d-none`);
       for (let i = 0; i < 5; i++) {
         arrayList.push(detail.data[i].title);
         arrayId.push(detail.data[i].album.id);

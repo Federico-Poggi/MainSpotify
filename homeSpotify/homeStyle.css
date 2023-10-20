@@ -12390,7 +12390,7 @@ body {
 }
 
 #div-add {
-  background-color: #b2b2b2;
+  background-color: #767676;
 }
 
 #add-icon {
@@ -12494,7 +12494,7 @@ body {
   color: #1ed760 !important;
 }
 
-#spinner {
+#spinner, #spinner1, #spinner3, #spinner2, #spinner4, #spinner5 {
   width: 50px;
   height: 50px;
 }

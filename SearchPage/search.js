@@ -1,7 +1,7 @@
 const search = document.getElementById("searchBtn");
-const search2 = document.getElementById("search");
+const search2 = document.getElementById("search1");
 const searchSongs = () => {
-  const searchWrap = document.getElementById("search");
+  const searchWrap = document.getElementById("search1");
   const searchValue = searchWrap.value;
   localStorage.setItem("query", searchValue);
   fetch(
@@ -138,7 +138,7 @@ footerHeart2.addEventListener(`click`, function (e) {
 });
 
 const sidelist = document.getElementById(`ulBox`);
-sidelist.classList.add(`custom-scrollbar`)
+sidelist.classList.add(`custom-scrollbar`);
 const list = JSON.parse(sessionStorage.getItem(`list`));
 const Id = JSON.parse(sessionStorage.getItem(`Id`));
 console.log(list);
